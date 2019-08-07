@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Python_Day2_文件与异常 | 菜鹌鹑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="python的基本输入机制是基于行的 open（）  引入os模块：12&amp;gt;&amp;gt;&amp;gt; import os  &amp;gt;&amp;gt;&amp;gt; os.getcwd()#查看当前所在路径  &apos;C:\\Users\\张鹌鹑\\Desktop&apos;  &amp;gt;&amp;gt;&amp;gt; ls  sketch.txt  查看数据使用open（）读取文件 1data = open(&apos;sketch.txt&apos;)  没有报">
+  <meta name="description" content="python的基本输入机制是基于行的 open（）  引入os模块：12&amp;gt;&amp;gt;&amp;gt; import os  &amp;gt;&amp;gt;&amp;gt; os.getcwd()#查看当前所在路径  &apos;C:\\Users\\张鹌鹑\\Desktop&apos;  &amp;gt;&amp;gt;&amp;gt; ls  sketch.txt">
 <meta name="keywords" content="python,基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python_Day2_文件与异常">
 <meta property="og:url" content="http://yoursite.com/2019/08/07/Python_Day2_文件与异常/index.html">
 <meta property="og:site_name" content="菜鹌鹑">
-<meta property="og:description" content="python的基本输入机制是基于行的 open（）  引入os模块：12&amp;gt;&amp;gt;&amp;gt; import os  &amp;gt;&amp;gt;&amp;gt; os.getcwd()#查看当前所在路径  &apos;C:\\Users\\张鹌鹑\\Desktop&apos;  &amp;gt;&amp;gt;&amp;gt; ls  sketch.txt  查看数据使用open（）读取文件 1data = open(&apos;sketch.txt&apos;)  没有报">
+<meta property="og:description" content="python的基本输入机制是基于行的 open（）  引入os模块：12&amp;gt;&amp;gt;&amp;gt; import os  &amp;gt;&amp;gt;&amp;gt; os.getcwd()#查看当前所在路径  &apos;C:\\Users\\张鹌鹑\\Desktop&apos;  &amp;gt;&amp;gt;&amp;gt; ls  sketch.txt">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2019/08/07/2b6LV7g3udB9iMs.png">
 <meta property="og:image" content="https://i.loli.net/2019/08/07/gJRiBH9Z7MQzToh.png">
@@ -30,10 +30,10 @@
 <meta property="og:image" content="https://i.loli.net/2019/08/07/o1Sa3AldhHmyYNW.png">
 <meta property="og:image" content="e:/python/%E7%AC%94%E8%AE%B0%E5%8C%BA/m15631196139@163.com/fb11e89ad4204685903a43c8860751db/564310555652.png">
 <meta property="og:image" content="https://i.loli.net/2019/08/07/iz8JXoANH1wfeOs.png">
-<meta property="og:updated_time" content="2019-08-07T11:36:55.814Z">
+<meta property="og:updated_time" content="2019-08-07T11:39:49.549Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python_Day2_文件与异常">
-<meta name="twitter:description" content="python的基本输入机制是基于行的 open（）  引入os模块：12&amp;gt;&amp;gt;&amp;gt; import os  &amp;gt;&amp;gt;&amp;gt; os.getcwd()#查看当前所在路径  &apos;C:\\Users\\张鹌鹑\\Desktop&apos;  &amp;gt;&amp;gt;&amp;gt; ls  sketch.txt  查看数据使用open（）读取文件 1data = open(&apos;sketch.txt&apos;)  没有报">
+<meta name="twitter:description" content="python的基本输入机制是基于行的 open（）  引入os模块：12&amp;gt;&amp;gt;&amp;gt; import os  &amp;gt;&amp;gt;&amp;gt; os.getcwd()#查看当前所在路径  &apos;C:\\Users\\张鹌鹑\\Desktop&apos;  &amp;gt;&amp;gt;&amp;gt; ls  sketch.txt">
 <meta name="twitter:image" content="https://i.loli.net/2019/08/07/2b6LV7g3udB9iMs.png">
   
     <link rel="alternative" href="/atom.xml" title="菜鹌鹑" type="application/atom+xml">
@@ -208,6 +208,8 @@
 <li>open（）</li>
 </ul>
 <h2 id="引入os模块："><a href="#引入os模块：" class="headerlink" title="引入os模块："></a>引入os模块：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> os  &gt;&gt;&gt; os.getcwd()<span class="comment">#查看当前所在路径  'C:\\Users\\张鹌鹑\\Desktop'  </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>ls  sketch.txt</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <h2 id="查看数据"><a href="#查看数据" class="headerlink" title="查看数据"></a>查看数据</h2><p>使用open（）读取文件</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data = open(<span class="string">'sketch.txt'</span>)</span><br></pre></td></tr></table></figure>
