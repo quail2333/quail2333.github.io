@@ -6,26 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Nginx编译安装(附脚本) | 菜鹌鹑</title>
+  <title>菜鹌鹑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="下载Nginx-1.15.0.tar.gz源码包12cd /home/quailwget -c http://mirrors.sohu.com/nginx/nginx-1.15.0.tar.gz  解压nginx-1.15.0.tar.gz源码包1tar zxf nginx-1.15.0.tar.gz">
-<meta name="keywords" content="Nginx,编译安装">
+  <meta name="description" content="一、构建两个tomcat容器并启动 123[root@localhost bin]# ps -ef|grep tomcatroot       1525      1 12 10:19 pts/0    00:00:03 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-1/conf/logging.properties">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nginx编译安装(附脚本)">
-<meta property="og:url" content="http://yoursite.com/2019/08/08/Nginx编译安装(附脚本)/index.html">
+<meta property="og:title" content="菜鹌鹑">
+<meta property="og:url" content="http://yoursite.com/2019/08/08/Nginx代理和负载均衡实验/index.html">
 <meta property="og:site_name" content="菜鹌鹑">
-<meta property="og:description" content="下载Nginx-1.15.0.tar.gz源码包12cd /home/quailwget -c http://mirrors.sohu.com/nginx/nginx-1.15.0.tar.gz  解压nginx-1.15.0.tar.gz源码包1tar zxf nginx-1.15.0.tar.gz">
+<meta property="og:description" content="一、构建两个tomcat容器并启动 123[root@localhost bin]# ps -ef|grep tomcatroot       1525      1 12 10:19 pts/0    00:00:03 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-1/conf/logging.properties">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/WjLXh1tReyGPzmQ.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/VafIgnKrGdQBLW5.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/97SfReLZBXHj5tV.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/9B3lT4kKXjhrNwz.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/B2x6aL4GfHkiIr1.png">
-<meta property="og:updated_time" content="2019-08-08T06:19:27.183Z">
+<meta property="og:image" content="https://common.cnblogs.com/images/copycode.gif">
+<meta property="og:image" content="https://common.cnblogs.com/images/copycode.gif">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1655141/201907/1655141-20190715102447820-593334092.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1655141/201907/1655141-20190715102651435-484904954.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1655141/201907/1655141-20190715131727096-2006311422.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1655141/201907/1655141-20190715133427820-677492248.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1655141/201907/1655141-20190715134131881-178138200.png">
+<meta property="og:updated_time" content="2019-08-08T08:01:10.720Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nginx编译安装(附脚本)">
-<meta name="twitter:description" content="下载Nginx-1.15.0.tar.gz源码包12cd /home/quailwget -c http://mirrors.sohu.com/nginx/nginx-1.15.0.tar.gz  解压nginx-1.15.0.tar.gz源码包1tar zxf nginx-1.15.0.tar.gz">
-<meta name="twitter:image" content="https://i.loli.net/2019/08/08/WjLXh1tReyGPzmQ.png">
+<meta name="twitter:title" content="菜鹌鹑">
+<meta name="twitter:description" content="一、构建两个tomcat容器并启动 123[root@localhost bin]# ps -ef|grep tomcatroot       1525      1 12 10:19 pts/0    00:00:03 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-1/conf/logging.properties">
+<meta name="twitter:image" content="https://common.cnblogs.com/images/copycode.gif">
   
     <link rel="alternative" href="/atom.xml" title="菜鹌鹑" type="application/atom+xml">
   
@@ -147,85 +148,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Nginx编译安装(附脚本)" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Nginx代理和负载均衡实验" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Nginx编译安装(附脚本)
-    </h1>
-  
-
-        
-        <a href="/2019/08/08/Nginx编译安装(附脚本)/" class="archive-article-date">
-  	<time datetime="2019-08-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
-</a>
-        
-      </header>
     
 	<!-- 目录内容 -->
 	
-		<p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-			  <span class="btn-bg"></span>
-			  <span class="btn-text">导航窗口</span>
-			  </p>
-		<div id="toc-article" class="toc-article">
-			<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-			<strong class="toc-title">目录</strong>
-			   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#下载Nginx-1-15-0-tar-gz源码包"><span class="toc-number">1.</span> <span class="toc-text">下载Nginx-1.15.0.tar.gz源码包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解压nginx-1-15-0-tar-gz源码包"><span class="toc-number">2.</span> <span class="toc-text">解压nginx-1.15.0.tar.gz源码包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装Nginx"><span class="toc-number">3.</span> <span class="toc-text">安装Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#预编译"><span class="toc-number">3.1.</span> <span class="toc-text">预编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装"><span class="toc-number">3.2.</span> <span class="toc-text">编译安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#启动Nginx主程序"><span class="toc-number">4.</span> <span class="toc-text">启动Nginx主程序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#进行访问测试"><span class="toc-number">5.</span> <span class="toc-text">进行访问测试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Nginx自动安装脚本"><span class="toc-number">6.</span> <span class="toc-text">Nginx自动安装脚本</span></a></li></ol>
-			 </div>
-	   <script type="text/javascript">
-		function showToc(){
-			var toc_article = document.getElementById("toc-article");
-			var show_toc_btn = document.getElementById("show-toc-btn");
-			toc_article.setAttribute("style","display:block");
-			show_toc_btn.setAttribute("style","display:none");
-			};
-		function showBtn(){
-			var toc_article = document.getElementById("toc-article");
-			var show_toc_btn = document.getElementById("show-toc-btn");
-			toc_article.setAttribute("style","display:none");
-			show_toc_btn.setAttribute("style","display:block");
-			};
-	   </script>
-		  
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="下载Nginx-1-15-0-tar-gz源码包"><a href="#下载Nginx-1-15-0-tar-gz源码包" class="headerlink" title="下载Nginx-1.15.0.tar.gz源码包"></a>下载Nginx-1.15.0.tar.gz源码包</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/quail</span><br><span class="line">wget -c http://mirrors.sohu.com/nginx/nginx-1.15.0.tar.gz</span><br></pre></td></tr></table></figure>
+        <h2 id="一、构建两个tomcat容器并启动"><a href="#一、构建两个tomcat容器并启动" class="headerlink" title="一、构建两个tomcat容器并启动"></a>一、构建两个tomcat容器并启动</h2><p><a href="javascript:void(0);" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost bin]# ps -ef|grep tomcat</span><br><span class="line">root       1525      1 12 10:19 pts/0    00:00:03 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-1/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /usr/local/tomcat-1/bin/bootstrap.jar:/usr/local/tomcat-1/bin/tomcat-juli.jar -Dcatalina.base=/usr/local/tomcat-1 -Dcatalina.home=/usr/local/tomcat-1 -Djava.io.tmpdir=/usr/local/tomcat-1/temp org.apache.catalina.startup.Bootstrap start</span><br><span class="line">root       1586      1 39 10:19 pts/0    00:00:02 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-2/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /usr/local/tomcat-2/bin/bootstrap.jar:/usr/local/tomcat-2/bin/tomcat-juli.jar -Dcatalina.base=/usr/local/tomcat-2 -Dcatalina.home=/usr/local/tomcat-2 -Djava.io.tmpdir=/usr/local/tomcat-2/temp org.apache.catalina.startup.Bootstrap start</span><br></pre></td></tr></table></figure>
 
-<h1 id="解压nginx-1-15-0-tar-gz源码包"><a href="#解压nginx-1-15-0-tar-gz源码包" class="headerlink" title="解压nginx-1.15.0.tar.gz源码包"></a>解压nginx-1.15.0.tar.gz源码包</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar zxf nginx-1.15.0.tar.gz</span><br></pre></td></tr></table></figure>
+<p><a href="javascript:void(0);" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<h2 id="二、修改两个容器的web首页，并测试两个容器是否正常"><a href="#二、修改两个容器的web首页，并测试两个容器是否正常" class="headerlink" title="二、修改两个容器的web首页，并测试两个容器是否正常"></a>二、修改两个容器的web首页，并测试两个容器是否正常</h2><p><img src="https://img2018.cnblogs.com/blog/1655141/201907/1655141-20190715102447820-593334092.png" alt="img"></p>
+<p><img src="https://img2018.cnblogs.com/blog/1655141/201907/1655141-20190715102651435-484904954.png" alt="img"></p>
+<h2 id="三、启动Nginx并查看进程"><a href="#三、启动Nginx并查看进程" class="headerlink" title="三、启动Nginx并查看进程"></a>三、启动Nginx并查看进程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`[root@www ~]``# /usr/local/nginx/sbin/./nginx``[root@www ~]``# ps -ef|grep nginx``root       5354      1  0 13:00 ?        00:00:00 nginx: master process ``/usr/local/nginx/sbin/``.``/nginx``nobody     5355   5354  0 13:00 ?        00:00:00 nginx: worker process`</span><br></pre></td></tr></table></figure>
 
-<a id="more"></a>
+<h2 id="四、开始实验："><a href="#四、开始实验：" class="headerlink" title="四、开始实验："></a>四、开始实验：</h2><p><strong>Nginx代理服务器IP：192.168.249.132</strong></p>
+<p><strong>Tomcat-1 IP：192.168.249.133：8080</strong></p>
+<p><strong>Tomcat-2 IP：192.168.249.133：8081</strong></p>
+<h3 id="1-配置测试反向代理"><a href="#1-配置测试反向代理" class="headerlink" title="1.配置测试反向代理"></a>1.配置测试反向代理</h3><h4 id="1）修改Nginx的配置文件"><a href="#1）修改Nginx的配置文件" class="headerlink" title="1）修改Nginx的配置文件"></a>1）修改Nginx的配置文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`[root@www conf]``# cat nginx.conf|grep -E -v &quot;#|^$&quot;``worker_processes  1;``events &#123;``    ``worker_connections  1024;``&#125;``http &#123;``    ``include       mime.types;``    ``default_type  application``/octet-stream``;``    ``sendfile        on;``    ``keepalive_timeout  65;``    ``server &#123;``        ``listen       80;``        ``server_name  localhost;``    ``location / &#123;``        ``proxy_pass http:``//192``.168.249.133:8080;  ``#将请求转向后端定义的Tomcat-1上.``    ``&#125;``        ``error_page   500 502 503 504  ``/50x``.html;``        ``location = ``/50x``.html &#123;``            ``root   html;``        ``&#125;``    ``&#125;``&#125;`</span><br></pre></td></tr></table></figure>
 
-<h1 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h1><h2 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd nginx-1.15.0</span><br><span class="line">./configure</span><br></pre></td></tr></table></figure>
+<h4 id="2）重新载入nginx-conf"><a href="#2）重新载入nginx-conf" class="headerlink" title="2）重新载入nginx.conf"></a>2）重新载入nginx.conf</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`[root@www conf]``# cat nginx.conf|grep -E -v &quot;#|^$&quot;`</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://i.loli.net/2019/08/08/WjLXh1tReyGPzmQ.png" alt="1565228795343.png"></p>
-<p>嘤嘤嘤？？报错了？</p>
-<p>查看报错信息：<strong>error: the HTTP rewrite module requires the PCRE library.</strong>原因是请求重写模块的PCRE开发没有安装或者没有正确安装，我们对其进行重新安装。</p>
-<p>所以我们安装PCRE</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y isntall pcre pcre-devel</span><br></pre></td></tr></table></figure>
+<h4 id="3）访问Nginx代理服务器，查看是否跳转"><a href="#3）访问Nginx代理服务器，查看是否跳转" class="headerlink" title="3）访问Nginx代理服务器，查看是否跳转"></a>3）访问Nginx代理服务器，查看是否跳转</h4><p><img src="https://img2018.cnblogs.com/blog/1655141/201907/1655141-20190715131727096-2006311422.png" alt="img"></p>
+<h3 id="2-负载均衡算法测试——轮询算法"><a href="#2-负载均衡算法测试——轮询算法" class="headerlink" title="2.负载均衡算法测试——轮询算法"></a>2.负载均衡算法测试——轮询算法</h3><h4 id="1）在nginx-conf的server块里写入upstream配置块，并修改proxy-pass参数"><a href="#1）在nginx-conf的server块里写入upstream配置块，并修改proxy-pass参数" class="headerlink" title="1）在nginx.conf的server块里写入upstream配置块，并修改proxy_pass参数"></a>1）在nginx.conf的server块里写入upstream配置块，并修改proxy_pass参数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`[root@www conf]``# cat nginx.conf|grep -E -v &quot;#|^$&quot;``worker_processes  1;``events &#123;``    ``worker_connections  1024;``&#125;``http &#123;``    ``include       mime.types;``    ``default_type  application``/octet-stream``;``    ``sendfile        on;``    ``keepalive_timeout  65;``    ``upstream nginxtest &#123;``        ``server 192.168.249.133:8080;``        ``server 192.168.249.133:8081;``    ``&#125;``    ``server &#123;``        ``listen       80;``        ``server_name  localhost;``    ``location / &#123;``        ``proxy_pass http:``//nginxtest``;``    ``&#125;``        ``error_page   500 502 503 504  ``/50x``.html;``        ``location = ``/50x``.html &#123;``            ``root   html;``        ``&#125;``    ``&#125;``&#125;`</span><br></pre></td></tr></table></figure>
 
-<p>重新预编译：</p>
-<p><img src="https://i.loli.net/2019/08/08/VafIgnKrGdQBLW5.png" alt="1565229044678.png"></p>
-<p>我去！又来？！</p>
-<p>查看报错信息：<strong>error: the HTTP gzip module requires the zlib library.</strong>这次是因为压缩模块没有被安装或正确安装，所以我们安装zlip和zlip-devel。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install zlib zlib-devel</span><br></pre></td></tr></table></figure>
+<h4 id="2）重新载入nginx-conf-1"><a href="#2）重新载入nginx-conf-1" class="headerlink" title="2）重新载入nginx.conf"></a>2）重新载入nginx.conf</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`[root@www conf]``# ../sbin/./nginx -s reload`</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://i.loli.net/2019/08/08/97SfReLZBXHj5tV.png" alt="1565229120705.png"></p>
-<p>我去……可算是ok了……</p>
-<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make -j4 &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<h4 id="3）多次访问Nginx代理服务器"><a href="#3）多次访问Nginx代理服务器" class="headerlink" title="3）多次访问Nginx代理服务器"></a>3）多次访问Nginx代理服务器</h4><p><img src="https://img2018.cnblogs.com/blog/1655141/201907/1655141-20190715133427820-677492248.png" alt="img"></p>
+<p><img src="https://img2018.cnblogs.com/blog/1655141/201907/1655141-20190715134131881-178138200.png" alt="img"></p>
+<p>一直刷新页面会发现随机出现两个网页，这就是nginx默认的负载均衡算法：轮询算法</p>
+<h3 id="3-负载均衡权重测试——权重算法"><a href="#3-负载均衡权重测试——权重算法" class="headerlink" title="3.负载均衡权重测试——权重算法"></a>3.负载均衡权重测试——权重算法</h3><h4 id="1）在nginx-conf的server块里修改upstream配置块，在其中server参数后添加weight参数"><a href="#1）在nginx-conf的server块里修改upstream配置块，在其中server参数后添加weight参数" class="headerlink" title="1）在nginx.conf的server块里修改upstream配置块，在其中server参数后添加weight参数"></a>1）在nginx.conf的server块里修改upstream配置块，在其中server参数后添加weight参数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`[root@www conf]``# cat nginx.conf|grep -E -v &quot;#|^$&quot;``worker_processes  1;``events &#123;``    ``worker_connections  1024;``&#125;``http &#123;``    ``include       mime.types;``    ``default_type  application``/octet-stream``;``    ``sendfile        on;``    ``keepalive_timeout  65;``    ``upstream nginxtest &#123;``        ``server 192.168.249.133:8080 weight=3;``        ``server 192.168.249.133:8081 weight=2;``    ``&#125;``    ``server &#123;``        ``listen       80;``        ``server_name  localhost;``        ``location / &#123;``            ``proxy_pass http:``//nginxtest``;``        ``&#125;``        ``error_page   500 502 503 504  ``/50x``.html;``        ``location = ``/50x``.html &#123;``            ``root   html;``        ``&#125;``    ``&#125;``&#125;`</span><br></pre></td></tr></table></figure>
 
-<h1 id="启动Nginx主程序"><a href="#启动Nginx主程序" class="headerlink" title="启动Nginx主程序"></a>启动Nginx主程序</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
+<p>2）重新载入nginx.conf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`[root@www conf]``# ../sbin/./nginx -s reload`</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://i.loli.net/2019/08/08/9B3lT4kKXjhrNwz.png" alt="1565229431774.png"></p>
-<h1 id="进行访问测试"><a href="#进行访问测试" class="headerlink" title="进行访问测试"></a>进行访问测试</h1><p><img src="https://i.loli.net/2019/08/08/B2x6aL4GfHkiIr1.png" alt="1565229467749.png"></p>
-<p>至此，nginx编译安装完成！</p>
-<h1 id="Nginx自动安装脚本"><a href="#Nginx自动安装脚本" class="headerlink" title="Nginx自动安装脚本"></a>Nginx自动安装脚本</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line"><span class="meta">#</span>2019-08-08</span><br><span class="line"><span class="meta">#</span>auto check and install NGINX</span><br><span class="line"><span class="meta">#</span>by Quail</span><br><span class="line"><span class="meta">#</span>###########################################</span><br><span class="line">Nginx_stat=`find / -name nginx | grep sbin`</span><br><span class="line"></span><br><span class="line">function run_nginx()</span><br><span class="line">&#123;</span><br><span class="line">	pkill httpd</span><br><span class="line">	pkill nginx</span><br><span class="line">	/usr/local/nginx/sbin/nginx</span><br><span class="line">&#125;</span><br><span class="line">function install_nginx()</span><br><span class="line">&#123;</span><br><span class="line">	cd /home</span><br><span class="line">	wget -c http://mirrors.sohu.com/nginx/nginx-1.15.0.tar.gz</span><br><span class="line">	tar zxf nginx-1.15.0.tar.gz</span><br><span class="line">	cd nginx-1.15.0</span><br><span class="line">	./configure</span><br><span class="line">	make -j4 &amp;&amp; make install</span><br><span class="line">&#125;</span><br><span class="line">function Dependency_packages()</span><br><span class="line">&#123;</span><br><span class="line">	yum -y install gcc gcc-c++ kernel-devel pcre pcre-devel zlib zlib-devel openssl</span><br><span class="line">&#125;</span><br><span class="line">if [ Nginx_stat == '/usr/local/nginx/sbin/nginx' ];then</span><br><span class="line">	run_nginx</span><br><span class="line">	echo 'Nginx is exist and is running!'</span><br><span class="line">	exit 1</span><br><span class="line">else</span><br><span class="line">	Dependency_packages</span><br><span class="line">	install_nginx</span><br><span class="line">	run_nginx</span><br><span class="line">	echo 'NGINX installation is OK ! And NGINX is running!'</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-
-
+<p>3）访问nginx代理服务器</p>
+<p>发现刷新三次是tomcat-1后，后两次刷新是tomcat-2.</p>
+<h2 id="剩下的两种算法持续更新哦……"><a href="#剩下的两种算法持续更新哦……" class="headerlink" title="剩下的两种算法持续更新哦……"></a>剩下的两种算法持续更新哦……</h2>
       
 
       
@@ -264,21 +225,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编译安装</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -329,7 +275,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/08/Nginx编译安装(附脚本)/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/08/Nginx代理和负载均衡实验/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -343,18 +289,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/08/Nginx反向代理后端服务器/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          LNMP WEB架构构建
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/08/PHP-5.6.8编译安装(附脚本)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">PHP-5.6.8编译安装(附脚本)</div>
+    <a href="/2019/08/08/Nginx反向代理后端服务器/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LNMP WEB架构构建</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -381,7 +318,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#下载Nginx-1-15-0-tar-gz源码包"><span class="toc-number">1.</span> <span class="toc-text">下载Nginx-1.15.0.tar.gz源码包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解压nginx-1-15-0-tar-gz源码包"><span class="toc-number">2.</span> <span class="toc-text">解压nginx-1.15.0.tar.gz源码包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装Nginx"><span class="toc-number">3.</span> <span class="toc-text">安装Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#预编译"><span class="toc-number">3.1.</span> <span class="toc-text">预编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装"><span class="toc-number">3.2.</span> <span class="toc-text">编译安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#启动Nginx主程序"><span class="toc-number">4.</span> <span class="toc-text">启动Nginx主程序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#进行访问测试"><span class="toc-number">5.</span> <span class="toc-text">进行访问测试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Nginx自动安装脚本"><span class="toc-number">6.</span> <span class="toc-text">Nginx自动安装脚本</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、构建两个tomcat容器并启动"><span class="toc-number">1.</span> <span class="toc-text">一、构建两个tomcat容器并启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、修改两个容器的web首页，并测试两个容器是否正常"><span class="toc-number">2.</span> <span class="toc-text">二、修改两个容器的web首页，并测试两个容器是否正常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、启动Nginx并查看进程"><span class="toc-number">3.</span> <span class="toc-text">三、启动Nginx并查看进程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、开始实验："><span class="toc-number">4.</span> <span class="toc-text">四、开始实验：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-配置测试反向代理"><span class="toc-number">4.1.</span> <span class="toc-text">1.配置测试反向代理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）修改Nginx的配置文件"><span class="toc-number">4.1.1.</span> <span class="toc-text">1）修改Nginx的配置文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）重新载入nginx-conf"><span class="toc-number">4.1.2.</span> <span class="toc-text">2）重新载入nginx.conf</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3）访问Nginx代理服务器，查看是否跳转"><span class="toc-number">4.1.3.</span> <span class="toc-text">3）访问Nginx代理服务器，查看是否跳转</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-负载均衡算法测试——轮询算法"><span class="toc-number">4.2.</span> <span class="toc-text">2.负载均衡算法测试——轮询算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）在nginx-conf的server块里写入upstream配置块，并修改proxy-pass参数"><span class="toc-number">4.2.1.</span> <span class="toc-text">1）在nginx.conf的server块里写入upstream配置块，并修改proxy_pass参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）重新载入nginx-conf-1"><span class="toc-number">4.2.2.</span> <span class="toc-text">2）重新载入nginx.conf</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3）多次访问Nginx代理服务器"><span class="toc-number">4.2.3.</span> <span class="toc-text">3）多次访问Nginx代理服务器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-负载均衡权重测试——权重算法"><span class="toc-number">4.3.</span> <span class="toc-text">3.负载均衡权重测试——权重算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）在nginx-conf的server块里修改upstream配置块，在其中server参数后添加weight参数"><span class="toc-number">4.3.1.</span> <span class="toc-text">1）在nginx.conf的server块里修改upstream配置块，在其中server参数后添加weight参数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#剩下的两种算法持续更新哦……"><span class="toc-number">5.</span> <span class="toc-text">剩下的两种算法持续更新哦……</span></a></li></ol>
                     </div>
                 </span>
             </div>

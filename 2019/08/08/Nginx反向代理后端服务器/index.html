@@ -6,26 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Nginx编译安装(附脚本) | 菜鹌鹑</title>
+  <title>LNMP WEB架构构建 | 菜鹌鹑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="下载Nginx-1.15.0.tar.gz源码包12cd /home/quailwget -c http://mirrors.sohu.com/nginx/nginx-1.15.0.tar.gz  解压nginx-1.15.0.tar.gz源码包1tar zxf nginx-1.15.0.tar.gz">
-<meta name="keywords" content="Nginx,编译安装">
+  <meta name="description" content="知识速览LNMP WEB架构处理请求过程 Nginx为一款高性能Web服务器，本身是不能处理PHP的，当接收到客户端浏览器发送HTTP Request请求时,Nginx服务器响应并处理web请求，静态资源CSS、图片、视频、TXT等静态文件请求，Nginx服务器可以直接处理并回应。 Nginx并不能直接处理PHP页面，PHP动态页面请求Nginx不能直接处理，Nginx服务器会将PHP网页脚本通过">
+<meta name="keywords" content="Nginx,反向代理,LNMP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nginx编译安装(附脚本)">
-<meta property="og:url" content="http://yoursite.com/2019/08/08/Nginx编译安装(附脚本)/index.html">
+<meta property="og:title" content="LNMP WEB架构构建">
+<meta property="og:url" content="http://yoursite.com/2019/08/08/Nginx反向代理后端服务器/index.html">
 <meta property="og:site_name" content="菜鹌鹑">
-<meta property="og:description" content="下载Nginx-1.15.0.tar.gz源码包12cd /home/quailwget -c http://mirrors.sohu.com/nginx/nginx-1.15.0.tar.gz  解压nginx-1.15.0.tar.gz源码包1tar zxf nginx-1.15.0.tar.gz">
+<meta property="og:description" content="知识速览LNMP WEB架构处理请求过程 Nginx为一款高性能Web服务器，本身是不能处理PHP的，当接收到客户端浏览器发送HTTP Request请求时,Nginx服务器响应并处理web请求，静态资源CSS、图片、视频、TXT等静态文件请求，Nginx服务器可以直接处理并回应。 Nginx并不能直接处理PHP页面，PHP动态页面请求Nginx不能直接处理，Nginx服务器会将PHP网页脚本通过">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/WjLXh1tReyGPzmQ.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/VafIgnKrGdQBLW5.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/97SfReLZBXHj5tV.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/9B3lT4kKXjhrNwz.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/B2x6aL4GfHkiIr1.png">
-<meta property="og:updated_time" content="2019-08-08T06:19:27.183Z">
+<meta property="og:image" content="https://i.loli.net/2019/08/08/snJiG92lIMANHrY.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/08/NzKwfD5LdqQWtkV.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/08/fw59PWJyOKjTYG2.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/08/Aa8PWD4YjxBEdeI.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/08/SprGPmDkMbJuwly.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/08/cDFuigxT7UKR6fI.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/08/VU8NqgT2iJYrdc4.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/08/tJTDgPElZUrAcfe.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/08/jdbVnhx2TZYuR7J.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/08/52TxYFsPGvr1J9j.png">
+<meta property="og:updated_time" content="2019-08-08T08:38:48.780Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nginx编译安装(附脚本)">
-<meta name="twitter:description" content="下载Nginx-1.15.0.tar.gz源码包12cd /home/quailwget -c http://mirrors.sohu.com/nginx/nginx-1.15.0.tar.gz  解压nginx-1.15.0.tar.gz源码包1tar zxf nginx-1.15.0.tar.gz">
-<meta name="twitter:image" content="https://i.loli.net/2019/08/08/WjLXh1tReyGPzmQ.png">
+<meta name="twitter:title" content="LNMP WEB架构构建">
+<meta name="twitter:description" content="知识速览LNMP WEB架构处理请求过程 Nginx为一款高性能Web服务器，本身是不能处理PHP的，当接收到客户端浏览器发送HTTP Request请求时,Nginx服务器响应并处理web请求，静态资源CSS、图片、视频、TXT等静态文件请求，Nginx服务器可以直接处理并回应。 Nginx并不能直接处理PHP页面，PHP动态页面请求Nginx不能直接处理，Nginx服务器会将PHP网页脚本通过">
+<meta name="twitter:image" content="https://i.loli.net/2019/08/08/snJiG92lIMANHrY.png">
   
     <link rel="alternative" href="/atom.xml" title="菜鹌鹑" type="application/atom+xml">
   
@@ -147,20 +152,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Nginx编译安装(附脚本)" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Nginx反向代理后端服务器" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Nginx编译安装(附脚本)
+      LNMP WEB架构构建
     </h1>
   
 
         
-        <a href="/2019/08/08/Nginx编译安装(附脚本)/" class="archive-article-date">
-  	<time datetime="2019-08-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
+        <a href="/2019/08/08/Nginx反向代理后端服务器/" class="archive-article-date">
+  	<time datetime="2019-08-07T16:04:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
 </a>
         
       </header>
@@ -174,7 +179,7 @@
 		<div id="toc-article" class="toc-article">
 			<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 			<strong class="toc-title">目录</strong>
-			   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#下载Nginx-1-15-0-tar-gz源码包"><span class="toc-number">1.</span> <span class="toc-text">下载Nginx-1.15.0.tar.gz源码包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解压nginx-1-15-0-tar-gz源码包"><span class="toc-number">2.</span> <span class="toc-text">解压nginx-1.15.0.tar.gz源码包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装Nginx"><span class="toc-number">3.</span> <span class="toc-text">安装Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#预编译"><span class="toc-number">3.1.</span> <span class="toc-text">预编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装"><span class="toc-number">3.2.</span> <span class="toc-text">编译安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#启动Nginx主程序"><span class="toc-number">4.</span> <span class="toc-text">启动Nginx主程序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#进行访问测试"><span class="toc-number">5.</span> <span class="toc-text">进行访问测试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Nginx自动安装脚本"><span class="toc-number">6.</span> <span class="toc-text">Nginx自动安装脚本</span></a></li></ol>
+			   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#知识速览"><span class="toc-number">1.</span> <span class="toc-text">知识速览</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#LNMP-WEB架构处理请求过程"><span class="toc-number">1.1.</span> <span class="toc-text">LNMP WEB架构处理请求过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CGI、FAST-CGI、PHP-CGI、PHP-FPM概念总结："><span class="toc-number">1.2.</span> <span class="toc-text">CGI、FAST-CGI、PHP-CGI、PHP-FPM概念总结：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实验准备"><span class="toc-number">2.</span> <span class="toc-text">实验准备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#虚拟机IP配置"><span class="toc-number">3.</span> <span class="toc-text">虚拟机IP配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置Nginx代理服务器"><span class="toc-number">4.</span> <span class="toc-text">配置Nginx代理服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装Nginx"><span class="toc-number">4.1.</span> <span class="toc-text">编译安装Nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置防火墙"><span class="toc-number">4.2.</span> <span class="toc-text">配置防火墙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启动Nginx，并访问，查看回显："><span class="toc-number">4.3.</span> <span class="toc-text">启动Nginx，并访问，查看回显：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置后端服务器"><span class="toc-number">5.</span> <span class="toc-text">配置后端服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装PHP-5-6-8"><span class="toc-number">5.1.</span> <span class="toc-text">编译安装PHP-5.6.8</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#整合PHP和Nginx"><span class="toc-number">6.</span> <span class="toc-text">整合PHP和Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#修改Nginx配置文件"><span class="toc-number">6.1.</span> <span class="toc-text">修改Nginx配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注释Nginx配置文件"><span class="toc-number">6.2.</span> <span class="toc-text">注释Nginx配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#检测配置文件是否正确"><span class="toc-number">6.3.</span> <span class="toc-text">检测配置文件是否正确</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重新读取配置文件"><span class="toc-number">6.4.</span> <span class="toc-text">重新读取配置文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#访问测试"><span class="toc-number">7.</span> <span class="toc-text">访问测试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#访问界面"><span class="toc-number">7.1.</span> <span class="toc-text">访问界面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内心独白"><span class="toc-number">7.2.</span> <span class="toc-text">内心独白</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#冷静分析"><span class="toc-number">7.3.</span> <span class="toc-text">冷静分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#我靠！冷静个屁啊！哭晕了都……"><span class="toc-number">7.3.1.</span> <span class="toc-text">我靠！冷静个屁啊！哭晕了都……</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开始检查"><span class="toc-number">7.3.2.</span> <span class="toc-text">开始检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#矛头指向php后端服务器"><span class="toc-number">7.3.3.</span> <span class="toc-text">矛头指向php后端服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#检查php-fpm配置文件"><span class="toc-number">7.3.4.</span> <span class="toc-text">检查php-fpm配置文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重新访问www-test-com-index-php"><span class="toc-number">7.4.</span> <span class="toc-text">重新访问www.test.com/index.php</span></a></li></ol></li></ol>
 			 </div>
 	   <script type="text/javascript">
 		function showToc(){
@@ -194,37 +199,69 @@
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="下载Nginx-1-15-0-tar-gz源码包"><a href="#下载Nginx-1-15-0-tar-gz源码包" class="headerlink" title="下载Nginx-1.15.0.tar.gz源码包"></a>下载Nginx-1.15.0.tar.gz源码包</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/quail</span><br><span class="line">wget -c http://mirrors.sohu.com/nginx/nginx-1.15.0.tar.gz</span><br></pre></td></tr></table></figure>
+        <h1 id="知识速览"><a href="#知识速览" class="headerlink" title="知识速览"></a>知识速览</h1><h2 id="LNMP-WEB架构处理请求过程"><a href="#LNMP-WEB架构处理请求过程" class="headerlink" title="LNMP WEB架构处理请求过程"></a>LNMP WEB架构处理请求过程</h2><ol>
+<li>Nginx为一款<strong>高性能Web服务器，本身是不能处理PHP</strong>的，当接收到客户端浏览器发送HTTP Request请求时,Nginx服务器响应并处理web请求，静态资源CSS、图片、视频、TXT等<strong>静态文件请求，Nginx服务器可以直接处理并回应。</strong></li>
+<li>Nginx并<strong>不能直接处理PHP页面，PHP动态页面请求Nginx不能直接处理</strong>，Nginx服务器会<strong>将PHP网页脚本通过接口传输协议（网关协议）PHP-FCGI（Fast-CGI）传输给PHP-FPM（PHP进程管理程序）</strong> </li>
+<li><strong>PHP-FPM不做处理</strong>，然后PHP-FPM调用<strong>PHP解析器进程</strong>，PHP解析器进程解析PHP脚本信息，处理PHP页面。<strong>PHP解析器进程可以启动多个，可以实现多进行并发执行。</strong></li>
+<li>PHP解释器将解析后的脚本返回到PHP-FPM，PHP-FPM再通过Fast-CGI的形式将脚本信息传送给Nginx,Nginx服务器再 通过HTTP Response的形式传送给浏览器,浏览器再进行解析与渲染然后进行呈现</li>
+</ol>
+<h2 id="CGI、FAST-CGI、PHP-CGI、PHP-FPM概念总结："><a href="#CGI、FAST-CGI、PHP-CGI、PHP-FPM概念总结：" class="headerlink" title="CGI、FAST-CGI、PHP-CGI、PHP-FPM概念总结："></a>CGI、FAST-CGI、PHP-CGI、PHP-FPM概念总结：</h2><ul>
+<li>CGI：Common gateway interface 通用网关接口；   </li>
+<li>FastCGI：Fast common gateway interface 快速通用网关接口；   </li>
+<li>PHP-FPM：PHP-Fast CGI Process Manager CGI，是FastCGII协议的实现并且带进程管理器；</li>
+</ul>
+<p>PHP-FPM是PHPCGI进程管理器，可以有效控制内存和进程、可以平滑重载PHP配置。PHP-CGI(PHP解析器进程)是解析PHP代码的程序，属于PHP程序解释器，只负责解析请求，不负责进程管理。</p>
+<h1 id="实验准备"><a href="#实验准备" class="headerlink" title="实验准备"></a>实验准备</h1><ol>
+<li>Centos 7.4 两台</li>
+<li>Nginx-1.16.0.tar.gz</li>
+<li>php-5.6.8.tar.bz2 </li>
+<li>mariadb mariadb-server</li>
+</ol>
+<h1 id="虚拟机IP配置"><a href="#虚拟机IP配置" class="headerlink" title="虚拟机IP配置"></a>虚拟机IP配置</h1><ul>
+<li><p>Nginx代理服务器IP：192.168.249.103</p>
+</li>
+<li><p>后端服务器IP：192.168.249.104</p>
+</li>
+</ul>
+<h1 id="配置Nginx代理服务器"><a href="#配置Nginx代理服务器" class="headerlink" title="配置Nginx代理服务器"></a>配置Nginx代理服务器</h1><h2 id="编译安装Nginx"><a href="#编译安装Nginx" class="headerlink" title="编译安装Nginx"></a>编译安装Nginx</h2><p><strong><a href="https://quail2333.github.io/2019/08/08/Nginx%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85(%E9%99%84%E8%84%9A%E6%9C%AC)/" target="_blank" rel="noopener">请戳我！</a></strong></p>
+<h2 id="配置防火墙"><a href="#配置防火墙" class="headerlink" title="配置防火墙"></a>配置防火墙</h2><p>如果对防火墙有一定的了解，可以选择自行配置出入站规则，如果不了解防火墙，建议直接关闭</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service firewalld stop</span><br></pre></td></tr></table></figure>
 
-<h1 id="解压nginx-1-15-0-tar-gz源码包"><a href="#解压nginx-1-15-0-tar-gz源码包" class="headerlink" title="解压nginx-1.15.0.tar.gz源码包"></a>解压nginx-1.15.0.tar.gz源码包</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar zxf nginx-1.15.0.tar.gz</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/08/08/snJiG92lIMANHrY.png" alt="1565195036288.png"></p>
+<h2 id="启动Nginx，并访问，查看回显："><a href="#启动Nginx，并访问，查看回显：" class="headerlink" title="启动Nginx，并访问，查看回显："></a>启动Nginx，并访问，查看回显：</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx</span><br><span class="line">ps -ef |grep nginx</span><br></pre></td></tr></table></figure>
 
-<a id="more"></a>
+<p><img src="https://i.loli.net/2019/08/08/NzKwfD5LdqQWtkV.png" alt="1565194891383.png"></p>
+<p>打开浏览器，访问192.168.249.103</p>
+<p><img src="https://i.loli.net/2019/08/08/fw59PWJyOKjTYG2.png" alt="1565195060297.png"></p>
+<p><strong>哇！好神奇啊！竟然能访问了呢~</strong></p>
+<h1 id="配置后端服务器"><a href="#配置后端服务器" class="headerlink" title="配置后端服务器"></a>配置后端服务器</h1><h2 id="编译安装PHP-5-6-8"><a href="#编译安装PHP-5-6-8" class="headerlink" title="编译安装PHP-5.6.8"></a>编译安装PHP-5.6.8</h2><p><strong><a href="https://quail2333.github.io/2019/08/08/PHP-5.6.8%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85(%E9%99%84%E8%84%9A%E6%9C%AC)/" target="_blank" rel="noopener">请戳我！</a></strong></p>
+<h1 id="整合PHP和Nginx"><a href="#整合PHP和Nginx" class="headerlink" title="整合PHP和Nginx"></a>整合PHP和Nginx</h1><h2 id="修改Nginx配置文件"><a href="#修改Nginx配置文件" class="headerlink" title="修改Nginx配置文件"></a>修改Nginx配置文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/nginx/conf/nginx.conf</span><br></pre></td></tr></table></figure>
 
-<h1 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h1><h2 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd nginx-1.15.0</span><br><span class="line">./configure</span><br></pre></td></tr></table></figure>
+<p>将配置文件改成以下内容，：x保存并退出</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application/octet-stream;</span><br><span class="line">    sendfile        on;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  www.test.com;</span><br><span class="line">        error_page   500 502 503 504  /50x.html;</span><br><span class="line">        location = /50x.html &#123;</span><br><span class="line">            root   html;</span><br><span class="line">        &#125;</span><br><span class="line">        location ~ \.php$ &#123;</span><br><span class="line">            root           /var/www/html;</span><br><span class="line">            fastcgi_pass   192.168.249.104:9000;</span><br><span class="line">            fastcgi_index  index.php;</span><br><span class="line">            fastcgi_param  SCRIPT_FILENAME /var/www/html$fastcgi_script_name;</span><br><span class="line">            include        fastcgi_params;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://i.loli.net/2019/08/08/WjLXh1tReyGPzmQ.png" alt="1565228795343.png"></p>
-<p>嘤嘤嘤？？报错了？</p>
-<p>查看报错信息：<strong>error: the HTTP rewrite module requires the PCRE library.</strong>原因是请求重写模块的PCRE开发没有安装或者没有正确安装，我们对其进行重新安装。</p>
-<p>所以我们安装PCRE</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y isntall pcre pcre-devel</span><br></pre></td></tr></table></figure>
+<h2 id="注释Nginx配置文件"><a href="#注释Nginx配置文件" class="headerlink" title="注释Nginx配置文件"></a>注释Nginx配置文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application/octet-stream;</span><br><span class="line">    sendfile        on;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  localhost;</span><br><span class="line">        error_page   500 502 503 504  /50x.html;</span><br><span class="line">        location = /50x.html &#123;</span><br><span class="line">            root   html;</span><br><span class="line">        &#125;</span><br><span class="line">        location ~ \.php$ &#123;</span><br><span class="line">            root           /var/www/html;　　#指定网站根目录</span><br><span class="line">            fastcgi_pass   127.0.0.1:9000;　　#指定fastcgi转发端口.Nginx通过此端口与php进行交互</span><br><span class="line">            fastcgi_index  index.php;　　#指定默认索引页（首页）</span><br><span class="line">            fastcgi_param  SCRIPT_FILENAME /var/www/html$fastcgi_script_name;　　</span><br><span class="line">　　　　　　　　#脚本文件请求的路径，这个配置的意思是在浏览器中访问的.php文件，实际读取的是 $document_root(网站根目录：/var/www/html)下的.php文件</span><br><span class="line">　　　　　　　　#也就是说当访问127.0.0.1/index.php的时候，需要读取网站根目录下面的index.php文件，如果没有配置这一配置项时，nginx不会去网站根目录下访问.php文件，所以返回空白</span><br><span class="line">            include        fastcgi_params;　　#调用fastcgi 的变量文件。可以nginx中配置文件里面看到（/usr/local/nginx/conf/）,支持上一条参数</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>重新预编译：</p>
-<p><img src="https://i.loli.net/2019/08/08/VafIgnKrGdQBLW5.png" alt="1565229044678.png"></p>
-<p>我去！又来？！</p>
-<p>查看报错信息：<strong>error: the HTTP gzip module requires the zlib library.</strong>这次是因为压缩模块没有被安装或正确安装，所以我们安装zlip和zlip-devel。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install zlib zlib-devel</span><br></pre></td></tr></table></figure>
+<h2 id="检测配置文件是否正确"><a href="#检测配置文件是否正确" class="headerlink" title="检测配置文件是否正确"></a>检测配置文件是否正确</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx -t</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://i.loli.net/2019/08/08/97SfReLZBXHj5tV.png" alt="1565229120705.png"></p>
-<p>我去……可算是ok了……</p>
-<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make -j4 &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/08/08/Aa8PWD4YjxBEdeI.png" alt="1565247058417.png"></p>
+<h2 id="重新读取配置文件"><a href="#重新读取配置文件" class="headerlink" title="重新读取配置文件"></a>重新读取配置文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx -s reload</span><br></pre></td></tr></table></figure>
 
-<h1 id="启动Nginx主程序"><a href="#启动Nginx主程序" class="headerlink" title="启动Nginx主程序"></a>启动Nginx主程序</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
+<h1 id="访问测试"><a href="#访问测试" class="headerlink" title="访问测试"></a>访问测试</h1><h2 id="访问界面"><a href="#访问界面" class="headerlink" title="访问界面"></a>访问界面</h2><p><img src="https://i.loli.net/2019/08/08/SprGPmDkMbJuwly.png" alt="1565252338332.png"></p>
+<h2 id="内心独白"><a href="#内心独白" class="headerlink" title="内心独白"></a>内心独白</h2><p>我靠！这是咋了？防火墙我记得关了啊，selinux我记得也关了啊，配置文件应该没有错误啊！怎么会这样？一边想，一边把锅缓缓背在身上</p>
+<h2 id="冷静分析"><a href="#冷静分析" class="headerlink" title="冷静分析"></a>冷静分析</h2><h3 id="我靠！冷静个屁啊！哭晕了都……"><a href="#我靠！冷静个屁啊！哭晕了都……" class="headerlink" title="我靠！冷静个屁啊！哭晕了都……"></a>我靠！冷静个屁啊！哭晕了都……</h3><h3 id="开始检查"><a href="#开始检查" class="headerlink" title="开始检查"></a>开始检查</h3><p><img src="https://i.loli.net/2019/08/08/cDFuigxT7UKR6fI.png" alt="1565252812043.png"></p>
+<p>发现原来是连接被拒绝……</p>
+<h3 id="矛头指向php后端服务器"><a href="#矛头指向php后端服务器" class="headerlink" title="矛头指向php后端服务器"></a>矛头指向php后端服务器</h3><p><img src="https://i.loli.net/2019/08/08/VU8NqgT2iJYrdc4.png" alt="1565252892446.png"></p>
+<p>selinux和firewalld都处于关闭状态（微笑</p>
+<p>要不……去看看配置文件？</p>
+<h3 id="检查php-fpm配置文件"><a href="#检查php-fpm配置文件" class="headerlink" title="检查php-fpm配置文件"></a>检查php-fpm配置文件</h3><p><img src="https://i.loli.net/2019/08/08/tJTDgPElZUrAcfe.png" alt="1565252991924.png"></p>
+<p>这里有个端口监听？监听的127.0.0.1？茅厕顿开！！原来这里php-fpm只监听来自本地的请求！ok！改掉！</p>
+<p>修改成ens网卡IP地址后，重启服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service php-fpm restart</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://i.loli.net/2019/08/08/9B3lT4kKXjhrNwz.png" alt="1565229431774.png"></p>
-<h1 id="进行访问测试"><a href="#进行访问测试" class="headerlink" title="进行访问测试"></a>进行访问测试</h1><p><img src="https://i.loli.net/2019/08/08/B2x6aL4GfHkiIr1.png" alt="1565229467749.png"></p>
-<p>至此，nginx编译安装完成！</p>
-<h1 id="Nginx自动安装脚本"><a href="#Nginx自动安装脚本" class="headerlink" title="Nginx自动安装脚本"></a>Nginx自动安装脚本</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line"><span class="meta">#</span>2019-08-08</span><br><span class="line"><span class="meta">#</span>auto check and install NGINX</span><br><span class="line"><span class="meta">#</span>by Quail</span><br><span class="line"><span class="meta">#</span>###########################################</span><br><span class="line">Nginx_stat=`find / -name nginx | grep sbin`</span><br><span class="line"></span><br><span class="line">function run_nginx()</span><br><span class="line">&#123;</span><br><span class="line">	pkill httpd</span><br><span class="line">	pkill nginx</span><br><span class="line">	/usr/local/nginx/sbin/nginx</span><br><span class="line">&#125;</span><br><span class="line">function install_nginx()</span><br><span class="line">&#123;</span><br><span class="line">	cd /home</span><br><span class="line">	wget -c http://mirrors.sohu.com/nginx/nginx-1.15.0.tar.gz</span><br><span class="line">	tar zxf nginx-1.15.0.tar.gz</span><br><span class="line">	cd nginx-1.15.0</span><br><span class="line">	./configure</span><br><span class="line">	make -j4 &amp;&amp; make install</span><br><span class="line">&#125;</span><br><span class="line">function Dependency_packages()</span><br><span class="line">&#123;</span><br><span class="line">	yum -y install gcc gcc-c++ kernel-devel pcre pcre-devel zlib zlib-devel openssl</span><br><span class="line">&#125;</span><br><span class="line">if [ Nginx_stat == '/usr/local/nginx/sbin/nginx' ];then</span><br><span class="line">	run_nginx</span><br><span class="line">	echo 'Nginx is exist and is running!'</span><br><span class="line">	exit 1</span><br><span class="line">else</span><br><span class="line">	Dependency_packages</span><br><span class="line">	install_nginx</span><br><span class="line">	run_nginx</span><br><span class="line">	echo 'NGINX installation is OK ! And NGINX is running!'</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-
+<p><img src="https://i.loli.net/2019/08/08/jdbVnhx2TZYuR7J.png" alt="1565253159187.png"></p>
+<h2 id="重新访问www-test-com-index-php"><a href="#重新访问www-test-com-index-php" class="headerlink" title="重新访问www.test.com/index.php"></a>重新访问<a href="http://www.test.com/index.php" target="_blank" rel="noopener">www.test.com/index.php</a></h2><p><img src="https://i.loli.net/2019/08/08/52TxYFsPGvr1J9j.png" alt="1565253222477.png"></p>
+<p>哇！我可真是个小机灵鬼……</p>
 
       
 
@@ -273,7 +310,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编译安装</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">反向代理</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">LNMP</a>
         		</li>
       		
 		</ul>
@@ -329,7 +370,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/08/Nginx编译安装(附脚本)/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/08/Nginx反向代理后端服务器/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -343,18 +384,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/08/Nginx反向代理后端服务器/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/08/Nginx代理和负载均衡实验/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          LNMP WEB架构构建
+          (no title)
         
       </div>
     </a>
   
   
-    <a href="/2019/08/08/PHP-5.6.8编译安装(附脚本)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">PHP-5.6.8编译安装(附脚本)</div>
+    <a href="/2019/08/08/Nginx编译安装(附脚本)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Nginx编译安装(附脚本)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -381,7 +422,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#下载Nginx-1-15-0-tar-gz源码包"><span class="toc-number">1.</span> <span class="toc-text">下载Nginx-1.15.0.tar.gz源码包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解压nginx-1-15-0-tar-gz源码包"><span class="toc-number">2.</span> <span class="toc-text">解压nginx-1.15.0.tar.gz源码包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装Nginx"><span class="toc-number">3.</span> <span class="toc-text">安装Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#预编译"><span class="toc-number">3.1.</span> <span class="toc-text">预编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装"><span class="toc-number">3.2.</span> <span class="toc-text">编译安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#启动Nginx主程序"><span class="toc-number">4.</span> <span class="toc-text">启动Nginx主程序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#进行访问测试"><span class="toc-number">5.</span> <span class="toc-text">进行访问测试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Nginx自动安装脚本"><span class="toc-number">6.</span> <span class="toc-text">Nginx自动安装脚本</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#知识速览"><span class="toc-number">1.</span> <span class="toc-text">知识速览</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#LNMP-WEB架构处理请求过程"><span class="toc-number">1.1.</span> <span class="toc-text">LNMP WEB架构处理请求过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CGI、FAST-CGI、PHP-CGI、PHP-FPM概念总结："><span class="toc-number">1.2.</span> <span class="toc-text">CGI、FAST-CGI、PHP-CGI、PHP-FPM概念总结：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实验准备"><span class="toc-number">2.</span> <span class="toc-text">实验准备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#虚拟机IP配置"><span class="toc-number">3.</span> <span class="toc-text">虚拟机IP配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置Nginx代理服务器"><span class="toc-number">4.</span> <span class="toc-text">配置Nginx代理服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装Nginx"><span class="toc-number">4.1.</span> <span class="toc-text">编译安装Nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置防火墙"><span class="toc-number">4.2.</span> <span class="toc-text">配置防火墙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启动Nginx，并访问，查看回显："><span class="toc-number">4.3.</span> <span class="toc-text">启动Nginx，并访问，查看回显：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置后端服务器"><span class="toc-number">5.</span> <span class="toc-text">配置后端服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装PHP-5-6-8"><span class="toc-number">5.1.</span> <span class="toc-text">编译安装PHP-5.6.8</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#整合PHP和Nginx"><span class="toc-number">6.</span> <span class="toc-text">整合PHP和Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#修改Nginx配置文件"><span class="toc-number">6.1.</span> <span class="toc-text">修改Nginx配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注释Nginx配置文件"><span class="toc-number">6.2.</span> <span class="toc-text">注释Nginx配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#检测配置文件是否正确"><span class="toc-number">6.3.</span> <span class="toc-text">检测配置文件是否正确</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重新读取配置文件"><span class="toc-number">6.4.</span> <span class="toc-text">重新读取配置文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#访问测试"><span class="toc-number">7.</span> <span class="toc-text">访问测试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#访问界面"><span class="toc-number">7.1.</span> <span class="toc-text">访问界面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内心独白"><span class="toc-number">7.2.</span> <span class="toc-text">内心独白</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#冷静分析"><span class="toc-number">7.3.</span> <span class="toc-text">冷静分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#我靠！冷静个屁啊！哭晕了都……"><span class="toc-number">7.3.1.</span> <span class="toc-text">我靠！冷静个屁啊！哭晕了都……</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开始检查"><span class="toc-number">7.3.2.</span> <span class="toc-text">开始检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#矛头指向php后端服务器"><span class="toc-number">7.3.3.</span> <span class="toc-text">矛头指向php后端服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#检查php-fpm配置文件"><span class="toc-number">7.3.4.</span> <span class="toc-text">检查php-fpm配置文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重新访问www-test-com-index-php"><span class="toc-number">7.4.</span> <span class="toc-text">重新访问www.test.com/index.php</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

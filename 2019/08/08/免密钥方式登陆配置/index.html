@@ -6,26 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Nginx编译安装(附脚本) | 菜鹌鹑</title>
+  <title>免密钥方式连接ssh | 菜鹌鹑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="下载Nginx-1.15.0.tar.gz源码包12cd /home/quailwget -c http://mirrors.sohu.com/nginx/nginx-1.15.0.tar.gz  解压nginx-1.15.0.tar.gz源码包1tar zxf nginx-1.15.0.tar.gz">
-<meta name="keywords" content="Nginx,编译安装">
+  <meta name="description" content="使用 ssh-keygen 生成公钥和私钥1ssh-keygen  默认三次回车 1234567891011121314The key fingerprint is:SHA256:mgyB4mVBPdMaPPbYZbXDJzycMZ6nOmTT9RsetKFtDOY root@localhost.localdomainThe key&amp;apos;s randomart image is:+---[R">
+<meta name="keywords" content="ssh,Centos系统管理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nginx编译安装(附脚本)">
-<meta property="og:url" content="http://yoursite.com/2019/08/08/Nginx编译安装(附脚本)/index.html">
+<meta property="og:title" content="免密钥方式连接ssh">
+<meta property="og:url" content="http://yoursite.com/2019/08/08/免密钥方式登陆配置/index.html">
 <meta property="og:site_name" content="菜鹌鹑">
-<meta property="og:description" content="下载Nginx-1.15.0.tar.gz源码包12cd /home/quailwget -c http://mirrors.sohu.com/nginx/nginx-1.15.0.tar.gz  解压nginx-1.15.0.tar.gz源码包1tar zxf nginx-1.15.0.tar.gz">
+<meta property="og:description" content="使用 ssh-keygen 生成公钥和私钥1ssh-keygen  默认三次回车 1234567891011121314The key fingerprint is:SHA256:mgyB4mVBPdMaPPbYZbXDJzycMZ6nOmTT9RsetKFtDOY root@localhost.localdomainThe key&amp;apos;s randomart image is:+---[R">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/WjLXh1tReyGPzmQ.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/VafIgnKrGdQBLW5.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/97SfReLZBXHj5tV.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/9B3lT4kKXjhrNwz.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/B2x6aL4GfHkiIr1.png">
-<meta property="og:updated_time" content="2019-08-08T06:19:27.183Z">
+<meta property="og:updated_time" content="2019-08-08T07:56:28.167Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nginx编译安装(附脚本)">
-<meta name="twitter:description" content="下载Nginx-1.15.0.tar.gz源码包12cd /home/quailwget -c http://mirrors.sohu.com/nginx/nginx-1.15.0.tar.gz  解压nginx-1.15.0.tar.gz源码包1tar zxf nginx-1.15.0.tar.gz">
-<meta name="twitter:image" content="https://i.loli.net/2019/08/08/WjLXh1tReyGPzmQ.png">
+<meta name="twitter:title" content="免密钥方式连接ssh">
+<meta name="twitter:description" content="使用 ssh-keygen 生成公钥和私钥1ssh-keygen  默认三次回车 1234567891011121314The key fingerprint is:SHA256:mgyB4mVBPdMaPPbYZbXDJzycMZ6nOmTT9RsetKFtDOY root@localhost.localdomainThe key&amp;apos;s randomart image is:+---[R">
   
     <link rel="alternative" href="/atom.xml" title="菜鹌鹑" type="application/atom+xml">
   
@@ -147,19 +141,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Nginx编译安装(附脚本)" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-免密钥方式登陆配置" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Nginx编译安装(附脚本)
+      免密钥方式连接ssh
     </h1>
   
 
         
-        <a href="/2019/08/08/Nginx编译安装(附脚本)/" class="archive-article-date">
+        <a href="/2019/08/08/免密钥方式登陆配置/" class="archive-article-date">
   	<time datetime="2019-08-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
 </a>
         
@@ -174,7 +168,7 @@
 		<div id="toc-article" class="toc-article">
 			<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 			<strong class="toc-title">目录</strong>
-			   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#下载Nginx-1-15-0-tar-gz源码包"><span class="toc-number">1.</span> <span class="toc-text">下载Nginx-1.15.0.tar.gz源码包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解压nginx-1-15-0-tar-gz源码包"><span class="toc-number">2.</span> <span class="toc-text">解压nginx-1.15.0.tar.gz源码包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装Nginx"><span class="toc-number">3.</span> <span class="toc-text">安装Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#预编译"><span class="toc-number">3.1.</span> <span class="toc-text">预编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装"><span class="toc-number">3.2.</span> <span class="toc-text">编译安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#启动Nginx主程序"><span class="toc-number">4.</span> <span class="toc-text">启动Nginx主程序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#进行访问测试"><span class="toc-number">5.</span> <span class="toc-text">进行访问测试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Nginx自动安装脚本"><span class="toc-number">6.</span> <span class="toc-text">Nginx自动安装脚本</span></a></li></ol>
+			   <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-ssh-keygen-生成公钥和私钥"><span class="toc-number">1.</span> <span class="toc-text">使用 ssh-keygen 生成公钥和私钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看-root-ssh-目录，发现多了两个文件"><span class="toc-number">2.</span> <span class="toc-text">查看/root/.ssh/目录，发现多了两个文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-ssh-copy-id-命令发送公钥至指定主机"><span class="toc-number">3.</span> <span class="toc-text">使用 ssh-copy-id 命令发送公钥至指定主机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#现在尝试-ssh-l-IP-进行免密登陆"><span class="toc-number">4.</span> <span class="toc-text">现在尝试 ssh -l IP 进行免密登陆</span></a></li></ol>
 			 </div>
 	   <script type="text/javascript">
 		function showToc(){
@@ -194,38 +188,16 @@
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="下载Nginx-1-15-0-tar-gz源码包"><a href="#下载Nginx-1-15-0-tar-gz源码包" class="headerlink" title="下载Nginx-1.15.0.tar.gz源码包"></a>下载Nginx-1.15.0.tar.gz源码包</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/quail</span><br><span class="line">wget -c http://mirrors.sohu.com/nginx/nginx-1.15.0.tar.gz</span><br></pre></td></tr></table></figure>
+        <h2 id="使用-ssh-keygen-生成公钥和私钥"><a href="#使用-ssh-keygen-生成公钥和私钥" class="headerlink" title="使用 ssh-keygen 生成公钥和私钥"></a>使用 ssh-keygen 生成公钥和私钥</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
 
-<h1 id="解压nginx-1-15-0-tar-gz源码包"><a href="#解压nginx-1-15-0-tar-gz源码包" class="headerlink" title="解压nginx-1.15.0.tar.gz源码包"></a>解压nginx-1.15.0.tar.gz源码包</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar zxf nginx-1.15.0.tar.gz</span><br></pre></td></tr></table></figure>
+<p>默认三次回车</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:mgyB4mVBPdMaPPbYZbXDJzycMZ6nOmTT9RsetKFtDOY root@localhost.localdomain</span><br><span class="line">The key&apos;s randomart image is:</span><br><span class="line">+---[RSA 2048]----+</span><br><span class="line">|  .oo .   .+     |</span><br><span class="line">|   ..O . o= *    |</span><br><span class="line">|. .oo X o  % * o |</span><br><span class="line">|..o  + o  . @ B o|</span><br><span class="line">| .  .   S+ o E O |</span><br><span class="line">|     o oo o   o +|</span><br><span class="line">|      +  o     o |</span><br><span class="line">|          .      |</span><br><span class="line">|                 |</span><br><span class="line">+----[SHA256]-----+</span><br></pre></td></tr></table></figure>
 
-<a id="more"></a>
+<h2 id="查看-root-ssh-目录，发现多了两个文件"><a href="#查看-root-ssh-目录，发现多了两个文件" class="headerlink" title="查看/root/.ssh/目录，发现多了两个文件"></a>查看/root/.ssh/目录，发现多了两个文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ll .ssh/</span><br><span class="line">total 12</span><br><span class="line">-rw------- 1 root root 1679 Aug  1 00:46 id_rsa</span><br><span class="line">-rw-r--r-- 1 root root  408 Aug  1 00:46 id_rsa.pub</span><br></pre></td></tr></table></figure>
 
-<h1 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h1><h2 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd nginx-1.15.0</span><br><span class="line">./configure</span><br></pre></td></tr></table></figure>
+<h2 id="使用-ssh-copy-id-命令发送公钥至指定主机"><a href="#使用-ssh-copy-id-命令发送公钥至指定主机" class="headerlink" title="使用 ssh-copy-id 命令发送公钥至指定主机"></a>使用 ssh-copy-id 命令发送公钥至指定主机</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ssh-copy-id -i /root/.ssh/</span><br><span class="line">id_rsa       id_rsa.pub   known_hosts  </span><br><span class="line">[root@localhost ~]# ssh-copy-id -i /root/.ssh/id_rsa.pub 192.168.249.132</span><br><span class="line">/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/root/.ssh/id_rsa.pub"</span><br><span class="line">/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed</span><br><span class="line">/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys</span><br><span class="line">root@192.168.249.132's password: </span><br><span class="line"></span><br><span class="line">Number of key(s) added: 1</span><br><span class="line"></span><br><span class="line">Now try logging into the machine, with:   "ssh '192.168.249.132'"</span><br><span class="line">and check to make sure that only the key(s) you wanted were added.</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://i.loli.net/2019/08/08/WjLXh1tReyGPzmQ.png" alt="1565228795343.png"></p>
-<p>嘤嘤嘤？？报错了？</p>
-<p>查看报错信息：<strong>error: the HTTP rewrite module requires the PCRE library.</strong>原因是请求重写模块的PCRE开发没有安装或者没有正确安装，我们对其进行重新安装。</p>
-<p>所以我们安装PCRE</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y isntall pcre pcre-devel</span><br></pre></td></tr></table></figure>
-
-<p>重新预编译：</p>
-<p><img src="https://i.loli.net/2019/08/08/VafIgnKrGdQBLW5.png" alt="1565229044678.png"></p>
-<p>我去！又来？！</p>
-<p>查看报错信息：<strong>error: the HTTP gzip module requires the zlib library.</strong>这次是因为压缩模块没有被安装或正确安装，所以我们安装zlip和zlip-devel。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install zlib zlib-devel</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://i.loli.net/2019/08/08/97SfReLZBXHj5tV.png" alt="1565229120705.png"></p>
-<p>我去……可算是ok了……</p>
-<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make -j4 &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-
-<h1 id="启动Nginx主程序"><a href="#启动Nginx主程序" class="headerlink" title="启动Nginx主程序"></a>启动Nginx主程序</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://i.loli.net/2019/08/08/9B3lT4kKXjhrNwz.png" alt="1565229431774.png"></p>
-<h1 id="进行访问测试"><a href="#进行访问测试" class="headerlink" title="进行访问测试"></a>进行访问测试</h1><p><img src="https://i.loli.net/2019/08/08/B2x6aL4GfHkiIr1.png" alt="1565229467749.png"></p>
-<p>至此，nginx编译安装完成！</p>
-<h1 id="Nginx自动安装脚本"><a href="#Nginx自动安装脚本" class="headerlink" title="Nginx自动安装脚本"></a>Nginx自动安装脚本</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line"><span class="meta">#</span>2019-08-08</span><br><span class="line"><span class="meta">#</span>auto check and install NGINX</span><br><span class="line"><span class="meta">#</span>by Quail</span><br><span class="line"><span class="meta">#</span>###########################################</span><br><span class="line">Nginx_stat=`find / -name nginx | grep sbin`</span><br><span class="line"></span><br><span class="line">function run_nginx()</span><br><span class="line">&#123;</span><br><span class="line">	pkill httpd</span><br><span class="line">	pkill nginx</span><br><span class="line">	/usr/local/nginx/sbin/nginx</span><br><span class="line">&#125;</span><br><span class="line">function install_nginx()</span><br><span class="line">&#123;</span><br><span class="line">	cd /home</span><br><span class="line">	wget -c http://mirrors.sohu.com/nginx/nginx-1.15.0.tar.gz</span><br><span class="line">	tar zxf nginx-1.15.0.tar.gz</span><br><span class="line">	cd nginx-1.15.0</span><br><span class="line">	./configure</span><br><span class="line">	make -j4 &amp;&amp; make install</span><br><span class="line">&#125;</span><br><span class="line">function Dependency_packages()</span><br><span class="line">&#123;</span><br><span class="line">	yum -y install gcc gcc-c++ kernel-devel pcre pcre-devel zlib zlib-devel openssl</span><br><span class="line">&#125;</span><br><span class="line">if [ Nginx_stat == '/usr/local/nginx/sbin/nginx' ];then</span><br><span class="line">	run_nginx</span><br><span class="line">	echo 'Nginx is exist and is running!'</span><br><span class="line">	exit 1</span><br><span class="line">else</span><br><span class="line">	Dependency_packages</span><br><span class="line">	install_nginx</span><br><span class="line">	run_nginx</span><br><span class="line">	echo 'NGINX installation is OK ! And NGINX is running!'</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-
-
+<h2 id="现在尝试-ssh-l-IP-进行免密登陆"><a href="#现在尝试-ssh-l-IP-进行免密登陆" class="headerlink" title="现在尝试 ssh -l IP 进行免密登陆"></a>现在尝试 ssh -l IP 进行免密登陆</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ssh -l root 192.168.249.132</span><br><span class="line">Last login: Thu Aug  1 00:35:11 2019 from 192.168.249.135</span><br></pre></td></tr></table></figure>
       
 
       
@@ -269,11 +241,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ssh</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编译安装</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Centos系统管理</a>
         		</li>
       		
 		</ul>
@@ -329,7 +301,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/08/Nginx编译安装(附脚本)/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/08/免密钥方式登陆配置/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -343,18 +315,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/08/Nginx反向代理后端服务器/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/08/PHP-5.6.8编译安装(附脚本)/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          LNMP WEB架构构建
+          PHP-5.6.8编译安装(附脚本)
         
       </div>
     </a>
   
   
-    <a href="/2019/08/08/PHP-5.6.8编译安装(附脚本)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">PHP-5.6.8编译安装(附脚本)</div>
+    <a href="/2019/08/08/初始Ansible/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">初始Ansible</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -381,7 +353,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#下载Nginx-1-15-0-tar-gz源码包"><span class="toc-number">1.</span> <span class="toc-text">下载Nginx-1.15.0.tar.gz源码包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解压nginx-1-15-0-tar-gz源码包"><span class="toc-number">2.</span> <span class="toc-text">解压nginx-1.15.0.tar.gz源码包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装Nginx"><span class="toc-number">3.</span> <span class="toc-text">安装Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#预编译"><span class="toc-number">3.1.</span> <span class="toc-text">预编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装"><span class="toc-number">3.2.</span> <span class="toc-text">编译安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#启动Nginx主程序"><span class="toc-number">4.</span> <span class="toc-text">启动Nginx主程序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#进行访问测试"><span class="toc-number">5.</span> <span class="toc-text">进行访问测试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Nginx自动安装脚本"><span class="toc-number">6.</span> <span class="toc-text">Nginx自动安装脚本</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-ssh-keygen-生成公钥和私钥"><span class="toc-number">1.</span> <span class="toc-text">使用 ssh-keygen 生成公钥和私钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看-root-ssh-目录，发现多了两个文件"><span class="toc-number">2.</span> <span class="toc-text">查看/root/.ssh/目录，发现多了两个文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-ssh-copy-id-命令发送公钥至指定主机"><span class="toc-number">3.</span> <span class="toc-text">使用 ssh-copy-id 命令发送公钥至指定主机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#现在尝试-ssh-l-IP-进行免密登陆"><span class="toc-number">4.</span> <span class="toc-text">现在尝试 ssh -l IP 进行免密登陆</span></a></li></ol>
                     </div>
                 </span>
             </div>
