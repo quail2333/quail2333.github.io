@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>免密钥方式连接ssh | 菜鹌鹑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用 ssh-keygen 生成公钥和私钥1ssh-keygen  默认三次回车 1234567891011121314The key fingerprint is:SHA256:mgyB4mVBPdMaPPbYZbXDJzycMZ6nOmTT9RsetKFtDOY root@localhost.localdomainThe key&amp;apos;s randomart image is:+---[R">
+  <meta name="description" content="使用 ssh-keygen 生成公钥和私钥1ssh-keygen  默认三次回车">
 <meta name="keywords" content="ssh,Centos系统管理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="免密钥方式连接ssh">
 <meta property="og:url" content="http://yoursite.com/2019/08/08/免密钥方式登陆配置/index.html">
 <meta property="og:site_name" content="菜鹌鹑">
-<meta property="og:description" content="使用 ssh-keygen 生成公钥和私钥1ssh-keygen  默认三次回车 1234567891011121314The key fingerprint is:SHA256:mgyB4mVBPdMaPPbYZbXDJzycMZ6nOmTT9RsetKFtDOY root@localhost.localdomainThe key&amp;apos;s randomart image is:+---[R">
+<meta property="og:description" content="使用 ssh-keygen 生成公钥和私钥1ssh-keygen  默认三次回车">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-08T07:56:28.167Z">
+<meta property="og:updated_time" content="2019-08-08T09:36:34.305Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="免密钥方式连接ssh">
-<meta name="twitter:description" content="使用 ssh-keygen 生成公钥和私钥1ssh-keygen  默认三次回车 1234567891011121314The key fingerprint is:SHA256:mgyB4mVBPdMaPPbYZbXDJzycMZ6nOmTT9RsetKFtDOY root@localhost.localdomainThe key&amp;apos;s randomart image is:+---[R">
+<meta name="twitter:description" content="使用 ssh-keygen 生成公钥和私钥1ssh-keygen  默认三次回车">
   
     <link rel="alternative" href="/atom.xml" title="菜鹌鹑" type="application/atom+xml">
   
@@ -190,7 +190,7 @@
       
         <h2 id="使用-ssh-keygen-生成公钥和私钥"><a href="#使用-ssh-keygen-生成公钥和私钥" class="headerlink" title="使用 ssh-keygen 生成公钥和私钥"></a>使用 ssh-keygen 生成公钥和私钥</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
 
-<p>默认三次回车</p>
+<p>默认三次回车<a id="more"></a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:mgyB4mVBPdMaPPbYZbXDJzycMZ6nOmTT9RsetKFtDOY root@localhost.localdomain</span><br><span class="line">The key&apos;s randomart image is:</span><br><span class="line">+---[RSA 2048]----+</span><br><span class="line">|  .oo .   .+     |</span><br><span class="line">|   ..O . o= *    |</span><br><span class="line">|. .oo X o  % * o |</span><br><span class="line">|..o  + o  . @ B o|</span><br><span class="line">| .  .   S+ o E O |</span><br><span class="line">|     o oo o   o +|</span><br><span class="line">|      +  o     o |</span><br><span class="line">|          .      |</span><br><span class="line">|                 |</span><br><span class="line">+----[SHA256]-----+</span><br></pre></td></tr></table></figure>
 
 <h2 id="查看-root-ssh-目录，发现多了两个文件"><a href="#查看-root-ssh-目录，发现多了两个文件" class="headerlink" title="查看/root/.ssh/目录，发现多了两个文件"></a>查看/root/.ssh/目录，发现多了两个文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ll .ssh/</span><br><span class="line">total 12</span><br><span class="line">-rw------- 1 root root 1679 Aug  1 00:46 id_rsa</span><br><span class="line">-rw-r--r-- 1 root root  408 Aug  1 00:46 id_rsa.pub</span><br></pre></td></tr></table></figure>
@@ -315,18 +315,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/08/PHP-5.6.8编译安装(附脚本)/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/08/Nginx代理和负载均衡实验/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          PHP-5.6.8编译安装(附脚本)
+          Nginx代理和负载均衡实验
         
       </div>
     </a>
   
   
     <a href="/2019/08/08/初始Ansible/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">初始Ansible</div>
+      <div class="article-nav-title">初识Ansible</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -506,6 +506,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Ansible</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Tomcat，负载均衡</a>
               </li>
             
             <div class="clearfix"></div>

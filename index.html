@@ -138,57 +138,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Nginx代理和负载均衡实验" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-	<!-- 目录内容 -->
-	
-<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、构建两个tomcat容器并启动"><a href="#一、构建两个tomcat容器并启动" class="headerlink" title="一、构建两个tomcat容器并启动"></a>一、构建两个tomcat容器并启动</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost bin]# ps -ef|grep tomcat</span><br><span class="line">root       1525      1 12 10:19 pts/0    00:00:03 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-1/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /usr/local/tomcat-1/bin/bootstrap.jar:/usr/local/tomcat-1/bin/tomcat-juli.jar -Dcatalina.base=/usr/local/tomcat-1 -Dcatalina.home=/usr/local/tomcat-1 -Djava.io.tmpdir=/usr/local/tomcat-1/temp org.apache.catalina.startup.Bootstrap start</span><br><span class="line">root       1586      1 39 10:19 pts/0    00:00:02 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-2/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /usr/local/tomcat-2/bin/bootstrap.jar:/usr/local/tomcat-2/bin/tomcat-juli.jar -Dcatalina.base=/usr/local/tomcat-2 -Dcatalina.home=/usr/local/tomcat-2 -Djava.io.tmpdir=/usr/local/tomcat-2/temp org.apache.catalina.startup.Bootstrap start</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/08/Nginx代理和负载均衡实验/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-Nginx反向代理后端服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -445,6 +394,87 @@
 
 
   
+    <article id="post-Nginx代理和负载均衡实验" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/08/Nginx代理和负载均衡实验/">Nginx代理和负载均衡实验</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/08/Nginx代理和负载均衡实验/" class="archive-article-date">
+  	<time datetime="2019-08-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
+</a>
+        
+      </header>
+    
+	<!-- 目录内容 -->
+	
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、构建两个tomcat容器并启动"><a href="#一、构建两个tomcat容器并启动" class="headerlink" title="一、构建两个tomcat容器并启动"></a>一、构建两个tomcat容器并启动</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost bin]# ps -ef|grep tomcat</span><br><span class="line">root       1525      1 12 10:19 pts/0    00:00:03 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-1/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /usr/local/tomcat-1/bin/bootstrap.jar:/usr/local/tomcat-1/bin/tomcat-juli.jar -Dcatalina.base=/usr/local/tomcat-1 -Dcatalina.home=/usr/local/tomcat-1 -Djava.io.tmpdir=/usr/local/tomcat-1/temp org.apache.catalina.startup.Bootstrap start</span><br><span class="line">root       1586      1 39 10:19 pts/0    00:00:02 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-2/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /usr/local/tomcat-2/bin/bootstrap.jar:/usr/local/tomcat-2/bin/tomcat-juli.jar -Dcatalina.base=/usr/local/tomcat-2 -Dcatalina.home=/usr/local/tomcat-2 -Djava.io.tmpdir=/usr/local/tomcat-2/temp org.apache.catalina.startup.Bootstrap start</span><br></pre></td></tr></table></figure>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat，负载均衡</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/08/Nginx代理和负载均衡实验/">more >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-免密钥方式登陆配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -470,14 +500,8 @@
       
         <h2 id="使用-ssh-keygen-生成公钥和私钥"><a href="#使用-ssh-keygen-生成公钥和私钥" class="headerlink" title="使用 ssh-keygen 生成公钥和私钥"></a>使用 ssh-keygen 生成公钥和私钥</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
 
-<p>默认三次回车</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:mgyB4mVBPdMaPPbYZbXDJzycMZ6nOmTT9RsetKFtDOY root@localhost.localdomain</span><br><span class="line">The key&apos;s randomart image is:</span><br><span class="line">+---[RSA 2048]----+</span><br><span class="line">|  .oo .   .+     |</span><br><span class="line">|   ..O . o= *    |</span><br><span class="line">|. .oo X o  % * o |</span><br><span class="line">|..o  + o  . @ B o|</span><br><span class="line">| .  .   S+ o E O |</span><br><span class="line">|     o oo o   o +|</span><br><span class="line">|      +  o     o |</span><br><span class="line">|          .      |</span><br><span class="line">|                 |</span><br><span class="line">+----[SHA256]-----+</span><br></pre></td></tr></table></figure>
-
-<h2 id="查看-root-ssh-目录，发现多了两个文件"><a href="#查看-root-ssh-目录，发现多了两个文件" class="headerlink" title="查看/root/.ssh/目录，发现多了两个文件"></a>查看/root/.ssh/目录，发现多了两个文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ll .ssh/</span><br><span class="line">total 12</span><br><span class="line">-rw------- 1 root root 1679 Aug  1 00:46 id_rsa</span><br><span class="line">-rw-r--r-- 1 root root  408 Aug  1 00:46 id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<h2 id="使用-ssh-copy-id-命令发送公钥至指定主机"><a href="#使用-ssh-copy-id-命令发送公钥至指定主机" class="headerlink" title="使用 ssh-copy-id 命令发送公钥至指定主机"></a>使用 ssh-copy-id 命令发送公钥至指定主机</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ssh-copy-id -i /root/.ssh/</span><br><span class="line">id_rsa       id_rsa.pub   known_hosts  </span><br><span class="line">[root@localhost ~]# ssh-copy-id -i /root/.ssh/id_rsa.pub 192.168.249.132</span><br><span class="line">/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/root/.ssh/id_rsa.pub"</span><br><span class="line">/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed</span><br><span class="line">/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys</span><br><span class="line">root@192.168.249.132's password: </span><br><span class="line"></span><br><span class="line">Number of key(s) added: 1</span><br><span class="line"></span><br><span class="line">Now try logging into the machine, with:   "ssh '192.168.249.132'"</span><br><span class="line">and check to make sure that only the key(s) you wanted were added.</span><br></pre></td></tr></table></figure>
-
-<h2 id="现在尝试-ssh-l-IP-进行免密登陆"><a href="#现在尝试-ssh-l-IP-进行免密登陆" class="headerlink" title="现在尝试 ssh -l IP 进行免密登陆"></a>现在尝试 ssh -l IP 进行免密登陆</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ssh -l root 192.168.249.132</span><br><span class="line">Last login: Thu Aug  1 00:35:11 2019 from 192.168.249.135</span><br></pre></td></tr></table></figure>
+<p>默认三次回车
+        
       
 
       
@@ -541,7 +565,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/08/初始Ansible/">初始Ansible</a>
+      <a class="article-title" href="/2019/08/08/初始Ansible/">初识Ansible</a>
     </h1>
   
 
@@ -561,65 +585,8 @@
 <li>手工安装系统、机房建设；</li>
 <li>软件服务配置、部署通过手工的操作；</li>
 <li>没有自动化脚本、流程；</li>
-<li>依靠大量的运维人员完成任务；</li>
-</ul>
-<h2 id="2）自动化运维概念（硬件、软件、系统、网络）"><a href="#2）自动化运维概念（硬件、软件、系统、网络）" class="headerlink" title="2）自动化运维概念（硬件、软件、系统、网络）"></a>2）自动化运维概念（硬件、软件、系统、网络）</h2><ul>
-<li>自动安装系统、机房建设；</li>
-<li>软件服务配置、部署通过自动化脚本、工具；</li>
-<li>编写自动化脚本、定制流程；</li>
-<li>小量运维人员完成复杂的工作任务；</li>
-</ul>
-<h1 id="2、自动化运维工具-Ansible实战"><a href="#2、自动化运维工具-Ansible实战" class="headerlink" title="2、自动化运维工具-Ansible实战"></a>2、自动化运维工具-Ansible实战</h1><h2 id="1）概述"><a href="#1）概述" class="headerlink" title="1）概述"></a>1）概述</h2><p>Ansible是基于Python语言开发的一款自动化运维工具，主要是帮助运维人员去管理Linux服务器，帮助运维人员实现轻松的对操作系统、软件服务、配置文件等管理，能够使用自动化的方式去维护和操作。</p>
-<h2 id="2）Ansible自动化运维工具特点："><a href="#2）Ansible自动化运维工具特点：" class="headerlink" title="2）Ansible自动化运维工具特点："></a>2）Ansible自动化运维工具特点：</h2><ul>
-<li>轻量级、所有操作在服务端完成即可；</li>
-<li>服务端跟客户端通信使用SSH协议（密码、秘钥）；</li>
-<li>客户端无需安装Ansible客户端程序；</li>
-<li>基于Python语言编写，代码简洁、维护方便；</li>
-<li>支持Root、普通用户、Sudo用户的操作；</li>
-</ul>
-<h2 id="3）Ansible自动化运维工具原理："><a href="#3）Ansible自动化运维工具原理：" class="headerlink" title="3）Ansible自动化运维工具原理："></a>3）Ansible自动化运维工具原理：</h2><p>Ansible服务端会读取本地hosts文件列表（客户端IP列表），调用本地各种插件和模块，基于SSH协议（用户名|密码|秘钥文件）远程客户端IP主机，让客户端主机执行命令、修改配置、执行任务（Ansible服务端下达的）等，客户端执行任务完成会反馈给服务端或者屏幕终端执行的结果。</p>
-<h2 id="4）-Ansible自动化运维工具安装与配置："><a href="#4）-Ansible自动化运维工具安装与配置：" class="headerlink" title="4） Ansible自动化运维工具安装与配置："></a>4） Ansible自动化运维工具安装与配置：</h2><h3 id="【1】安装："><a href="#【1】安装：" class="headerlink" title="【1】安装："></a>【1】安装：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ansible]# yum -y remove ansible</span><br><span class="line">Loaded plugins: fastestmirror, langpacks</span><br><span class="line">Resolving Dependencies</span><br><span class="line">--&gt; Running transaction check</span><br><span class="line">---&gt; Package ansible.noarch 0:2.4.2.0-2.el7 will be erased</span><br><span class="line">--&gt; Finished Dependency Resolution</span><br><span class="line"></span><br><span class="line">Dependencies Resolved</span><br><span class="line"></span><br><span class="line">=========================================================================================================</span><br><span class="line"> Package                Arch                  Version                       Repository              Size</span><br><span class="line">=========================================================================================================</span><br><span class="line">Removing:</span><br><span class="line"> ansible                noarch                2.4.2.0-2.el7                 @extras                 38 M</span><br><span class="line"></span><br><span class="line">Transaction Summary</span><br><span class="line">=========================================================================================================</span><br><span class="line">Remove  1 Package</span><br><span class="line"></span><br><span class="line">Installed size: 38 M</span><br><span class="line">Downloading packages:</span><br><span class="line">Running transaction check</span><br><span class="line">Running transaction test</span><br><span class="line">Transaction test succeeded</span><br><span class="line">Running transaction</span><br><span class="line">  Erasing    : ansible-2.4.2.0-2.el7.noarch                                                          1/1 </span><br><span class="line">warning: /etc/ansible/hosts saved as /etc/ansible/hosts.rpmsave</span><br><span class="line">  Verifying  : ansible-2.4.2.0-2.el7.noarch                                                          1/1 </span><br><span class="line"></span><br><span class="line">Removed:</span><br><span class="line">  ansible.noarch 0:2.4.2.0-2.el7                                                                         </span><br><span class="line"></span><br><span class="line">Complete!</span><br><span class="line">[root@localhost ansible]# ls</span><br><span class="line">hosts_bak  hosts.rpmsave</span><br><span class="line">[root@localhost ansible]# cd /</span><br><span class="line">[root@localhost /]# cd </span><br><span class="line">[root@localhost ~]# yum -y install ansible</span><br><span class="line">Loaded plugins: fastestmirror, langpacks</span><br><span class="line">Loading mirror speeds from cached hostfile</span><br><span class="line"> * base: mirrors.aliyun.com</span><br><span class="line"> * extras: mirrors.aliyun.com</span><br><span class="line"> * updates: mirrors.aliyun.com</span><br><span class="line">Resolving Dependencies</span><br><span class="line">--&gt; Running transaction check</span><br><span class="line">---&gt; Package ansible.noarch 0:2.4.2.0-2.el7 will be installed</span><br><span class="line">--&gt; Finished Dependency Resolution</span><br><span class="line"></span><br><span class="line">Dependencies Resolved</span><br><span class="line"></span><br><span class="line">=========================================================================================================</span><br><span class="line"> Package                Arch                  Version                        Repository             Size</span><br><span class="line">=========================================================================================================</span><br><span class="line">Installing:</span><br><span class="line"> ansible                noarch                2.4.2.0-2.el7                  extras                7.6 M</span><br><span class="line"></span><br><span class="line">Transaction Summary</span><br><span class="line">=========================================================================================================</span><br><span class="line">Install  1 Package</span><br><span class="line"></span><br><span class="line">Total download size: 7.6 M</span><br><span class="line">Installed size: 38 M</span><br><span class="line">Downloading packages:</span><br><span class="line">ansible-2.4.2.0-2.el7.noarch.rpm                                                  | 7.6 MB  00:00:01     </span><br><span class="line">Running transaction check</span><br><span class="line">Running transaction test</span><br><span class="line">Transaction test succeeded</span><br><span class="line">Running transaction</span><br><span class="line">  Installing : ansible-2.4.2.0-2.el7.noarch                                                          1/1 </span><br><span class="line">  Verifying  : ansible-2.4.2.0-2.el7.noarch                                                          1/1 </span><br><span class="line"></span><br><span class="line">Installed:</span><br><span class="line">  ansible.noarch 0:2.4.2.0-2.el7                                                                         </span><br><span class="line"></span><br><span class="line">Complete!</span><br></pre></td></tr></table></figure>
-
-<h3 id="【2】查看-etc-ansible-目录下的文件"><a href="#【2】查看-etc-ansible-目录下的文件" class="headerlink" title="【2】查看/etc/ansible/目录下的文件"></a>【2】查看/etc/ansible/目录下的文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ll /etc/ansible/</span><br><span class="line">total 32</span><br><span class="line">-rw-r--r-- 1 root root 19179 Jan 30  2018 ansible.cfg</span><br><span class="line">-rw-r--r-- 1 root root  1016 Jan 30  2018 hosts</span><br><span class="line">-rw-r--r-- 1 root root    57 Jul 31 21:55 hosts.rpmsave</span><br><span class="line">drwxr-xr-x 2 root root     6 Jan 30  2018 roles</span><br></pre></td></tr></table></figure>
-
-<h3 id="【3】修改hosts文件（不是本地DNS文件）"><a href="#【3】修改hosts文件（不是本地DNS文件）" class="headerlink" title="【3】修改hosts文件（不是本地DNS文件）"></a>【3】修改hosts文件<strong>（不是本地DNS文件）</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ansible]# cp hosts hosts_bak</span><br><span class="line">cp: overwrite ‘hosts_bak’? y</span><br><span class="line">[root@localhost ansible]# vim hosts</span><br><span class="line">[root@localhost ansible]# cat hosts</span><br><span class="line">[localhost]</span><br><span class="line">192.168.249.135</span><br><span class="line">[Nginx1]</span><br><span class="line">192.168.249.132</span><br></pre></td></tr></table></figure>
-
-<h3 id="【4】参数了解"><a href="#【4】参数了解" class="headerlink" title="【4】参数了解"></a>【4】参数了解</h3><ul>
-<li>-m：要执行的模块，默认为command</li>
-<li>-a：模块的参数</li>
-<li>-u：ssh连接的用户名，默认用root，ansible.cfg中可以配置</li>
-<li>-k：提示输入ssh登录密码，当使用密码验证的时候用</li>
-<li>-s：sudo运行</li>
-<li>-U：sudo到哪个用户，默认为root</li>
-<li>-K：提示输入sudo密码，当不是NOPASSWD模式时使用</li>
-<li>-C：只是测试一下会改变什么内容，不会真正去执行</li>
-<li>-c：连接类型(default=smart)</li>
-<li>-f：fork多少进程并发处理，默认为5个</li>
-<li>-i：指定hosts文件路径，默认default=/etc/ansible/hosts</li>
-<li>-I：指定pattern，对已匹配的主机中再过滤一次</li>
-<li>–list-host：只打印有哪些主机会执行这个命令，不会实际执行</li>
-<li>-M：要执行的模块路径，默认为/usr/share/ansible</li>
-<li>-o：压缩输出，摘要输出</li>
-<li>–private-key：私钥路径</li>
-<li>-T：ssh连接超时时间，默认是10秒</li>
-<li>-t：日志输出到该目录，日志文件名以主机命名</li>
-<li>-v：显示详细日志</li>
-</ul>
-<h3 id="【5】常用模块"><a href="#【5】常用模块" class="headerlink" title="【5】常用模块"></a>【5】常用模块</h3><p><strong>只需要熟练使用 shell 模块和 copy 模块即可，其余的file、yum、command模块等都可以使用shell模块代替</strong></p>
-<h3 id="【6】实战操作"><a href="#【6】实战操作" class="headerlink" title="【6】实战操作"></a>【6】实战操作</h3><h4 id="1-远程执行“df-h”命令"><a href="#1-远程执行“df-h”命令" class="headerlink" title="　　1.远程执行“df -h”命令"></a>　　1.远程执行“df -h”命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ansible]# ansible 192.168.249.132 -m command -a &quot;df -h&quot;</span><br><span class="line">The authenticity of host &apos;192.168.249.132 (192.168.249.132)&apos; can&apos;t be established.</span><br><span class="line">ECDSA key fingerprint is SHA256:6t+bT9udQAxIkfD6ncqowUKRgNalEatjusRkAw8pbWo.</span><br><span class="line">ECDSA key fingerprint is MD5:46:d3:59:fc:d6:44:03:36:6e:d0:51:c6:66:55:a5:e5.</span><br><span class="line">Are you sure you want to continue connecting (yes/no)? yes</span><br><span class="line">192.168.249.132 | UNREACHABLE! =&gt; &#123;</span><br><span class="line">    &quot;changed&quot;: false, </span><br><span class="line">    &quot;msg&quot;: &quot;Failed to connect to the host via ssh: Warning: Permanently added &apos;192.168.249.132&apos; (ECDSA) to the list of known hosts.\r\nPermission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n&quot;, </span><br><span class="line">    &quot;unreachable&quot;: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>我们发现让我们输入密码，我们还没输入呢，就已经报错了，所以，我们需要加一个-k参数来输入密码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ansible]# ansible -k 192.168.249.132 -m command -a &quot;df -h&quot;</span><br><span class="line">SSH password: </span><br><span class="line">192.168.249.132 | SUCCESS | rc=0 &gt;&gt;</span><br><span class="line">Filesystem               Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/mapper/centos-root   17G  3.4G   14G  20% /</span><br><span class="line">devtmpfs                 475M     0  475M   0% /dev</span><br><span class="line">tmpfs                    487M     0  487M   0% /dev/shm</span><br><span class="line">tmpfs                    487M  7.6M  479M   2% /run</span><br><span class="line">tmpfs                    487M     0  487M   0% /sys/fs/cgroup</span><br><span class="line">/dev/sda1               1014M  192M  823M  19% /boot</span><br><span class="line">tmpfs                     98M     0   98M   0% /run/user/0</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-使用ssh进行此操作"><a href="#2-使用ssh进行此操作" class="headerlink" title="　　2.使用ssh进行此操作"></a>　　2.使用ssh进行此操作</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# ssh -l root 192.168.249.132 &quot;ip ad&quot;</span><br><span class="line">SSH password：</span><br><span class="line">1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000</span><br><span class="line">    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00</span><br><span class="line">    inet 127.0.0.1/8 scope host lo</span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">    inet6 ::1/128 scope host </span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">2: ens32: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group default qlen 1000</span><br><span class="line">    link/ether 00:0c:29:61:2d:0a brd ff:ff:ff:ff:ff:ff</span><br><span class="line">    inet 192.168.249.132/24 brd 192.168.249.255 scope global noprefixroute dynamic ens32</span><br><span class="line">       valid_lft 1037sec preferred_lft 1037sec</span><br><span class="line">    inet6 fe80::dfe1:38b4:8e7d:8765/64 scope link noprefixroute </span><br><span class="line">       valid_lft forever preferred_lft forever</span><br></pre></td></tr></table></figure>
-
-<p>我们同样可以实现啊，所以我们为什么要是使用ansible呢？我们继续往下做实验</p>
-<h4 id="3-同时对2台主机进行操作，执行“df-h”命令"><a href="#3-同时对2台主机进行操作，执行“df-h”命令" class="headerlink" title="　　3.同时对2台主机进行操作，执行“df -h”命令"></a>　　3.同时对2台主机进行操作，执行“df -h”命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ansible]# ansible all -m shell -a &quot;df -h&quot;  #这里的all是指对hosts文件内所有的主机进行操作</span><br><span class="line">192.168.249.135 | SUCCESS | rc=0 &gt;&gt;</span><br><span class="line">Filesystem               Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/mapper/centos-root   17G  1.7G   16G  10% /</span><br><span class="line">devtmpfs                 475M     0  475M   0% /dev</span><br><span class="line">tmpfs                    487M  144K  487M   1% /dev/shm</span><br><span class="line">tmpfs                    487M  7.6M  479M   2% /run</span><br><span class="line">tmpfs                    487M     0  487M   0% /sys/fs/cgroup</span><br><span class="line">/dev/sda1               1014M  179M  836M  18% /boot</span><br><span class="line">tmpfs                     98M     0   98M   0% /run/user/0</span><br><span class="line"></span><br><span class="line">192.168.249.132 | SUCCESS | rc=0 &gt;&gt;</span><br><span class="line">Filesystem               Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/mapper/centos-root   17G  3.4G   14G  20% /</span><br><span class="line">devtmpfs                 475M     0  475M   0% /dev</span><br><span class="line">tmpfs                    487M     0  487M   0% /dev/shm</span><br><span class="line">tmpfs                    487M  7.6M  479M   2% /run</span><br><span class="line">tmpfs                    487M     0  487M   0% /sys/fs/cgroup</span><br><span class="line">/dev/sda1               1014M  192M  823M  19% /boot</span><br><span class="line">tmpfs                     98M     0   98M   0% /run/user/0</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-ssh实现不了，但是！我可以使用while循环语句啊："><a href="#4-ssh实现不了，但是！我可以使用while循环语句啊：" class="headerlink" title="　　4.ssh实现不了，但是！我可以使用while循环语句啊："></a>　　4.ssh实现不了，但是！<strong>我可以使用while循环语句啊：</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ansible]# for i in `seq 132 135`;do echo -e &quot;\033[32m10.10.10.$i | CHANGED |rc=0 &gt;&gt;\033[0m&quot;;ssh -l root 192.168.249.$i &quot;df -h&quot;;done</span><br><span class="line">192.168.249.132 | CHANGED |rc=0 &gt;&gt;</span><br><span class="line">root@192.168.249.132&apos;s password: </span><br><span class="line">Filesystem               Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/mapper/centos-root   17G  3.4G   14G  20% /</span><br><span class="line">devtmpfs                 475M     0  475M   0% /dev</span><br><span class="line">tmpfs                    487M     0  487M   0% /dev/shm</span><br><span class="line">tmpfs                    487M  7.6M  479M   2% /run</span><br><span class="line">tmpfs                    487M     0  487M   0% /sys/fs/cgroup</span><br><span class="line">/dev/sda1               1014M  192M  823M  19% /boot</span><br><span class="line">tmpfs                     98M     0   98M   0% /run/user/0192.168.249.135 | CHANGED |rc=0 &gt;&gt;</span><br><span class="line">root@192.168.249.135&apos;s password: </span><br><span class="line">Filesystem               Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/mapper/centos-root   17G  1.7G   16G  10% /</span><br><span class="line">devtmpfs                 475M     0  475M   0% /dev</span><br><span class="line">tmpfs                    487M     0  487M   0% /dev/shm</span><br><span class="line">tmpfs                    487M  7.6M  479M   2% /run</span><br><span class="line">tmpfs                    487M     0  487M   0% /sys/fs/cgroup</span><br><span class="line">/dev/sda1               1014M  179M  836M  18% /boot</span><br><span class="line">tmpfs                     98M     0   98M   0% /run/user/0</span><br></pre></td></tr></table></figure>
-
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>那这有啥区别呢？当我们在执行的时候，很清楚的可以发现，<strong>ansible是同时执行，两个结果同时出现，也就是并行，而循环是先出现第一个主机的结果，再出现第二个主机的结果，所以是串行</strong>。现在感觉不出来，毕竟只有两台机器，如果是服务器集群呢？所以我们还是选择Ansible。</p>
-
+<li>依靠大量的运维人员完成任务；
+        
       
 
       
@@ -1060,6 +1027,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Ansible</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Tomcat，负载均衡</a>
               </li>
             
             <div class="clearfix"></div>
