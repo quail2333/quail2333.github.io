@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: LNMP | 菜鹌鹑</title>
+  <title>Nginx正向代理和反向代理 | 菜鹌鹑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="菜鹌鹑">
-<meta property="og:url" content="http://yoursite.com/tags/LNMP/index.html">
+  <meta name="description" content="关于代理说到代理，首先我们要明确一个概念，所谓代理就是一个代表、一个渠道； 此时就设计到两个角色，一个是被代理角色，一个是目标角色，被代理角色通过这个代理访问目标角色完成一些任务的过程称为代理操作过程；例如生活中的专卖店，客人到华为旗舰店买了一部华为P30 Pro，这个旗舰店就是代理，被代理角色就是华为厂商，目标角色就是用户。 一、正向代理在如今的网络环境下，我们如果由于技术需要要去访问国外的某些">
+<meta name="keywords" content="Nginx,反向代理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nginx正向代理和反向代理">
+<meta property="og:url" content="http://yoursite.com/2019/08/09/Nginx正向代理和反向代理/index.html">
 <meta property="og:site_name" content="菜鹌鹑">
+<meta property="og:description" content="关于代理说到代理，首先我们要明确一个概念，所谓代理就是一个代表、一个渠道； 此时就设计到两个角色，一个是被代理角色，一个是目标角色，被代理角色通过这个代理访问目标角色完成一些任务的过程称为代理操作过程；例如生活中的专卖店，客人到华为旗舰店买了一部华为P30 Pro，这个旗舰店就是代理，被代理角色就是华为厂商，目标角色就是用户。 一、正向代理在如今的网络环境下，我们如果由于技术需要要去访问国外的某些">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/09/eH4vtI.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/09/eH4xht.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/09/eH5S9P.png">
+<meta property="og:updated_time" content="2019-08-09T03:31:29.436Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="菜鹌鹑">
+<meta name="twitter:title" content="Nginx正向代理和反向代理">
+<meta name="twitter:description" content="关于代理说到代理，首先我们要明确一个概念，所谓代理就是一个代表、一个渠道； 此时就设计到两个角色，一个是被代理角色，一个是目标角色，被代理角色通过这个代理访问目标角色完成一些任务的过程称为代理操作过程；例如生活中的专卖店，客人到华为旗舰店买了一部华为P30 Pro，这个旗舰店就是代理，被代理角色就是华为厂商，目标角色就是用户。 一、正向代理在如今的网络环境下，我们如果由于技术需要要去访问国外的某些">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/08/09/eH4vtI.png">
   
     <link rel="alternative" href="/atom.xml" title="菜鹌鹑" type="application/atom+xml">
   
@@ -136,36 +145,121 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Nginx正向代理和反向代理" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/08/Nginx反向代理后端服务器/" class="archive-article-date">
-  	<time datetime="2019-08-07T16:04:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/08/Nginx反向代理后端服务器/">LNMP WEB架构构建</a>
+    <h1 class="article-title" itemprop="name">
+      Nginx正向代理和反向代理
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/08/09/Nginx正向代理和反向代理/" class="archive-article-date">
+  	<time datetime="2019-08-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
+</a>
+        
+      </header>
+    
+	<!-- 目录内容 -->
+	
+		<p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+			  <span class="btn-bg"></span>
+			  <span class="btn-text">导航窗口</span>
+			  </p>
+		<div id="toc-article" class="toc-article">
+			<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+			<strong class="toc-title">目录</strong>
+			   <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于代理"><span class="toc-number">1.</span> <span class="toc-text">关于代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、正向代理"><span class="toc-number">2.</span> <span class="toc-text">一、正向代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、反向代理"><span class="toc-number">3.</span> <span class="toc-text">二、反向代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、应用场景"><span class="toc-number">4.</span> <span class="toc-text">三、应用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、负载均衡"><span class="toc-number">5.</span> <span class="toc-text">四、负载均衡</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#负载均衡在实际项目操作过程中，有硬件负载均衡和软件负载均衡两种。"><span class="toc-number">5.1.</span> <span class="toc-text">负载均衡在实际项目操作过程中，有硬件负载均衡和软件负载均衡两种。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nginx支持的负载均衡调度算法方式如下："><span class="toc-number">5.2.</span> <span class="toc-text">nginx支持的负载均衡调度算法方式如下：</span></a></li></ol></li></ol>
+			 </div>
+	   <script type="text/javascript">
+		function showToc(){
+			var toc_article = document.getElementById("toc-article");
+			var show_toc_btn = document.getElementById("show-toc-btn");
+			toc_article.setAttribute("style","display:block");
+			show_toc_btn.setAttribute("style","display:none");
+			};
+		function showBtn(){
+			var toc_article = document.getElementById("toc-article");
+			var show_toc_btn = document.getElementById("show-toc-btn");
+			toc_article.setAttribute("style","display:none");
+			show_toc_btn.setAttribute("style","display:block");
+			};
+	   </script>
+		  
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="关于代理"><a href="#关于代理" class="headerlink" title="关于代理"></a>关于代理</h2><p>说到代理，首先我们要明确一个概念，所谓代理就是一个代表、一个渠道；</p>
+<p>此时就设计到两个角色，一个是被代理角色，一个是目标角色，被代理角色通过这个代理访问目标角色完成一些任务的过程称为代理操作过程；例如生活中的专卖店，客人到华为旗舰店买了一部华为P30 Pro，这个旗舰店就是代理，被代理角色就是华为厂商，目标角色就是用户。</p>
+<h2 id="一、正向代理"><a href="#一、正向代理" class="headerlink" title="一、正向代理"></a>一、正向代理</h2><p>在如今的网络环境下，我们如果由于技术需要要去访问国外的某些网站，此时你会发现位于国外的某网站我们通过浏览器是没有办法访问的，此时大家可能都会用一个操作FQ进行访问，<a id="more"></a>FQ的方式主要是找到一个可以访问国外网站的代理服务器，我们将请求发送给代理服务器，代理服务器去访问国外的网站，然后将访问到的数据传递给我们。</p>
+<p>上述这样的代理模式称为正向代理，正向代理最大的特点：</p>
+<ol>
+<li>客户端非常明确要访问的服务器地址；</li>
+<li>服务器只清楚请求来自哪个代理服务器，而不清楚来自哪个具体的客户端；</li>
+<li>正向代理模式屏蔽或者隐藏了真实客户端信息。</li>
+</ol>
+<p><img src="https://s2.ax1x.com/2019/08/09/eH4vtI.png" alt="eH4vtI.png"></p>
+<h2 id="二、反向代理"><a href="#二、反向代理" class="headerlink" title="二、反向代理"></a>二、反向代理</h2><p>客户端给服务器发送的请求，nginx服务器接收到之后，按照一定的规则分发给了后端的业务处理服务器进行处理了。此时请求的来源也就是客户端是明确的，但是请求具体由哪台服务器处理的并不明确了，nginx扮演的就是一个反向代理角色。</p>
+<p>反向代理，主要用于服务器集群分布式部署的情况下，反向代理隐藏了服务器的信息。</p>
+<p><img src="https://s2.ax1x.com/2019/08/09/eH4xht.png" alt="eH4xht.png"></p>
+<h2 id="三、应用场景"><a href="#三、应用场景" class="headerlink" title="三、应用场景"></a>三、应用场景</h2><p><img src="https://s2.ax1x.com/2019/08/09/eH5S9P.png" alt="eH5S9P.png"></p>
+<h2 id="四、负载均衡"><a href="#四、负载均衡" class="headerlink" title="四、负载均衡"></a>四、负载均衡</h2><p>我们已经明确了所谓代理服务器的概念，那么接下来，nginx扮演了反向代理服务器的角色，它是以依据什么样的规则进行请求分发的呢？不用的项目应用场景，分发的规则是否可以控制呢？</p>
+<p>这里提到的客户端发送的、nginx反向代理服务器接收到的请求数量，就是我们说的负载量</p>
+<p>请求数量按照一定的规则进行分发到不同的服务器处理的规则，就是一种均衡规则</p>
+<p>所以，将服务器接收到的请求按照规则分发的过程，称为负载均衡。</p>
+<h3 id="负载均衡在实际项目操作过程中，有硬件负载均衡和软件负载均衡两种。"><a href="#负载均衡在实际项目操作过程中，有硬件负载均衡和软件负载均衡两种。" class="headerlink" title="负载均衡在实际项目操作过程中，有硬件负载均衡和软件负载均衡两种。"></a>负载均衡在实际项目操作过程中，有硬件负载均衡和软件负载均衡两种。</h3><p>硬件负载均衡也称为硬负载，如F5、NetScaler：</p>
+<p>局限：相对造价昂贵成本较高，一套设备最起码得上百万，</p>
+<p>优点：但是数据的稳定性安全性等等有非常好的保障，如中国移动中国联通这样的公司才会选择硬负载进行操作；</p>
+<p>软件负载均衡也称为软负载，如LVS、Nginx、HAProxy：</p>
+<p>更多的公司考虑到成本原因，会选择使用软件负载均衡，软件负载均衡是利用现有的技术结合主机硬件实现的一种消息队列分发机制</p>
+<h3 id="nginx支持的负载均衡调度算法方式如下："><a href="#nginx支持的负载均衡调度算法方式如下：" class="headerlink" title="nginx支持的负载均衡调度算法方式如下："></a>nginx支持的负载均衡调度算法方式如下：</h3><ol>
+<li>weight轮询（默认）：接收到的请求按照顺序逐一分配到不同的后端服务器，即使在使用过程中，某一台后端服务器宕机，nginx会自动将该服务器剔除出队列，请求受理情况不会受到任何影响。   这种方式下，可以给不同的后端服务器设置一个权重值（weight），用于调整不同的服务器上请求的分配率；权重数据越大，被分配到请求的几率越大；该权重值，主要是针对实际工作环境中不同的后端服务器硬件配置进行调整的。</li>
+<li><strong>ip_hash（大部分使用此算法）：每个请求按照发起客户端的ip的hash结果进行匹配，这样的算法下一个固定ip地址的客户端总会访问到同一个后端服务器，这也在一定程度上解决了集群部署环境下session共享的问题。</strong></li>
+<li>fair：智能调整调度算法，动态的根据后端服务器的请求处理到响应的时间进行均衡分配，响应时间短处理效率高的服务器分配到请求的概率高，响应时间长处理效率低的服务器分配到的请求少；结合了前两者的优点的一种调度算法。但是需要注意的是nginx默认不支持fair算法，如果要使用这种调度算法，请安装upstream_fair模块</li>
+<li>url_hash（极少数使用此算法）：按照访问的url的hash结果分配请求，每个请求的url会指向后端固定的某个服务器，可以在nginx作为静态服务器的情况下提高缓存效率。同样要注意nginx默认不支持这种调度算法，要使用的话需要安装nginx的hash软件包</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://i.loli.net/2019/08/07/STBjO1yIJeHcFXw.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://i.loli.net/2019/08/07/TUrd15kgxGNVs3C.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -177,27 +271,132 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">反向代理</a>
         		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">LNMP</a>
-        		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/09/Nginx正向代理和反向代理/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/08/09/Nginx搭建Discuz!/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Nginx代理服务器搭建discuz
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2019/08/08/Nginx反向代理后端服务器/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LNMP WEB架构构建</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于代理"><span class="toc-number">1.</span> <span class="toc-text">关于代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、正向代理"><span class="toc-number">2.</span> <span class="toc-text">一、正向代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、反向代理"><span class="toc-number">3.</span> <span class="toc-text">二、反向代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、应用场景"><span class="toc-number">4.</span> <span class="toc-text">三、应用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、负载均衡"><span class="toc-number">5.</span> <span class="toc-text">四、负载均衡</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#负载均衡在实际项目操作过程中，有硬件负载均衡和软件负载均衡两种。"><span class="toc-number">5.1.</span> <span class="toc-text">负载均衡在实际项目操作过程中，有硬件负载均衡和软件负载均衡两种。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nginx支持的负载均衡调度算法方式如下："><span class="toc-number">5.2.</span> <span class="toc-text">nginx支持的负载均衡调度算法方式如下：</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -220,9 +419,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,

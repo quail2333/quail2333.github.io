@@ -6,15 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: LNMP | 菜鹌鹑</title>
+  <title>Nginx代理服务器搭建discuz | 菜鹌鹑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="菜鹌鹑">
-<meta property="og:url" content="http://yoursite.com/tags/LNMP/index.html">
+  <meta name="description" content="环境准备 Nginx代理服务器 PHP后端服务器 数据库服务器 Discuz_X3.2_SC_UTF8.zip">
+<meta name="keywords" content="Nginx,PHP,discuz!">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nginx代理服务器搭建discuz">
+<meta property="og:url" content="http://yoursite.com/2019/08/09/Nginx搭建Discuz!/index.html">
 <meta property="og:site_name" content="菜鹌鹑">
+<meta property="og:description" content="环境准备 Nginx代理服务器 PHP后端服务器 数据库服务器 Discuz_X3.2_SC_UTF8.zip">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://i.loli.net/2019/08/09/TKzQBXRUMd6hCcm.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/08/09/NIDQrJCanOxUS2M.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/09/eH4Df0.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/09/eH42m4.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/09/oBn3ePHIpd2wRig.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/09/hQqBFjDGPyK5RVp.png">
+<meta property="og:updated_time" content="2019-08-09T03:29:23.029Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="菜鹌鹑">
+<meta name="twitter:title" content="Nginx代理服务器搭建discuz">
+<meta name="twitter:description" content="环境准备 Nginx代理服务器 PHP后端服务器 数据库服务器 Discuz_X3.2_SC_UTF8.zip">
+<meta name="twitter:image" content="https://i.loli.net/2019/08/09/TKzQBXRUMd6hCcm.jpg">
   
     <link rel="alternative" href="/atom.xml" title="菜鹌鹑" type="application/atom+xml">
   
@@ -136,36 +148,155 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Nginx搭建Discuz!" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/08/Nginx反向代理后端服务器/" class="archive-article-date">
-  	<time datetime="2019-08-07T16:04:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/08/Nginx反向代理后端服务器/">LNMP WEB架构构建</a>
+    <h1 class="article-title" itemprop="name">
+      Nginx代理服务器搭建discuz
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/08/09/Nginx搭建Discuz!/" class="archive-article-date">
+  	<time datetime="2019-08-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
+</a>
+        
+      </header>
+    
+	<!-- 目录内容 -->
+	
+		<p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+			  <span class="btn-bg"></span>
+			  <span class="btn-text">导航窗口</span>
+			  </p>
+		<div id="toc-article" class="toc-article">
+			<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+			<strong class="toc-title">目录</strong>
+			   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#环境准备"><span class="toc-number">1.</span> <span class="toc-text">环境准备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#架构图"><span class="toc-number">2.</span> <span class="toc-text">架构图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开始搭建Discuz！论坛"><span class="toc-number">3.</span> <span class="toc-text">开始搭建Discuz！论坛</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx代理服务器"><span class="toc-number">3.1.</span> <span class="toc-text">Nginx代理服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Nginx"><span class="toc-number">3.1.1.</span> <span class="toc-text">安装Nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动Nginx"><span class="toc-number">3.1.2.</span> <span class="toc-text">启动Nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改Nginx配置文件如下"><span class="toc-number">3.1.3.</span> <span class="toc-text">修改Nginx配置文件如下</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PHP后端服务器"><span class="toc-number">3.2.</span> <span class="toc-text">PHP后端服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装PHP"><span class="toc-number">3.2.1.</span> <span class="toc-text">安装PHP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动php-fpm进程"><span class="toc-number">3.2.2.</span> <span class="toc-text">启动php-fpm进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改php-fpm进程配置文件"><span class="toc-number">3.2.3.</span> <span class="toc-text">修改php-fpm进程配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#释放discuz源码"><span class="toc-number">3.2.4.</span> <span class="toc-text">释放discuz源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改discuz源码权限"><span class="toc-number">3.2.5.</span> <span class="toc-text">修改discuz源码权限</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库服务器"><span class="toc-number">3.3.</span> <span class="toc-text">数据库服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装mariadb服务"><span class="toc-number">3.3.1.</span> <span class="toc-text">安装mariadb服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动mariadb"><span class="toc-number">3.3.2.</span> <span class="toc-text">启动mariadb</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化数据库"><span class="toc-number">3.3.3.</span> <span class="toc-text">初始化数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置数据库"><span class="toc-number">3.3.4.</span> <span class="toc-text">配置数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#进入数据库"><span class="toc-number">3.3.4.1.</span> <span class="toc-text">进入数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#新建discuz！数据库"><span class="toc-number">3.3.4.2.</span> <span class="toc-text">新建discuz！数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#退出数据库"><span class="toc-number">3.3.4.3.</span> <span class="toc-text">退出数据库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#打开浏览器，访问Nginx服务器的IP"><span class="toc-number">3.4.</span> <span class="toc-text">打开浏览器，访问Nginx服务器的IP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#同意后进入权限检查，全是可写，下一步"><span class="toc-number">3.4.1.</span> <span class="toc-text">同意后进入权限检查，全是可写，下一步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进入数据库配置界面"><span class="toc-number">3.4.2.</span> <span class="toc-text">进入数据库配置界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#看看咱们的新首页-哎呦我去！"><span class="toc-number">3.4.3.</span> <span class="toc-text">看看咱们的新首页~哎呦我去！</span></a></li></ol></li></ol></li></ol>
+			 </div>
+	   <script type="text/javascript">
+		function showToc(){
+			var toc_article = document.getElementById("toc-article");
+			var show_toc_btn = document.getElementById("show-toc-btn");
+			toc_article.setAttribute("style","display:block");
+			show_toc_btn.setAttribute("style","display:none");
+			};
+		function showBtn(){
+			var toc_article = document.getElementById("toc-article");
+			var show_toc_btn = document.getElementById("show-toc-btn");
+			toc_article.setAttribute("style","display:none");
+			show_toc_btn.setAttribute("style","display:block");
+			};
+	   </script>
+		  
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h1><ul>
+<li>Nginx代理服务器</li>
+<li>PHP后端服务器</li>
+<li>数据库服务器</li>
+<li>Discuz_X3.2_SC_UTF8.zip<a id="more"></a></li>
+</ul>
+<h1 id="架构图"><a href="#架构图" class="headerlink" title="架构图"></a>架构图</h1><p><img src="https://i.loli.net/2019/08/09/TKzQBXRUMd6hCcm.jpg" alt="架构图.jpg"></p>
+<h1 id="开始搭建Discuz！论坛"><a href="#开始搭建Discuz！论坛" class="headerlink" title="开始搭建Discuz！论坛"></a>开始搭建Discuz！论坛</h1><h2 id="Nginx代理服务器"><a href="#Nginx代理服务器" class="headerlink" title="Nginx代理服务器"></a>Nginx代理服务器</h2><h3 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h3><p><strong><a href="https://quail2333.github.io/2019/08/08/Nginx编译安装(附脚本)/" target="_blank" rel="noopener">Nginx编译安装请戳我！</a></strong></p>
+<h3 id="启动Nginx"><a href="#启动Nginx" class="headerlink" title="启动Nginx"></a>启动Nginx</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
+
+<p>启动失败的话查看日志，先进行排错，pkill相关进程，在执行启动命令</p>
+<h3 id="修改Nginx配置文件如下"><a href="#修改Nginx配置文件如下" class="headerlink" title="修改Nginx配置文件如下"></a>修改Nginx配置文件如下</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application/octet-stream;</span><br><span class="line">    sendfile        on;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  www.test.com;</span><br><span class="line">        #error_page   500 502 503 504  /50x.html;</span><br><span class="line">		root /var/www/html;</span><br><span class="line">        location ~ \.php$ &#123;</span><br><span class="line">	    root /var/www/html;</span><br><span class="line">	    fastcgi_pass   192.168.249.104:9000;</span><br><span class="line">            fastcgi_index  index.php;</span><br><span class="line">            fastcgi_param  SCRIPT_FILENAME /var/www/html$fastcgi_script_name;</span><br><span class="line">            include fastcgi_params;</span><br><span class="line">	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改完成后检查配置文件是否正确</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx -t</span><br></pre></td></tr></table></figure>
+
+<p>无误后重新载入配置文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx -s reload</span><br></pre></td></tr></table></figure>
+
+<h2 id="PHP后端服务器"><a href="#PHP后端服务器" class="headerlink" title="PHP后端服务器"></a>PHP后端服务器</h2><h3 id="安装PHP"><a href="#安装PHP" class="headerlink" title="安装PHP"></a>安装PHP</h3><p><strong><a href="https://quail2333.github.io/2019/08/08/PHP-5.6.8编译安装(附脚本)/" target="_blank" rel="noopener">PHP编译安装请戳我！</a></strong></p>
+<h3 id="启动php-fpm进程"><a href="#启动php-fpm进程" class="headerlink" title="启动php-fpm进程"></a>启动php-fpm进程</h3><p><strong><a href="https://quail2333.github.io/2019/08/08/PHP-5.6.8编译安装(附脚本)/" target="_blank" rel="noopener">启动php-fpm进程也戳我！</a></strong></p>
+<h3 id="修改php-fpm进程配置文件"><a href="#修改php-fpm进程配置文件" class="headerlink" title="修改php-fpm进程配置文件"></a>修改php-fpm进程配置文件</h3><p>因为php-fpm默认监听127.0.0.1：9000，别的服务器请求会被拒之门外，所以我们通过下面的命令修改配置文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i 's#listen = 127.0.0.1:9000#listen = 192.168.249.104:9000#g' /usr/local/php/etc/php-fpm.conf</span><br></pre></td></tr></table></figure>
+
+<p>然后重启php-fpm进程</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart php-fpm</span><br></pre></td></tr></table></figure>
+
+<h3 id="释放discuz源码"><a href="#释放discuz源码" class="headerlink" title="释放discuz源码"></a>释放discuz源码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scp -r 192.168.249.103:/home/quail/Discuz_X3.2_SC_UTF8.zip /var/www/html</span><br><span class="line">unzip /var/www/html/Discuz_X3.2_SC_UTF8.zip</span><br><span class="line">rm -f /var/www/html/Discuz_X3.2_SC_UTF8.zip</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改discuz源码权限"><a href="#修改discuz源码权限" class="headerlink" title="修改discuz源码权限"></a>修改discuz源码权限</h3><p>网上很多教程都是给777，我建议能少给就少给，我给的755</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 -R /var/www/html</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据库服务器"><a href="#数据库服务器" class="headerlink" title="数据库服务器"></a>数据库服务器</h2><h3 id="安装mariadb服务"><a href="#安装mariadb服务" class="headerlink" title="安装mariadb服务"></a>安装mariadb服务</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install mariadb mariadb-server mysql-devel</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动mariadb"><a href="#启动mariadb" class="headerlink" title="启动mariadb"></a>启动mariadb</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mariadb</span><br></pre></td></tr></table></figure>
+
+<h3 id="初始化数据库"><a href="#初始化数据库" class="headerlink" title="初始化数据库"></a>初始化数据库</h3><ol>
+<li>执行初始化命令</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql_secure_installation</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>默认密码为空，所以直接回车</li>
+<li>提示让你输入新密码并确认</li>
+<li>无脑回车，直到退出为止</li>
+</ol>
+<h3 id="配置数据库"><a href="#配置数据库" class="headerlink" title="配置数据库"></a>配置数据库</h3><h4 id="进入数据库"><a href="#进入数据库" class="headerlink" title="进入数据库"></a>进入数据库</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p 123456#123456是我设置的数据库密码</span><br></pre></td></tr></table></figure>
+
+<h4 id="新建discuz！数据库"><a href="#新建discuz！数据库" class="headerlink" title="新建discuz！数据库"></a>新建discuz！数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database discuz;</span><br></pre></td></tr></table></figure>
+
+<h4 id="退出数据库"><a href="#退出数据库" class="headerlink" title="退出数据库"></a>退出数据库</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit;</span><br></pre></td></tr></table></figure>
+
+<h2 id="打开浏览器，访问Nginx服务器的IP"><a href="#打开浏览器，访问Nginx服务器的IP" class="headerlink" title="打开浏览器，访问Nginx服务器的IP"></a>打开浏览器，访问Nginx服务器的IP</h2><p><img src="https://i.loli.net/2019/08/09/NIDQrJCanOxUS2M.png" alt="1565320030037.png"></p>
+<h3 id="同意后进入权限检查，全是可写，下一步"><a href="#同意后进入权限检查，全是可写，下一步" class="headerlink" title="同意后进入权限检查，全是可写，下一步"></a>同意后进入权限检查，全是可写，下一步</h3><h3 id="进入数据库配置界面"><a href="#进入数据库配置界面" class="headerlink" title="进入数据库配置界面"></a>进入数据库配置界面</h3><p><img src="https://s2.ax1x.com/2019/08/09/eH4Df0.png" alt="eH4Df0.png"></p>
+<p>输入完成后，下一步。</p>
+<p><img src="https://s2.ax1x.com/2019/08/09/eH42m4.png" alt="eH42m4.png"></p>
+<p>哎呦我去？！这……原来远程数据库需要授权才能链接，进入数据库服务器的mariadb，执行以下命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grant all PRIVILEGES on discuz.* to root@'192.168.249.104'  identified by '123456';</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+
+<p>重新点击下一步，已经正在安装了，安装完成后，点击访问即可。</p>
+<p><img src="https://i.loli.net/2019/08/09/oBn3ePHIpd2wRig.png" alt="1565320752780.png"></p>
+<h3 id="看看咱们的新首页-哎呦我去！"><a href="#看看咱们的新首页-哎呦我去！" class="headerlink" title="看看咱们的新首页~哎呦我去！"></a>看看咱们的新首页~哎呦我去！</h3><p><img src="https://i.loli.net/2019/08/09/hQqBFjDGPyK5RVp.png" alt="1565320881901.png"></p>
+<p>Ok啦，新论坛搭建完成，首页一看就是CSS没有加载，这是因为Nginx只转发动态请求，下次我们更新动静分离，实现咱们的discuz论坛！</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://i.loli.net/2019/08/07/STBjO1yIJeHcFXw.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://i.loli.net/2019/08/07/TUrd15kgxGNVs3C.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -175,29 +306,129 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">反向代理</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">LNMP</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">discuz!</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/09/Nginx搭建Discuz!/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/08/09/Nginx正向代理和反向代理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Nginx正向代理和反向代理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#环境准备"><span class="toc-number">1.</span> <span class="toc-text">环境准备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#架构图"><span class="toc-number">2.</span> <span class="toc-text">架构图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开始搭建Discuz！论坛"><span class="toc-number">3.</span> <span class="toc-text">开始搭建Discuz！论坛</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx代理服务器"><span class="toc-number">3.1.</span> <span class="toc-text">Nginx代理服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Nginx"><span class="toc-number">3.1.1.</span> <span class="toc-text">安装Nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动Nginx"><span class="toc-number">3.1.2.</span> <span class="toc-text">启动Nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改Nginx配置文件如下"><span class="toc-number">3.1.3.</span> <span class="toc-text">修改Nginx配置文件如下</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PHP后端服务器"><span class="toc-number">3.2.</span> <span class="toc-text">PHP后端服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装PHP"><span class="toc-number">3.2.1.</span> <span class="toc-text">安装PHP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动php-fpm进程"><span class="toc-number">3.2.2.</span> <span class="toc-text">启动php-fpm进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改php-fpm进程配置文件"><span class="toc-number">3.2.3.</span> <span class="toc-text">修改php-fpm进程配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#释放discuz源码"><span class="toc-number">3.2.4.</span> <span class="toc-text">释放discuz源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改discuz源码权限"><span class="toc-number">3.2.5.</span> <span class="toc-text">修改discuz源码权限</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库服务器"><span class="toc-number">3.3.</span> <span class="toc-text">数据库服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装mariadb服务"><span class="toc-number">3.3.1.</span> <span class="toc-text">安装mariadb服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动mariadb"><span class="toc-number">3.3.2.</span> <span class="toc-text">启动mariadb</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化数据库"><span class="toc-number">3.3.3.</span> <span class="toc-text">初始化数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置数据库"><span class="toc-number">3.3.4.</span> <span class="toc-text">配置数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#进入数据库"><span class="toc-number">3.3.4.1.</span> <span class="toc-text">进入数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#新建discuz！数据库"><span class="toc-number">3.3.4.2.</span> <span class="toc-text">新建discuz！数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#退出数据库"><span class="toc-number">3.3.4.3.</span> <span class="toc-text">退出数据库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#打开浏览器，访问Nginx服务器的IP"><span class="toc-number">3.4.</span> <span class="toc-text">打开浏览器，访问Nginx服务器的IP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#同意后进入权限检查，全是可写，下一步"><span class="toc-number">3.4.1.</span> <span class="toc-text">同意后进入权限检查，全是可写，下一步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进入数据库配置界面"><span class="toc-number">3.4.2.</span> <span class="toc-text">进入数据库配置界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#看看咱们的新首页-哎呦我去！"><span class="toc-number">3.4.3.</span> <span class="toc-text">看看咱们的新首页~哎呦我去！</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -220,9 +451,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
