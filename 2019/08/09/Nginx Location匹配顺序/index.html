@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Nginx Location匹配规则 | 菜鹌鹑</title>
+  <title>Nginx Location匹配顺序 | 菜鹌鹑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言：location是Nginx配置中的一个指令，用于访问的URL匹配，而在这个location中所配置的每个指令将会启动不同的 模块去完成相应的工作。">
+  <meta name="description" content="理论部分文字释义匹配规则如下：略述 nginx服务器首先在server块的多个location块中搜索是否有标准的uri和请求字符串匹配。如果有多个标准uri可以匹配，就匹配其中匹配度最高的一个location。  然后，nginx在使用location块中，正则uri和请求字符串，进行匹配。如果正则匹配成功，则结束匹配，并使用这个location处理请求；如果正则匹配失败，则使用标准uri中，匹">
 <meta name="keywords" content="Nginx,Location">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nginx Location匹配规则">
-<meta property="og:url" content="http://yoursite.com/2019/08/09/Nginx Location匹配规则/index.html">
+<meta property="og:title" content="Nginx Location匹配顺序">
+<meta property="og:url" content="http://yoursite.com/2019/08/09/Nginx Location匹配顺序/index.html">
 <meta property="og:site_name" content="菜鹌鹑">
-<meta property="og:description" content="前言：location是Nginx配置中的一个指令，用于访问的URL匹配，而在这个location中所配置的每个指令将会启动不同的 模块去完成相应的工作。">
+<meta property="og:description" content="理论部分文字释义匹配规则如下：略述 nginx服务器首先在server块的多个location块中搜索是否有标准的uri和请求字符串匹配。如果有多个标准uri可以匹配，就匹配其中匹配度最高的一个location。  然后，nginx在使用location块中，正则uri和请求字符串，进行匹配。如果正则匹配成功，则结束匹配，并使用这个location处理请求；如果正则匹配失败，则使用标准uri中，匹">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-09T06:35:20.368Z">
+<meta property="og:updated_time" content="2019-08-09T06:42:51.060Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nginx Location匹配规则">
-<meta name="twitter:description" content="前言：location是Nginx配置中的一个指令，用于访问的URL匹配，而在这个location中所配置的每个指令将会启动不同的 模块去完成相应的工作。">
+<meta name="twitter:title" content="Nginx Location匹配顺序">
+<meta name="twitter:description" content="理论部分文字释义匹配规则如下：略述 nginx服务器首先在server块的多个location块中搜索是否有标准的uri和请求字符串匹配。如果有多个标准uri可以匹配，就匹配其中匹配度最高的一个location。  然后，nginx在使用location块中，正则uri和请求字符串，进行匹配。如果正则匹配成功，则结束匹配，并使用这个location处理请求；如果正则匹配失败，则使用标准uri中，匹">
   
     <link rel="alternative" href="/atom.xml" title="菜鹌鹑" type="application/atom+xml">
   
@@ -141,19 +141,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Nginx Location匹配规则" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Nginx Location匹配顺序" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Nginx Location匹配规则
+      Nginx Location匹配顺序
     </h1>
   
 
         
-        <a href="/2019/08/09/Nginx Location匹配规则/" class="archive-article-date">
+        <a href="/2019/08/09/Nginx Location匹配顺序/" class="archive-article-date">
   	<time datetime="2019-08-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
 </a>
         
@@ -168,7 +168,7 @@
 		<div id="toc-article" class="toc-article">
 			<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 			<strong class="toc-title">目录</strong>
-			   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言："><span class="toc-number">1.</span> <span class="toc-text">前言：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#理论部分"><span class="toc-number">2.</span> <span class="toc-text">理论部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、location语法："><span class="toc-number">2.1.</span> <span class="toc-text">一、location语法：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、四种可选标识符："><span class="toc-number">2.2.</span> <span class="toc-text">二、四种可选标识符：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#操作案例部分"><span class="toc-number">3.</span> <span class="toc-text">操作案例部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、环境准备"><span class="toc-number">3.1.</span> <span class="toc-text">一、环境准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、匹配标识符案例"><span class="toc-number">3.2.</span> <span class="toc-text">二、匹配标识符案例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-“-”精准匹配"><span class="toc-number">3.2.1.</span> <span class="toc-text">1. “=”精准匹配 </span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-“-”区分大小写正则匹配"><span class="toc-number">3.3.</span> <span class="toc-text">2.  “~”区分大小写正则匹配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-“-”不区分大小写的正则匹配"><span class="toc-number">3.4.</span> <span class="toc-text">3. “~*”不区分大小写的正则匹配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-“-”不进行正则匹配的标准匹配，只匹配前缀"><span class="toc-number">3.5.</span> <span class="toc-text">4. “^~”不进行正则匹配的标准匹配，只匹配前缀</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-普通匹配"><span class="toc-number">3.6.</span> <span class="toc-text">5.普通匹配</span></a></li></ol></li></ol>
+			   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#理论部分"><span class="toc-number">1.</span> <span class="toc-text">理论部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#文字释义匹配规则如下："><span class="toc-number">1.1.</span> <span class="toc-text">文字释义匹配规则如下：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#略述"><span class="toc-number">1.1.1.</span> <span class="toc-text">略述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#详细"><span class="toc-number">1.1.2.</span> <span class="toc-text">详细</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标识符匹配规则如下："><span class="toc-number">1.2.</span> <span class="toc-text">标识符匹配规则如下：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#操作案例部分"><span class="toc-number">2.</span> <span class="toc-text">操作案例部分</span></a></li></ol>
 			 </div>
 	   <script type="text/javascript">
 		function showToc(){
@@ -188,54 +188,28 @@
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h1><p>location是Nginx配置中的一个指令，用于访问的URL匹配，而在这个location中所配置的每个指令将会启动不同的 模块去完成相应的工作。<a id="more"></a></p>
-<h1 id="理论部分"><a href="#理论部分" class="headerlink" title="理论部分"></a>理论部分</h1><h2 id="一、location语法："><a href="#一、location语法：" class="headerlink" title="一、location语法："></a>一、location语法：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">location [=|~|~*|^~] uri &#123; … &#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="理论部分"><a href="#理论部分" class="headerlink" title="理论部分"></a>理论部分</h1><h2 id="文字释义匹配规则如下："><a href="#文字释义匹配规则如下：" class="headerlink" title="文字释义匹配规则如下："></a>文字释义匹配规则如下：</h2><h3 id="略述"><a href="#略述" class="headerlink" title="略述"></a>略述</h3><ol>
+<li><p>nginx服务器首先在server块的多个location块中搜索是否有标准的uri和请求字符串匹配。如果有多个标准uri可以匹配，就匹配其中匹配度最高的一个location。</p>
+</li>
+<li><p>然后，nginx在使用location块中，正则uri和请求字符串，进行匹配。如果正则匹配成功，则结束匹配，并使用这个location处理请求；如果正则匹配失败，则使用标准uri中，匹配度最高的location。<a id="more"></a></p>
+</li>
+</ol>
+<h3 id="详细"><a href="#详细" class="headerlink" title="详细"></a>详细</h3><ol>
+<li><p>如果有精确匹配，会先进行精确匹配，匹配成功，立刻返回结果。</p>
+</li>
+<li><p>普通匹配与顺序无关，因为按照匹配的长短来取匹配结果。</p>
+</li>
+<li><p>正则匹配与顺序有关，因为是从上往下匹配。(首先匹配，就结束解析过程)</p>
+</li>
+<li><p>在location中，有一种统配的location，所有的请求，都可以匹配</p>
+</li>
+</ol>
+<h2 id="标识符匹配规则如下："><a href="#标识符匹配规则如下：" class="headerlink" title="标识符匹配规则如下："></a>标识符匹配规则如下：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(location = uri &#123;&#125;) &gt; (location 完整路径 &#123;&#125;) &gt; (location ^~ 路径 &#123;&#125;) &gt; (location ~,~* 正则顺序 &#123;&#125;) &gt; (location 部分起始路径 &#123;&#125;) &gt; (location / &#123;&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>其中，方括号中的四种标识符是可选项，用来改变请求字符串和uri的匹配方式。uri是待匹配的请求字符串，可以是不包含正则的字符串，这种模式被称为“标准的uri”；也可以包含正则，这种模式被称为”正则uri”。例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location ~ .*\.(php|php5)?$ &#123;</span><br><span class="line">　　root /var/www/html;</span><br><span class="line">　　……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="操作案例部分"><a href="#操作案例部分" class="headerlink" title="操作案例部分"></a>操作案例部分</h1><p>首先，我们把所有的规则写入nginx.conf，并重新读取nginx.conf然后开始实验，这次仍然借助echo-nginx-module进行，（echo-nginx-module配置过程向右看👉<a href="https://quail2333.github.io/2019/08/09/echo-nginx-module的安装、配置、使用/" target="_blank" rel="noopener">echo-nginx-module的安装、配置、使用</a>）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">location = /php.php &#123;</span><br><span class="line">            echo &apos;精确匹配&apos;;</span><br><span class="line">&#125;</span><br><span class="line">location ^~ /php/ &#123;</span><br><span class="line">            echo &apos;标准匹配，仅前缀&apos;;</span><br><span class="line">&#125;</span><br><span class="line">location ~ \.(php) &#123;</span><br><span class="line">            echo &apos;区分大小写，小写&apos;;</span><br><span class="line">&#125;</span><br><span class="line">location ~ \.(pHp) &#123;</span><br><span class="line">            echo &apos;区分大小写，大写&apos;;</span><br><span class="line">&#125;</span><br><span class="line">location ~* \.(php)$ &#123;</span><br><span class="line">            echo &apos;不区分大小写&apos;;</span><br></pre></td></tr></table></figure>
 
-<h2 id="二、四种可选标识符："><a href="#二、四种可选标识符：" class="headerlink" title="二、四种可选标识符："></a>二、四种可选标识符：</h2><table>
-<thead>
-<tr>
-<th>标识符</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>=</td>
-<td><strong>精确匹配：</strong>用于标准uri前，要求请求字符串和uri严格匹配。如果匹配成功就停止匹配，立即执行该location里面的请求。</td>
-</tr>
-<tr>
-<td>~</td>
-<td><strong>正则匹配：</strong>用于正则uri前，表示uri里面包含正则，并且区分大小写。</td>
-</tr>
-<tr>
-<td>~*</td>
-<td><strong>正则匹配：</strong>用于正则uri前，表示uri里面包含正则，不区分大小写。</td>
-</tr>
-<tr>
-<td>^~</td>
-<td><strong>非正则匹配；</strong>用于标准uri前，nginx服务器匹配到前缀最多的uri后就结束，该模式匹配成功后，不会使用正则匹配。</td>
-</tr>
-<tr>
-<td>无</td>
-<td><strong>普通匹配（最长字符匹配）；</strong>与location顺序无关，是按照匹配的长短来取匹配结果。若完全匹配，就停止匹配。</td>
-</tr>
-</tbody></table>
-<h1 id="操作案例部分"><a href="#操作案例部分" class="headerlink" title="操作案例部分"></a>操作案例部分</h1><h2 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h2><p>为了方便验证各匹配标识符，我们借助第三方模块  echo模块进行操作。安装步骤向右看👉<a href="https://quail2333.github.io/2019/08/09/echo-nginx-module的安装、配置、使用/" target="_blank" rel="noopener">echo-nginx-module的安装、配置、使用</a></p>
-<h2 id="二、匹配标识符案例"><a href="#二、匹配标识符案例" class="headerlink" title="二、匹配标识符案例"></a>二、匹配标识符案例</h2><h3 id="1-“-”精准匹配"><a href="#1-“-”精准匹配" class="headerlink" title="1. “=”精准匹配 "></a>1. “=”精准匹配<a href="https://www.cnblogs.com/quail2333/p/11181589.html" target="_blank" rel="noopener"> </a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">location = /news/ &#123;</span><br><span class="line">            echo &quot;test1&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">[root@www quail]# curl 192.168.249.132/news/</span><br><span class="line">test1</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-“-”区分大小写正则匹配"><a href="#2-“-”区分大小写正则匹配" class="headerlink" title="2.  “~”区分大小写正则匹配"></a>2.  “~”区分大小写正则匹配</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">location ~ \.(html) &#123;</span><br><span class="line">    echo &apos;test2&apos;;</span><br><span class="line">&#125;</span><br><span class="line">location ~ \.(htmL) &#123;</span><br><span class="line">    echo &apos;test3&apos;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@www quail]# curl 192.168.249.132/index.html</span><br><span class="line">test2</span><br><span class="line">[root@www quail]# curl 192.168.249.132/index.htmL</span><br><span class="line">test3</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-“-”不区分大小写的正则匹配"><a href="#3-“-”不区分大小写的正则匹配" class="headerlink" title="3. “~*”不区分大小写的正则匹配"></a>3. “~*”不区分大小写的正则匹配</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">location ~* \.(html)&#123;</span><br><span class="line">            echo &apos;test4&apos;;</span><br><span class="line">&#125;</span><br><span class="line">[root@www quail]# curl 192.168.249.132/index.htmL</span><br><span class="line">test4</span><br><span class="line">[root@www quail]# curl 192.168.249.132/index.html</span><br><span class="line">test4</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-“-”不进行正则匹配的标准匹配，只匹配前缀"><a href="#4-“-”不进行正则匹配的标准匹配，只匹配前缀" class="headerlink" title="4. “^~”不进行正则匹配的标准匹配，只匹配前缀"></a>4. “^~”不进行正则匹配的标准匹配，只匹配前缀</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location ^~ /index/ &#123;</span><br><span class="line">            echo &apos;test5&apos;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@www quail]# curl 192.168.249.132/index/</span><br><span class="line">test5</span><br><span class="line">[root@www quail]# curl 192.168.249.132/index/heihei</span><br><span class="line">test5</span><br><span class="line">[root@www quail]# curl 192.168.249.132/index/asdnmkalsjd</span><br><span class="line">test5</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-普通匹配"><a href="#5-普通匹配" class="headerlink" title="5.普通匹配"></a>5.普通匹配</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">            echo &apos;test6&apos;;</span><br><span class="line">&#125;</span><br><span class="line">[root@www quail]# curl 192.168.249.132</span><br><span class="line">test6</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@www quail]# curl 192.168.249.132/php.php</span><br><span class="line">精确匹配</span><br><span class="line">[root@www quail]# curl 192.168.249.132/php/php.php</span><br><span class="line">标准匹配，仅前缀</span><br><span class="line">[root@www quail]# curl 192.168.249.132/pp.php</span><br><span class="line">区分大小写，小写</span><br><span class="line">[root@www quail]# curl 192.168.249.132/pp.pHp</span><br><span class="line">区分大小写，大写</span><br><span class="line">[root@www quail]# curl 192.168.249.132/php.pHP</span><br><span class="line">不区分大小写</span><br></pre></td></tr></table></figure>
       
 
       
@@ -339,7 +313,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/09/Nginx Location匹配规则/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/09/Nginx Location匹配顺序/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -353,18 +327,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/09/Nginx搭建Discuz!/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/09/Nginx的平滑升级记录---适用于编译安装的Nginx/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Nginx代理服务器搭建discuz
+          Nginx的平滑升级记录---适用于编译安装的Nginx
         
       </div>
     </a>
   
   
-    <a href="/2019/08/09/echo-nginx-module的安装、配置、使用/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">echo-nginx-module的安装，配置，使用</div>
+    <a href="/2019/08/09/针对discuz丢失css解决办法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">针对discuz！丢失css解决办法</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -391,7 +365,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言："><span class="toc-number">1.</span> <span class="toc-text">前言：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#理论部分"><span class="toc-number">2.</span> <span class="toc-text">理论部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、location语法："><span class="toc-number">2.1.</span> <span class="toc-text">一、location语法：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、四种可选标识符："><span class="toc-number">2.2.</span> <span class="toc-text">二、四种可选标识符：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#操作案例部分"><span class="toc-number">3.</span> <span class="toc-text">操作案例部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、环境准备"><span class="toc-number">3.1.</span> <span class="toc-text">一、环境准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、匹配标识符案例"><span class="toc-number">3.2.</span> <span class="toc-text">二、匹配标识符案例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-“-”精准匹配"><span class="toc-number">3.2.1.</span> <span class="toc-text">1. “=”精准匹配 </span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-“-”区分大小写正则匹配"><span class="toc-number">3.3.</span> <span class="toc-text">2.  “~”区分大小写正则匹配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-“-”不区分大小写的正则匹配"><span class="toc-number">3.4.</span> <span class="toc-text">3. “~*”不区分大小写的正则匹配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-“-”不进行正则匹配的标准匹配，只匹配前缀"><span class="toc-number">3.5.</span> <span class="toc-text">4. “^~”不进行正则匹配的标准匹配，只匹配前缀</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-普通匹配"><span class="toc-number">3.6.</span> <span class="toc-text">5.普通匹配</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#理论部分"><span class="toc-number">1.</span> <span class="toc-text">理论部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#文字释义匹配规则如下："><span class="toc-number">1.1.</span> <span class="toc-text">文字释义匹配规则如下：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#略述"><span class="toc-number">1.1.1.</span> <span class="toc-text">略述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#详细"><span class="toc-number">1.1.2.</span> <span class="toc-text">详细</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标识符匹配规则如下："><span class="toc-number">1.2.</span> <span class="toc-text">标识符匹配规则如下：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#操作案例部分"><span class="toc-number">2.</span> <span class="toc-text">操作案例部分</span></a></li></ol>
                     </div>
                 </span>
             </div>
