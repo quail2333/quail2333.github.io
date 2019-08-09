@@ -8,21 +8,21 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Python2.7更新pip：UnicodeDecodeError &#39;ascii&#39; codec can&#39;t decode byte 0xb7 in position 7 ordinal not in range(128) | 菜鹌鹑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="首先更新pip版本的时候出现。这是出现在python2.7.16出现的问题 进入你的pyhton目录下的Lib\mimetypes.py 打开它在import下面加入这代码  1234if sys.getdefaultencoding() != &amp;apos;gbk&amp;apos;:    reload(sys)    sys.setdefaultencoding(&amp;apos;gbk&amp;apos;)#对准">
+  <meta name="description" content="首先更新pip版本的时候出现。这是出现在python2.7.16出现的问题">
 <meta name="keywords" content="python,pip,踩坑">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python2.7更新pip：UnicodeDecodeError &#39;ascii&#39; codec can&#39;t decode byte 0xb7 in position 7 ordinal not in range(128)">
 <meta property="og:url" content="http://yoursite.com/2019/08/09/Python2.7更新pip：UnicodeDecodeError 'ascii' codec can't decode byte 0xb7 in position 7 ordinal not in range(128)/index.html">
 <meta property="og:site_name" content="菜鹌鹑">
-<meta property="og:description" content="首先更新pip版本的时候出现。这是出现在python2.7.16出现的问题 进入你的pyhton目录下的Lib\mimetypes.py 打开它在import下面加入这代码  1234if sys.getdefaultencoding() != &amp;apos;gbk&amp;apos;:    reload(sys)    sys.setdefaultencoding(&amp;apos;gbk&amp;apos;)#对准">
+<meta property="og:description" content="首先更新pip版本的时候出现。这是出现在python2.7.16出现的问题">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/09/ebDGjI.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/09/ebDYut.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/09/ebDw4g.png">
-<meta property="og:updated_time" content="2019-08-09T08:02:53.037Z">
+<meta property="og:updated_time" content="2019-08-09T08:26:12.968Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python2.7更新pip：UnicodeDecodeError &#39;ascii&#39; codec can&#39;t decode byte 0xb7 in position 7 ordinal not in range(128)">
-<meta name="twitter:description" content="首先更新pip版本的时候出现。这是出现在python2.7.16出现的问题 进入你的pyhton目录下的Lib\mimetypes.py 打开它在import下面加入这代码  1234if sys.getdefaultencoding() != &amp;apos;gbk&amp;apos;:    reload(sys)    sys.setdefaultencoding(&amp;apos;gbk&amp;apos;)#对准">
+<meta name="twitter:description" content="首先更新pip版本的时候出现。这是出现在python2.7.16出现的问题">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/08/09/ebDGjI.png">
   
     <link rel="alternative" href="/atom.xml" title="菜鹌鹑" type="application/atom+xml">
@@ -170,6 +170,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="首先更新pip版本的时候出现。这是出现在python2-7-16出现的问题"><a href="#首先更新pip版本的时候出现。这是出现在python2-7-16出现的问题" class="headerlink" title="首先更新pip版本的时候出现。这是出现在python2.7.16出现的问题"></a>首先更新pip版本的时候出现。这是出现在python2.7.16出现的问题</h1><p><img src="https://s2.ax1x.com/2019/08/09/ebDGjI.png" alt="ebDGjI.png"></p>
+<a id="more"></a>
+
 <h1 id="进入你的pyhton目录下的Lib-mimetypes-py-打开它"><a href="#进入你的pyhton目录下的Lib-mimetypes-py-打开它" class="headerlink" title="进入你的pyhton目录下的Lib\mimetypes.py 打开它"></a>进入你的pyhton目录下的Lib\mimetypes.py 打开它</h1><h1 id><a href="#" class="headerlink" title></a><img src="https://s2.ax1x.com/2019/08/09/ebDYut.png" alt="ebDYut.png"></h1><h1 id="在import下面加入这代码"><a href="#在import下面加入这代码" class="headerlink" title="在import下面加入这代码"></a>在import下面加入这代码</h1><p> <img src="https://s2.ax1x.com/2019/08/09/ebDw4g.png" alt="ebDw4g.png"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if sys.getdefaultencoding() != &apos;gbk&apos;:</span><br><span class="line">    reload(sys)</span><br><span class="line">    sys.setdefaultencoding(&apos;gbk&apos;)</span><br><span class="line">#对准格式</span><br></pre></td></tr></table></figure>
 
