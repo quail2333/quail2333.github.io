@@ -6,15 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 菜鹌鹑</title>
+  <title>初识Jenkins持续集成平台 | 菜鹌鹑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="菜鹌鹑">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="前言为什么要引入Jenkins呢？​        随着企业的门户网站、业务系统不断的增加，通过运维人员手工的代码更新、部署非常吃力，消耗大量的人力成本，为了提高网站、业务系统的部署更新的效率，会引入自动化部署的平台：Hudson（收费版本）、Jenkins（开源免费）。">
+<meta name="keywords" content="基础,Jenkins">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初识Jenkins持续集成平台">
+<meta property="og:url" content="http://yoursite.com/2019/08/11/初识Jenkins持续集成平台/index.html">
 <meta property="og:site_name" content="菜鹌鹑">
+<meta property="og:description" content="前言为什么要引入Jenkins呢？​        随着企业的门户网站、业务系统不断的增加，通过运维人员手工的代码更新、部署非常吃力，消耗大量的人力成本，为了提高网站、业务系统的部署更新的效率，会引入自动化部署的平台：Hudson（收费版本）、Jenkins（开源免费）。">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/09/eqRTds.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/09/eqf68P.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/09/eqh5LD.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/09/eqhbFA.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/09/eqh7od.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/09/eqhqJI.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/09/eqhLWt.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/09/eqhTdH.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/10/eq4iYn.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/10/eq4FWq.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/10/eq4AS0.png">
+<meta property="og:updated_time" content="2019-08-10T06:12:28.758Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="菜鹌鹑">
+<meta name="twitter:title" content="初识Jenkins持续集成平台">
+<meta name="twitter:description" content="前言为什么要引入Jenkins呢？​        随着企业的门户网站、业务系统不断的增加，通过运维人员手工的代码更新、部署非常吃力，消耗大量的人力成本，为了提高网站、业务系统的部署更新的效率，会引入自动化部署的平台：Hudson（收费版本）、Jenkins（开源免费）。">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/08/09/eqRTds.png">
   
     <link rel="alternative" href="/atom.xml" title="菜鹌鹑" type="application/atom+xml">
   
@@ -140,36 +157,117 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-初识Jenkins持续集成平台" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/11/初识Jenkins持续集成平台/" class="archive-article-date">
-  	<time datetime="2019-08-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/11/初识Jenkins持续集成平台/">初识Jenkins持续集成平台</a>
+    <h1 class="article-title" itemprop="name">
+      初识Jenkins持续集成平台
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/08/11/初识Jenkins持续集成平台/" class="archive-article-date">
+  	<time datetime="2019-08-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="为什么要引入Jenkins呢？"><a href="#为什么要引入Jenkins呢？" class="headerlink" title="为什么要引入Jenkins呢？"></a>为什么要引入Jenkins呢？</h2><p>​        随着企业的门户网站、业务系统不断的增加，通过运维人员手工的代码更新、部署非常吃力，消耗大量的人力成本，为了提高网站、业务系统的部署更新的效率，会引入自动化部署的平台：Hudson（收费版本）、Jenkins（开源免费）。<a id="more"></a></p>
+<h2 id="通过Jenkins持续集成平台，能够实现哪些功能呢？简化哪些工作任务呢？"><a href="#通过Jenkins持续集成平台，能够实现哪些功能呢？简化哪些工作任务呢？" class="headerlink" title="通过Jenkins持续集成平台，能够实现哪些功能呢？简化哪些工作任务呢？"></a>通过Jenkins持续集成平台，能够实现哪些功能呢？简化哪些工作任务呢？</h2><p><img src="https://s2.ax1x.com/2019/08/09/eqRTds.png" alt="eqRTds.png"></p>
+<ul>
+<li><h3 id="开发人员"><a href="#开发人员" class="headerlink" title="开发人员"></a>开发人员</h3><p>默认开发人员编写代码、编译代码、打包程序代码、简单部署、发送运维人员部署等，使用Jenkins平台之后，开发人员只需开发代码即可，无需对代码进行编译、打包、部署等工作，只需要将网站源代码上传至SVN|GIT仓库即可。</p>
+</li>
+<li><h3 id="运维人员"><a href="#运维人员" class="headerlink" title="运维人员"></a>运维人员</h3><p>默认运维人员负责内网环境部署、外网环境网站备份、下载代码、更新代码、查看部署结果、回滚等工作，使用Jenkins平台之后，运维人员只需维护好Jenkins平台即可，无需部署网站、更新网站、回滚等工作。</p>
+</li>
+<li><h3 id="测试人员"><a href="#测试人员" class="headerlink" title="测试人员"></a>测试人员</h3><p>默认测试人员负责内网环境测试、手工测试、功能测试、性能测试，使用Jenkins平台之后，测试人员只需要编写测试脚本，将测试脚本传递给Jenkins平台，让Jenkins全自动执行并且测试。</p>
+</li>
+</ul>
+<h2 id="Jenkins持续集成平台组件："><a href="#Jenkins持续集成平台组件：" class="headerlink" title="Jenkins持续集成平台组件："></a>Jenkins持续集成平台组件：</h2><ul>
+<li>SVN|GIT文件代码仓库（文件服务器）；</li>
+<li>部署Jenkins软件服务的服务器（平台）；</li>
+<li>创建集成任务JOB、网站部署的流程（下载代码、编译代码、打包代码、部署代码、测试代码、发送部署邮件结果）；</li>
+</ul>
+<h1 id="构建Jenkins持续集成平台"><a href="#构建Jenkins持续集成平台" class="headerlink" title="构建Jenkins持续集成平台"></a>构建Jenkins持续集成平台</h1><h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><ol>
+<li>Jenkins软件程序是基于JAVA语言开发的，要求运行Jenkins软件的底层Linux系统部署JAVA JDK（JVM虚拟机）。</li>
+<li>Java部署：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">tar xzf /home/quail/jdk1.8.0_131.tar.gz</span><br><span class="line">mkdir -p /usr/java/</span><br><span class="line">mv /home/quail/jdk1.8.0_131 /usr/java/</span><br><span class="line"><span class="meta">cat&gt;</span>&gt;/etc/profile&lt;&lt;EOF</span><br><span class="line"><span class="meta">&gt;</span> export JAVA_HOME=/usr/java/jdk1.8.0_131/</span><br><span class="line"><span class="meta">&gt;</span> export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib:$JAVA_HOME/jre/lib</span><br><span class="line"><span class="meta">&gt;</span> export PATH=$PATH:/usr/java/jdk1.8.0_131/bin/</span><br><span class="line"><span class="meta">&gt;</span> EOF</span><br></pre></td></tr></table></figure>
+
+<p>添加完成后，我们使用source命令重新载入一下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p>检查Java环境是否配置正确</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.ax1x.com/2019/08/09/eqf68P.png" alt="eqf68P.png"></p>
+<p>ok！Java环境就绪，我们进行下一步</p>
+<h2 id="安装Tomcat容器"><a href="#安装Tomcat容器" class="headerlink" title="安装Tomcat容器"></a>安装Tomcat容器</h2><h3 id="问号脸：为什么不直接使用jdk启动Jenkins程序呢？"><a href="#问号脸：为什么不直接使用jdk启动Jenkins程序呢？" class="headerlink" title="问号脸：为什么不直接使用jdk启动Jenkins程序呢？"></a>问号脸：为什么不直接使用jdk启动Jenkins程序呢？</h3><p>默认基于Java jdk确实可以直接启动Jenkins.war程序，但是此种方式不推荐（不方便管理），所以我们选择部署Tomcat WEB服务，通过Tomcat去发布和解析Jenkins程序。</p>
+<h3 id="解压Tomcat压缩包"><a href="#解压Tomcat压缩包" class="headerlink" title="解压Tomcat压缩包"></a>解压Tomcat压缩包</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -xzf /home/quail/apache-tomcat-8.0.50.tar.gz</span><br><span class="line">mkdir -p /usr/local/tomcat</span><br><span class="line">\cp -r /home/quail/apache-tomcat-8.0.50/* /usr/local/tomcat/</span><br></pre></td></tr></table></figure>
+
+<h3 id="释放Jenkins源码"><a href="#释放Jenkins源码" class="headerlink" title="释放Jenkins源码"></a>释放Jenkins源码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /usr/local/tomcat/webapps/*</span><br><span class="line">mkdir -p /usr/local/tomcat/webapps/ROOT</span><br><span class="line">mv /home/quail/jenkins.war /usr/local/tomcat/webapps/ROOT/</span><br><span class="line">cd /usr/local/tomcat/webapps/ROOT/</span><br><span class="line">jar -xf jenkins.war</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动Tomcat进程"><a href="#启动Tomcat进程" class="headerlink" title="启动Tomcat进程"></a>启动Tomcat进程</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/tomcat/bin/startup.sh</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.ax1x.com/2019/08/09/eqh5LD.png" alt="eqh5LD.png"></p>
+<h2 id="安装Jenkins持续集成平台"><a href="#安装Jenkins持续集成平台" class="headerlink" title="安装Jenkins持续集成平台"></a>安装Jenkins持续集成平台</h2><h3 id="通过浏览器访问当前服务器的8080端口"><a href="#通过浏览器访问当前服务器的8080端口" class="headerlink" title="通过浏览器访问当前服务器的8080端口"></a>通过浏览器访问当前服务器的8080端口</h3><p><img src="https://s2.ax1x.com/2019/08/09/eqhbFA.png" alt="eqhbFA.png"></p>
+<h3 id="通过提示，找到密码并继续"><a href="#通过提示，找到密码并继续" class="headerlink" title="通过提示，找到密码并继续"></a>通过提示，找到密码并继续</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /root/.jenkins/secrets/initialAdminPassword</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.ax1x.com/2019/08/09/eqh7od.png" alt="eqh7od.png"></p>
+<p>通过一段时间的加载，就进入了安装界面</p>
+<p><img src="https://s2.ax1x.com/2019/08/09/eqhqJI.png" alt="eqhqJI.png"></p>
+<h3 id="安装选项"><a href="#安装选项" class="headerlink" title="安装选项"></a>安装选项</h3><p>如果我们选择“选择插件来安装”的话，会看到以下界面</p>
+<p><img src="https://s2.ax1x.com/2019/08/09/eqhLWt.png" alt="eqhLWt.png"></p>
+<p>可以看到一共有59个插件可供选择，但是咱们就选择默认安装就可以了</p>
+<p><img src="https://s2.ax1x.com/2019/08/09/eqhTdH.png" alt="eqhTdH.png"></p>
+<h3 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h3><p>由于咱们是自己做实验，所以使用admin用户即可</p>
+<p><img src="https://s2.ax1x.com/2019/08/10/eq4iYn.png" alt="eq4iYn.png"></p>
+<h3 id="实例配置"><a href="#实例配置" class="headerlink" title="实例配置"></a>实例配置</h3><p>咱们选择默认即可</p>
+<p><img src="https://s2.ax1x.com/2019/08/10/eq4FWq.png" alt="eq4FWq.png"></p>
+<h3 id="Jenkins持续集成平台构建完成"><a href="#Jenkins持续集成平台构建完成" class="headerlink" title="Jenkins持续集成平台构建完成"></a>Jenkins持续集成平台构建完成</h3><p><img src="https://s2.ax1x.com/2019/08/10/eq4AS0.png" alt="eq4AS0.png"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://i.loli.net/2019/08/07/STBjO1yIJeHcFXw.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://i.loli.net/2019/08/07/TUrd15kgxGNVs3C.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -185,416 +283,118 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/11/初识Jenkins持续集成平台/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/09/Nginx正向代理和反向代理/" class="archive-article-date">
-  	<time datetime="2019-08-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/09/Nginx正向代理和反向代理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Nginx正向代理和反向代理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/09/Nginx正向代理和反向代理/">Nginx正向代理和反向代理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">反向代理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要引入Jenkins呢？"><span class="toc-number">1.1.</span> <span class="toc-text">为什么要引入Jenkins呢？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过Jenkins持续集成平台，能够实现哪些功能呢？简化哪些工作任务呢？"><span class="toc-number">1.2.</span> <span class="toc-text">通过Jenkins持续集成平台，能够实现哪些功能呢？简化哪些工作任务呢？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#开发人员"><span class="toc-number">1.2.1.</span> <span class="toc-text">开发人员</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运维人员"><span class="toc-number">1.2.2.</span> <span class="toc-text">运维人员</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试人员"><span class="toc-number">1.2.3.</span> <span class="toc-text">测试人员</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Jenkins持续集成平台组件："><span class="toc-number">1.3.</span> <span class="toc-text">Jenkins持续集成平台组件：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#构建Jenkins持续集成平台"><span class="toc-number">2.</span> <span class="toc-text">构建Jenkins持续集成平台</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置环境"><span class="toc-number">2.1.</span> <span class="toc-text">配置环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Tomcat容器"><span class="toc-number">2.2.</span> <span class="toc-text">安装Tomcat容器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#问号脸：为什么不直接使用jdk启动Jenkins程序呢？"><span class="toc-number">2.2.1.</span> <span class="toc-text">问号脸：为什么不直接使用jdk启动Jenkins程序呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解压Tomcat压缩包"><span class="toc-number">2.2.2.</span> <span class="toc-text">解压Tomcat压缩包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#释放Jenkins源码"><span class="toc-number">2.2.3.</span> <span class="toc-text">释放Jenkins源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动Tomcat进程"><span class="toc-number">2.2.4.</span> <span class="toc-text">启动Tomcat进程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Jenkins持续集成平台"><span class="toc-number">2.3.</span> <span class="toc-text">安装Jenkins持续集成平台</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#通过浏览器访问当前服务器的8080端口"><span class="toc-number">2.3.1.</span> <span class="toc-text">通过浏览器访问当前服务器的8080端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过提示，找到密码并继续"><span class="toc-number">2.3.2.</span> <span class="toc-text">通过提示，找到密码并继续</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装选项"><span class="toc-number">2.3.3.</span> <span class="toc-text">安装选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加用户"><span class="toc-number">2.3.4.</span> <span class="toc-text">添加用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实例配置"><span class="toc-number">2.3.5.</span> <span class="toc-text">实例配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins持续集成平台构建完成"><span class="toc-number">2.3.6.</span> <span class="toc-text">Jenkins持续集成平台构建完成</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/09/Windows安装python3.x后piplist警告DEPRECATIONTheefaultformatwillswitchtocolumnsinthefuture/" class="archive-article-date">
-  	<time datetime="2019-08-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/09/Windows安装python3.x后piplist警告DEPRECATIONTheefaultformatwillswitchtocolumnsinthefuture/">Windows安装python3.x后pip list警告DEPRECATION:The default format will switch to columns in the future</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">pip</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">踩坑</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/09/Python2.7更新pip：UnicodeDecodeError 'ascii' codec can't decode byte 0xb7 in position 7 ordinal not in range(128)/" class="archive-article-date">
-  	<time datetime="2019-08-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/09/Python2.7更新pip：UnicodeDecodeError 'ascii' codec can't decode byte 0xb7 in position 7 ordinal not in range(128)/">Python2.7更新pip：UnicodeDecodeError &#39;ascii&#39; codec can&#39;t decode byte 0xb7 in position 7 ordinal not in range(128)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">pip</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">踩坑</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/09/Nginx的平滑升级记录---适用于编译安装的Nginx/" class="archive-article-date">
-  	<time datetime="2019-08-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/09/Nginx的平滑升级记录---适用于编译安装的Nginx/">Nginx的平滑升级记录---适用于编译安装的Nginx</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/09/Nginx Location匹配顺序/" class="archive-article-date">
-  	<time datetime="2019-08-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/09/Nginx Location匹配顺序/">Nginx Location匹配顺序</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Location</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/09/针对discuz丢失css解决办法/" class="archive-article-date">
-  	<time datetime="2019-08-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/09/针对discuz丢失css解决办法/">针对discuz！丢失css解决办法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">discuz!</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">动静分离</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/09/echo-nginx-module的安装、配置、使用/" class="archive-article-date">
-  	<time datetime="2019-08-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/09/echo-nginx-module的安装、配置、使用/">echo-nginx-module的安装，配置，使用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Location</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">plusing</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/09/Nginx Location匹配规则/" class="archive-article-date">
-  	<time datetime="2019-08-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/09/Nginx Location匹配规则/">Nginx Location匹配规则</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Location</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/09/Nginx搭建Discuz!/" class="archive-article-date">
-  	<time datetime="2019-08-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/09/Nginx搭建Discuz!/">Nginx代理服务器搭建discuz</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">discuz!</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -618,8 +418,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
