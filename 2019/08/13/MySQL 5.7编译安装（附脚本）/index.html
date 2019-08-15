@@ -6,26 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://quail2333.github.io">
-  <title>Nginx代理和负载均衡实验 | 菜鹌鹑</title>
+  <title>MySQL 5.7编译安装（附脚本） | 菜鹌鹑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、构建两个tomcat容器并启动123[root@localhost bin]# ps -ef|grep tomcatroot       1525      1 12 10:19 pts/0    00:00:03 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-1/conf/logging.properties">
-<meta name="keywords" content="Nginx,Tomcat,负载均衡">
+  <meta name="description" content="废话MySQL数据库安装方法有两种，一种是yum/rpm通过YUM源在线安装，另外一种是通过源码软件编译安装。">
+<meta name="keywords" content="编译安装,MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nginx代理和负载均衡实验">
-<meta property="og:url" content="http://quail2333.github.io/2019/08/08/Nginx代理和负载均衡实验/index.html">
+<meta property="og:title" content="MySQL 5.7编译安装（附脚本）">
+<meta property="og:url" content="http://quail2333.github.io/2019/08/13/MySQL 5.7编译安装（附脚本）/index.html">
 <meta property="og:site_name" content="菜鹌鹑">
-<meta property="og:description" content="一、构建两个tomcat容器并启动123[root@localhost bin]# ps -ef|grep tomcatroot       1525      1 12 10:19 pts/0    00:00:03 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-1/conf/logging.properties">
+<meta property="og:description" content="废话MySQL数据库安装方法有两种，一种是yum/rpm通过YUM源在线安装，另外一种是通过源码软件编译安装。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/i1VkTIxzGe7mqhC.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/WBzLFs8v2RqHmTc.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/ULTGaktvVREoh79.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/ULTGaktvVREoh79.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/WBzLFs8v2RqHmTc.png">
-<meta property="og:updated_time" content="2019-08-08T09:41:56.725Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/12/ezwwrQ.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/12/ezwran.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/12/ezw0bj.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/12/ezwDVs.png">
+<meta property="og:updated_time" content="2019-08-15T02:42:55.821Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nginx代理和负载均衡实验">
-<meta name="twitter:description" content="一、构建两个tomcat容器并启动123[root@localhost bin]# ps -ef|grep tomcatroot       1525      1 12 10:19 pts/0    00:00:03 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-1/conf/logging.properties">
-<meta name="twitter:image" content="https://i.loli.net/2019/08/08/i1VkTIxzGe7mqhC.png">
+<meta name="twitter:title" content="MySQL 5.7编译安装（附脚本）">
+<meta name="twitter:description" content="废话MySQL数据库安装方法有两种，一种是yum/rpm通过YUM源在线安装，另外一种是通过源码软件编译安装。">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/08/12/ezwwrQ.png">
   
     <link rel="alternative" href="/atom.xml" title="菜鹌鹑" type="application/atom+xml">
   
@@ -155,57 +154,98 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Nginx代理和负载均衡实验" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MySQL 5.7编译安装（附脚本）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Nginx代理和负载均衡实验
+      MySQL 5.7编译安装（附脚本）
     </h1>
   
 
         
-        <a href="/2019/08/08/Nginx代理和负载均衡实验/" class="archive-article-date">
-  	<time datetime="2019-08-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
+        <a href="/2019/08/13/MySQL 5.7编译安装（附脚本）/" class="archive-article-date">
+  	<time datetime="2019-08-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、构建两个tomcat容器并启动"><a href="#一、构建两个tomcat容器并启动" class="headerlink" title="一、构建两个tomcat容器并启动"></a>一、构建两个tomcat容器并启动</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost bin]# ps -ef|grep tomcat</span><br><span class="line">root       1525      1 12 10:19 pts/0    00:00:03 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-1/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /usr/local/tomcat-1/bin/bootstrap.jar:/usr/local/tomcat-1/bin/tomcat-juli.jar -Dcatalina.base=/usr/local/tomcat-1 -Dcatalina.home=/usr/local/tomcat-1 -Djava.io.tmpdir=/usr/local/tomcat-1/temp org.apache.catalina.startup.Bootstrap start</span><br><span class="line">root       1586      1 39 10:19 pts/0    00:00:02 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-2/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /usr/local/tomcat-2/bin/bootstrap.jar:/usr/local/tomcat-2/bin/tomcat-juli.jar -Dcatalina.base=/usr/local/tomcat-2 -Dcatalina.home=/usr/local/tomcat-2 -Djava.io.tmpdir=/usr/local/tomcat-2/temp org.apache.catalina.startup.Bootstrap start</span><br></pre></td></tr></table></figure>
+        <h1 id="废话"><a href="#废话" class="headerlink" title="废话"></a>废话</h1><p>MySQL数据库安装方法有两种，一种是yum/rpm通过YUM源在线安装，另外一种是通过源码软件编译安装。<a id="more"></a></p>
+<h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h1><h2 id="YUM安装方式"><a href="#YUM安装方式" class="headerlink" title="YUM安装方式"></a>YUM安装方式</h2><h3 id="CentOS-6-X"><a href="#CentOS-6-X" class="headerlink" title="CentOS 6.X"></a>CentOS 6.X</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install mysql-server mysql-devel mysql-libs</span><br></pre></td></tr></table></figure>
 
-<a id="more"></a>
+<h3 id="CentOS-7-X"><a href="#CentOS-7-X" class="headerlink" title="CentOS 7.X"></a>CentOS 7.X</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install mariadb-server mariadb mariadb-libs</span><br></pre></td></tr></table></figure>
 
-<h2 id="二、修改两个容器的web首页，并测试两个容器是否正常"><a href="#二、修改两个容器的web首页，并测试两个容器是否正常" class="headerlink" title="二、修改两个容器的web首页，并测试两个容器是否正常"></a>二、修改两个容器的web首页，并测试两个容器是否正常</h2><p><img src="https://i.loli.net/2019/08/08/i1VkTIxzGe7mqhC.png" alt="1655141-20190715102447820-593334092.png"></p>
-<p><img src="https://i.loli.net/2019/08/08/WBzLFs8v2RqHmTc.png" alt="1655141-20190715102651435-484904954.png"></p>
-<h2 id="三、启动Nginx并查看进程"><a href="#三、启动Nginx并查看进程" class="headerlink" title="三、启动Nginx并查看进程"></a>三、启动Nginx并查看进程</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@www ~]# /usr/local/nginx/sbin/./nginx</span><br><span class="line">[root@www ~]# ps -ef|grep nginx</span><br><span class="line">root       5354      1  0 13:00 ?        00:00:00 nginx: master process /usr/local/nginx/sbin/./nginx</span><br><span class="line">nobody     5355   5354  0 13:00 ?        00:00:00 nginx: worker process`</span><br></pre></td></tr></table></figure>
+<p>是不是巨简单！NO！NO！NO！yum方式安装普遍是安装的MySQL5.5，安装目录也就是普遍的/usr/local/mysql55。但我们为什么要使用源码安装还是安装的5.7版本呢？<strong>因为爱情……</strong></p>
+<h2 id="编译安装方式"><a href="#编译安装方式" class="headerlink" title="编译安装方式"></a>编译安装方式</h2><h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><ul>
+<li>OS：CentOS 7.4</li>
+<li>内存：2G以上</li>
+<li>mysql版本： 5.7.x</li>
+</ul>
+<p>因为1G的内存很大的概率会把虚拟机搞炸……别问我怎么知道的……</p>
+<h3 id="安装包准备"><a href="#安装包准备" class="headerlink" title="安装包准备"></a>安装包准备</h3><ul>
+<li>mysql-5.7.21.tar.gz。</li>
+<li>cmake-3.15.2.tar.gz</li>
+<li>boost_1_59_0.tar.gz</li>
+</ul>
+<h3 id="安装编译器cmake"><a href="#安装编译器cmake" class="headerlink" title="安装编译器cmake"></a>安装编译器cmake</h3><ol>
+<li>解压cmake-3.15.2.tar.gz到指定目录</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar zxf /home/Laboratory_Installation_Package/cmake-3.15.2.tar.gz</span><br></pre></td></tr></table></figure>
 
-<h2 id="四、开始实验："><a href="#四、开始实验：" class="headerlink" title="四、开始实验："></a>四、开始实验：</h2><p><strong>Nginx代理服务器IP：192.168.249.132</strong></p>
-<p><strong>Tomcat-1 IP：192.168.249.133：8080</strong></p>
-<p><strong>Tomcat-2 IP：192.168.249.133：8081</strong></p>
-<h3 id="1-配置测试反向代理"><a href="#1-配置测试反向代理" class="headerlink" title="1.配置测试反向代理"></a>1.配置测试反向代理</h3><h4 id="1）修改Nginx的配置文件"><a href="#1）修改Nginx的配置文件" class="headerlink" title="1）修改Nginx的配置文件"></a>1）修改Nginx的配置文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[root@www conf]# cat nginx.conf|grep -E -v &quot;#|^$&quot;</span><br><span class="line">worker_processes  1;</span><br><span class="line">	events &#123;</span><br><span class="line">		worker_connections  1024;</span><br><span class="line">	&#125;</span><br><span class="line">http &#123;</span><br><span class="line">	include       mime.types;</span><br><span class="line">	default_type  application/octet-stream;</span><br><span class="line">	sendfile        on;</span><br><span class="line">	keepalive_timeout  65;</span><br><span class="line">	server &#123;</span><br><span class="line">		listen       80;</span><br><span class="line">		server_name  localhost;</span><br><span class="line">		location / &#123;</span><br><span class="line">			proxy_pass http://192.168.249.133:8080;  #将请求转向后端定义的Tomcat-1上.</span><br><span class="line">		&#125;</span><br><span class="line">		error_page   500 502 503 504  /50x.html;</span><br><span class="line">		location = /50x.html &#123;</span><br><span class="line">			root   html;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>预编译</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/home/Laboratory_Installation_Package/cmake-3.15.2/configure</span><br></pre></td></tr></table></figure>
 
-<h4 id="2）重新载入nginx-conf"><a href="#2）重新载入nginx-conf" class="headerlink" title="2）重新载入nginx.conf"></a>2）重新载入nginx.conf</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@www conf]# cat nginx.conf|grep -E -v &quot;#|^$&quot;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>编译安装一步到位</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/Laboratory_Installation_Package/cmake-3.15.2</span><br><span class="line">make -j4 &amp;&amp; make install</span><br></pre></td></tr></table></figure>
 
-<h4 id="3）访问Nginx代理服务器，查看是否跳转"><a href="#3）访问Nginx代理服务器，查看是否跳转" class="headerlink" title="3）访问Nginx代理服务器，查看是否跳转"></a>3）访问Nginx代理服务器，查看是否跳转</h4><p><img src="https://i.loli.net/2019/08/08/ULTGaktvVREoh79.png" alt="1655141-20190715133427820-677492248.png"></p>
-<h3 id="2-负载均衡算法测试——轮询算法"><a href="#2-负载均衡算法测试——轮询算法" class="headerlink" title="2.负载均衡算法测试——轮询算法"></a>2.负载均衡算法测试——轮询算法</h3><h4 id="1）在nginx-conf的server块里写入upstream配置块，并修改proxy-pass参数"><a href="#1）在nginx-conf的server块里写入upstream配置块，并修改proxy-pass参数" class="headerlink" title="1）在nginx.conf的server块里写入upstream配置块，并修改proxy_pass参数"></a>1）在nginx.conf的server块里写入upstream配置块，并修改proxy_pass参数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">[root@www conf]# cat nginx.conf|grep -E -v &quot;#|^$&quot;</span><br><span class="line">worker_processes  1;</span><br><span class="line">events &#123;</span><br><span class="line">	worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line">http &#123;</span><br><span class="line">	include       mime.types;</span><br><span class="line">	default_type  application/octet-stream;</span><br><span class="line">	sendfile        on;</span><br><span class="line">	keepalive_timeout  65;</span><br><span class="line">	upstream nginxtest &#123;</span><br><span class="line">		server 192.168.249.133:8080;</span><br><span class="line">		server 192.168.249.133:8081;</span><br><span class="line">	&#125;</span><br><span class="line">	server &#123;</span><br><span class="line">		listen       80;</span><br><span class="line">		server_name  localhost;</span><br><span class="line">		location / &#123;</span><br><span class="line">			proxy_pass http://nginxtest;</span><br><span class="line">		&#125;</span><br><span class="line">		error_page   500 502 503 504  /50x.html;</span><br><span class="line">		location = /50x.html &#123;</span><br><span class="line">			root   html;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>测试cmake是否安装成功</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -version</span><br></pre></td></tr></table></figure>
 
-<h4 id="2）重新载入nginx-conf-1"><a href="#2）重新载入nginx-conf-1" class="headerlink" title="2）重新载入nginx.conf"></a>2）重新载入nginx.conf</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@www conf]# ../sbin/./nginx -s reload</span><br></pre></td></tr></table></figure>
+<p><img src="https://s2.ax1x.com/2019/08/12/ezwwrQ.png" alt="ezwwrQ.png"></p>
+<h3 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install ncurses-devel perl autoconf automake zlib libxml libgcrypt libtool bison</span><br></pre></td></tr></table></figure>
 
-<h4 id="3）多次访问Nginx代理服务器"><a href="#3）多次访问Nginx代理服务器" class="headerlink" title="3）多次访问Nginx代理服务器"></a>3）多次访问Nginx代理服务器</h4><p><img src="https://i.loli.net/2019/08/08/ULTGaktvVREoh79.png" alt="1655141-20190715133427820-677492248.png"></p>
-<p><img src="https://i.loli.net/2019/08/08/WBzLFs8v2RqHmTc.png" alt="1655141-20190715102651435-484904954.png"></p>
-<p>一直刷新页面会发现随机出现两个网页，这就是nginx默认的负载均衡算法：轮询算法</p>
-<h3 id="3-负载均衡权重测试——权重算法"><a href="#3-负载均衡权重测试——权重算法" class="headerlink" title="3.负载均衡权重测试——权重算法"></a>3.负载均衡权重测试——权重算法</h3><h4 id="1）在nginx-conf的server块里修改upstream配置块，在其中server参数后添加weight参数"><a href="#1）在nginx-conf的server块里修改upstream配置块，在其中server参数后添加weight参数" class="headerlink" title="1）在nginx.conf的server块里修改upstream配置块，在其中server参数后添加weight参数"></a>1）在nginx.conf的server块里修改upstream配置块，在其中server参数后添加weight参数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">[root@www conf]# cat nginx.conf|grep -E -v &quot;#|^$&quot;</span><br><span class="line">worker_processes  1;</span><br><span class="line">events &#123;</span><br><span class="line">	worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line">http &#123;</span><br><span class="line">	include       mime.types;</span><br><span class="line">	default_type  application/octet-stream;</span><br><span class="line">	sendfile        on;</span><br><span class="line">	keepalive_timeout  65;</span><br><span class="line">	upstream nginxtest &#123;</span><br><span class="line">		server 192.168.249.133:8080 weight=3;</span><br><span class="line">		server 192.168.249.133:8081 weight=2;</span><br><span class="line">	&#125;</span><br><span class="line">	server &#123;</span><br><span class="line">		listen       80;</span><br><span class="line">		server_name  localhost;</span><br><span class="line">		location / &#123;</span><br><span class="line">			proxy_pass http://nginxtest;</span><br><span class="line">		&#125;</span><br><span class="line">		error_page   500 502 503 504  /50x.html;</span><br><span class="line">		location = /50x.html &#123;</span><br><span class="line">			root   html;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h3><h4 id="CMake预编译"><a href="#CMake预编译" class="headerlink" title="CMake预编译"></a>CMake预编译</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql5/ \</span><br><span class="line">-DMYSQL_UNIX_ADDR=/tmp/mysql.sock \</span><br><span class="line">-DMYSQL_DATADIR=/data/mysql/ \</span><br><span class="line">-DSYSCONFDIR=/etc \</span><br><span class="line">-DMYSQL_USER=mysql \</span><br><span class="line">-DMYSQL_TCP_PORT=3306 \</span><br><span class="line">-DWITH_XTRADB_STORAGE_ENGINE=1 \</span><br><span class="line">-DWITH_INNOBASE_STORAGE_ENGINE=1 \</span><br><span class="line">-DWITH_PARTITION_STORAGE_ENGINE=1 \</span><br><span class="line">-DWITH_BLACKHOLE_STORAGE_ENGINE=1 \</span><br><span class="line">-DWITH_MYISAM_STORAGE_ENGINE=1 \</span><br><span class="line">-DWITH_READLINE=1 \</span><br><span class="line">-DENABLED_LOCAL_INFILE=1 \</span><br><span class="line">-DWITH_EXTRA_CHARSETS=1 \</span><br><span class="line">-DDEFAULT_CHARSET=utf8 \</span><br><span class="line">-DDEFAULT_COLLATION=utf8_general_ci \</span><br><span class="line">-DEXTRA_CHARSETS=all \</span><br><span class="line">-DWITH_BIG_TABLES=1 \</span><br><span class="line">-DWITH_DEBUG=0 \</span><br><span class="line">-DDOWNLOAD_BOOST=1 \</span><br><span class="line">-DWITH_BOOST=/usr/local/boost</span><br></pre></td></tr></table></figure>
 
-<p>2）重新载入nginx.conf</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@www conf]# ../sbin/./nginx -s reload</span><br></pre></td></tr></table></figure>
+<h4 id="编译安装MySQL"><a href="#编译安装MySQL" class="headerlink" title="编译安装MySQL"></a>编译安装MySQL</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
 
-<p>3）访问nginx代理服务器</p>
-<p>发现刷新三次是tomcat-1后，后两次刷新是tomcat-2.</p>
-<h2 id="剩下的两种算法持续更新哦……"><a href="#剩下的两种算法持续更新哦……" class="headerlink" title="剩下的两种算法持续更新哦……"></a>剩下的两种算法持续更新哦……</h2>
+<p>如果有条件，处理器个数：4+，内存大小：4G+，大家可以使用下面的命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make -j4 &amp;&amp; make -j4 install</span><br></pre></td></tr></table></figure>
+
+<h1 id="配置用户和数据目录"><a href="#配置用户和数据目录" class="headerlink" title="配置用户和数据目录"></a>配置用户和数据目录</h1><h2 id="配置用户和组"><a href="#配置用户和组" class="headerlink" title="配置用户和组"></a>配置用户和组</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">groupadd mysql</span><br><span class="line">useradd -g mysql -r mysql</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置数据目录"><a href="#配置数据目录" class="headerlink" title="配置数据目录"></a>配置数据目录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chown mysql:mysql -R /usr/local/mysql5</span><br><span class="line">mkdir -p /data/mysql &amp;&amp; chown mysql:mysql -R /data/mysql/</span><br></pre></td></tr></table></figure>
+
+<h1 id="修改或创建my-cnf"><a href="#修改或创建my-cnf" class="headerlink" title="修改或创建my.cnf"></a>修改或创建my.cnf</h1><p><strong>CentOS 7默认就存在一个my.cnf，但是这个是mariadb的配置文件，所以我们直接修改他一下</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line">basedir = /usr/local/mysql5</span><br><span class="line">datadir = /data/mysql</span><br><span class="line">port = 3306</span><br><span class="line">socket = /tmp/mysql.sock</span><br></pre></td></tr></table></figure>
+
+<p>这几个参数足够MySQL启动了换句话说，这是MySQL启动的必需参数，少一个MySQL都起不来。</p>
+<h1 id="初始化MySQL"><a href="#初始化MySQL" class="headerlink" title="初始化MySQL"></a>初始化MySQL</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/mysql5/bin/mysqld --initialize --user=mysql --datadir=/data/mysql --basedir=/usr/local/mysql5</span><br></pre></td></tr></table></figure>
+
+<p><strong>初始化的功能就是在当前数据目录中创建基本MySQL的数据库管理表和账号。</strong></p>
+<p><img src="https://s2.ax1x.com/2019/08/12/ezwran.png" alt="ezwran.png"></p>
+<p>初始化完成后，最后一行会显示<strong>初始化后的数据库密码</strong>。</p>
+<h1 id="配置命令连接和脚本启动"><a href="#配置命令连接和脚本启动" class="headerlink" title="配置命令连接和脚本启动"></a>配置命令连接和脚本启动</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/mysql5/bin/* /usr/bin/</span><br><span class="line">\cp support-files/mysql.server /etc/init.d/mysqld</span><br><span class="line">chmod +x /etc/init.d/mysqld</span><br><span class="line">chkconfig --add mysqld</span><br><span class="line">chkconfig --level 35 mysqld on</span><br></pre></td></tr></table></figure>
+
+<h1 id="启动数据库服务"><a href="#启动数据库服务" class="headerlink" title="启动数据库服务"></a>启动数据库服务</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld restart</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.ax1x.com/2019/08/12/ezw0bj.png" alt="ezw0bj.png"></p>
+<h1 id="登陆MySQL"><a href="#登陆MySQL" class="headerlink" title="登陆MySQL"></a>登陆MySQL</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p'初始化生成的密码'</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.ax1x.com/2019/08/12/ezwDVs.png" alt="ezwDVs.png"></p>
+<p><strong>至此，MySQL已经安装成功了！</strong></p>
+<h1 id="一键配置安装脚本"><a href="#一键配置安装脚本" class="headerlink" title="一键配置安装脚本"></a>一键配置安装脚本</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line"><span class="meta">#</span>Auto intsall MySQL and config</span><br><span class="line"><span class="meta">#</span>2019-08-12</span><br><span class="line"><span class="meta">#</span>by quail</span><br><span class="line"><span class="meta">#</span>ready 3 package:</span><br><span class="line"><span class="meta">#</span> mysql-5.7.21.tar.gz。</span><br><span class="line"><span class="meta">#</span> cmake-3.15.2.tar.gz</span><br><span class="line"><span class="meta">#</span> boost_1_59_0.tar.gz</span><br><span class="line"><span class="meta">#</span>send to /home/quail, then sh this script.</span><br><span class="line"><span class="meta">#</span>################################################</span><br><span class="line">Pdir=/home/quail</span><br><span class="line"><span class="meta">#</span>安装依赖包</span><br><span class="line">function devel()</span><br><span class="line">&#123;</span><br><span class="line">	yum -y install ncurses-devel perl autoconf automake zlib libxml libgcrypt libtool bison</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#</span>安装cmake编译工具</span><br><span class="line">function cmake()</span><br><span class="line">&#123;</span><br><span class="line">	tar zxf $Pdir/15.2.tar.gz</span><br><span class="line">	cd $Pdir/cmake-3.15.2</span><br><span class="line">	./configrue &amp;&amp; make -j4 &amp;&amp; make -j4 install</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#</span>安装boost第三方库</span><br><span class="line">function boost()</span><br><span class="line">&#123;</span><br><span class="line">	tar zxf $Pdir/boost_1_59_0.tar.gz</span><br><span class="line">	\cp -r $Pdir/boost_1_59_0/* /usr/local/boost/</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#</span>安装MySQL</span><br><span class="line">function mysql_install()</span><br><span class="line">&#123;</span><br><span class="line">	cmake $Pdir/mysql-5.7.21/ -DCMAKE_INSTALL_PREFIX=/usr/local/mysql5/ -DMYSQL_UNIX_ADDR=/tmp/mysql.sock -DMYSQL_DATADIR=/data/mysql/ -DSYSCONFDIR=/etc -DMYSQL_USER=mysql -DMYSQL_TCP_PORT=3306 -DWITH_XTRADB_STORAGE_ENGINE=1 -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_PARTITION_STORAGE_ENGINE=1 -DWITH_BLACKHOLE_STORAGE_ENGINE=1 -DWITH_MYISAM_STORAGE_ENGINE=1 -DWITH_READLINE=1 -DENABLED_LOCAL_INFILE=1 -DWITH_EXTRA_CHARSETS=1 -DDEFAULT_CHARSET=utf8 -DDEFAULT_COLLATION=utf8_general_ci -DEXTRA_CHARSETS=all -DWITH_BIG_TABLES=1 -DWITH_DEBUG=0 -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/usr/local/boost</span><br><span class="line">	make &amp;&amp; make install</span><br><span class="line">	groupadd mysql</span><br><span class="line">	useradd -g mysql -r mysql</span><br><span class="line">	chown mysql:mysql -R /usr/local/mysql5</span><br><span class="line">	mkdir -p /data/mysql &amp;&amp; chown mysql:mysql -R /data/mysql/</span><br><span class="line">	echo -e '[mysqld]\nbasedir = /usr/local/mysql5\ndatadir = /data/mysql\nport = 3306\nsocket = /tmp/mysql.sock' &gt; /etc/my.cnf</span><br><span class="line">	ln -s /usr/local/mysql5/bin/* /usr/bin/</span><br><span class="line">	\cp support-files/mysql.server /etc/init.d/mysqld</span><br><span class="line">	chmod +x /etc/init.d/mysqld</span><br><span class="line">	chkconfig --add mysqld</span><br><span class="line">	chkconfig --level 35 mysqld on</span><br><span class="line">&#125;</span><br><span class="line">devel</span><br><span class="line">cmake</span><br><span class="line">boost</span><br><span class="line">mysql_install</span><br><span class="line">echo '+---------------------------+'</span><br><span class="line">echo '|         安装完成           |'</span><br><span class="line">echo '|        记得初始化哦！       |'</span><br><span class="line">echo '+---------------------------+'</span><br></pre></td></tr></table></figure>
+
+
       
 
       
@@ -249,15 +289,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编译安装</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">负载均衡</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
         		</li>
       		
 		</ul>
@@ -313,7 +349,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://quail2333.github.io/2019/08/08/Nginx代理和负载均衡实验/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://quail2333.github.io/2019/08/13/MySQL 5.7编译安装（附脚本）/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -327,18 +363,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/08/免密钥方式登陆配置/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/15/修改MySQL密码/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          免密钥方式连接ssh
+          初始化MySQL并修改密码
         
       </div>
     </a>
   
   
-    <a href="/2019/08/08/PHP-5.6.8编译安装(附脚本)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">PHP-5.6.8编译安装(附脚本)</div>
+    <a href="/2019/08/11/Nginx防盗链配置案例配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Nginx防盗链配置案例配置</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -365,7 +401,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、构建两个tomcat容器并启动"><span class="toc-number">1.</span> <span class="toc-text">一、构建两个tomcat容器并启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、修改两个容器的web首页，并测试两个容器是否正常"><span class="toc-number">2.</span> <span class="toc-text">二、修改两个容器的web首页，并测试两个容器是否正常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、启动Nginx并查看进程"><span class="toc-number">3.</span> <span class="toc-text">三、启动Nginx并查看进程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、开始实验："><span class="toc-number">4.</span> <span class="toc-text">四、开始实验：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-配置测试反向代理"><span class="toc-number">4.1.</span> <span class="toc-text">1.配置测试反向代理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）修改Nginx的配置文件"><span class="toc-number">4.1.1.</span> <span class="toc-text">1）修改Nginx的配置文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）重新载入nginx-conf"><span class="toc-number">4.1.2.</span> <span class="toc-text">2）重新载入nginx.conf</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3）访问Nginx代理服务器，查看是否跳转"><span class="toc-number">4.1.3.</span> <span class="toc-text">3）访问Nginx代理服务器，查看是否跳转</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-负载均衡算法测试——轮询算法"><span class="toc-number">4.2.</span> <span class="toc-text">2.负载均衡算法测试——轮询算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）在nginx-conf的server块里写入upstream配置块，并修改proxy-pass参数"><span class="toc-number">4.2.1.</span> <span class="toc-text">1）在nginx.conf的server块里写入upstream配置块，并修改proxy_pass参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）重新载入nginx-conf-1"><span class="toc-number">4.2.2.</span> <span class="toc-text">2）重新载入nginx.conf</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3）多次访问Nginx代理服务器"><span class="toc-number">4.2.3.</span> <span class="toc-text">3）多次访问Nginx代理服务器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-负载均衡权重测试——权重算法"><span class="toc-number">4.3.</span> <span class="toc-text">3.负载均衡权重测试——权重算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）在nginx-conf的server块里修改upstream配置块，在其中server参数后添加weight参数"><span class="toc-number">4.3.1.</span> <span class="toc-text">1）在nginx.conf的server块里修改upstream配置块，在其中server参数后添加weight参数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#剩下的两种算法持续更新哦……"><span class="toc-number">5.</span> <span class="toc-text">剩下的两种算法持续更新哦……</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#废话"><span class="toc-number">1.</span> <span class="toc-text">废话</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装步骤"><span class="toc-number">2.</span> <span class="toc-text">安装步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#YUM安装方式"><span class="toc-number">2.1.</span> <span class="toc-text">YUM安装方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CentOS-6-X"><span class="toc-number">2.1.1.</span> <span class="toc-text">CentOS 6.X</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CentOS-7-X"><span class="toc-number">2.1.2.</span> <span class="toc-text">CentOS 7.X</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装方式"><span class="toc-number">2.2.</span> <span class="toc-text">编译安装方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#环境准备"><span class="toc-number">2.2.1.</span> <span class="toc-text">环境准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装包准备"><span class="toc-number">2.2.2.</span> <span class="toc-text">安装包准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装编译器cmake"><span class="toc-number">2.2.3.</span> <span class="toc-text">安装编译器cmake</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装依赖包"><span class="toc-number">2.2.4.</span> <span class="toc-text">安装依赖包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装MySQL"><span class="toc-number">2.2.5.</span> <span class="toc-text">安装MySQL</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CMake预编译"><span class="toc-number">2.2.5.1.</span> <span class="toc-text">CMake预编译</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编译安装MySQL"><span class="toc-number">2.2.5.2.</span> <span class="toc-text">编译安装MySQL</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置用户和数据目录"><span class="toc-number">3.</span> <span class="toc-text">配置用户和数据目录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置用户和组"><span class="toc-number">3.1.</span> <span class="toc-text">配置用户和组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置数据目录"><span class="toc-number">3.2.</span> <span class="toc-text">配置数据目录</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#修改或创建my-cnf"><span class="toc-number">4.</span> <span class="toc-text">修改或创建my.cnf</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#初始化MySQL"><span class="toc-number">5.</span> <span class="toc-text">初始化MySQL</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置命令连接和脚本启动"><span class="toc-number">6.</span> <span class="toc-text">配置命令连接和脚本启动</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#启动数据库服务"><span class="toc-number">7.</span> <span class="toc-text">启动数据库服务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#登陆MySQL"><span class="toc-number">8.</span> <span class="toc-text">登陆MySQL</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一键配置安装脚本"><span class="toc-number">9.</span> <span class="toc-text">一键配置安装脚本</span></a></li></ol>
                     </div>
                 </span>
             </div>

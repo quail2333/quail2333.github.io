@@ -6,26 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://quail2333.github.io">
-  <title>Nginx代理和负载均衡实验 | 菜鹌鹑</title>
+  <title>初始化MySQL并修改密码 | 菜鹌鹑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、构建两个tomcat容器并启动123[root@localhost bin]# ps -ef|grep tomcatroot       1525      1 12 10:19 pts/0    00:00:03 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-1/conf/logging.properties">
-<meta name="keywords" content="Nginx,Tomcat,负载均衡">
+  <meta name="description" content="前言由于MySQL5.7.X版本的安全限制，新安装的数据库是不允许我们使用mysqladmin -uroot password ‘初始化密码’ ‘新密码’进行更改密码操作的。所以我们第一次更改密码需要进入MySQL进行更改。">
+<meta name="keywords" content="基础,MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nginx代理和负载均衡实验">
-<meta property="og:url" content="http://quail2333.github.io/2019/08/08/Nginx代理和负载均衡实验/index.html">
+<meta property="og:title" content="初始化MySQL并修改密码">
+<meta property="og:url" content="http://quail2333.github.io/2019/08/15/修改MySQL密码/index.html">
 <meta property="og:site_name" content="菜鹌鹑">
-<meta property="og:description" content="一、构建两个tomcat容器并启动123[root@localhost bin]# ps -ef|grep tomcatroot       1525      1 12 10:19 pts/0    00:00:03 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-1/conf/logging.properties">
+<meta property="og:description" content="前言由于MySQL5.7.X版本的安全限制，新安装的数据库是不允许我们使用mysqladmin -uroot password ‘初始化密码’ ‘新密码’进行更改密码操作的。所以我们第一次更改密码需要进入MySQL进行更改。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/i1VkTIxzGe7mqhC.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/WBzLFs8v2RqHmTc.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/ULTGaktvVREoh79.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/ULTGaktvVREoh79.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/08/WBzLFs8v2RqHmTc.png">
-<meta property="og:updated_time" content="2019-08-08T09:41:56.725Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/12/ez241A.png">
+<meta property="og:updated_time" content="2019-08-15T02:42:13.414Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nginx代理和负载均衡实验">
-<meta name="twitter:description" content="一、构建两个tomcat容器并启动123[root@localhost bin]# ps -ef|grep tomcatroot       1525      1 12 10:19 pts/0    00:00:03 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-1/conf/logging.properties">
-<meta name="twitter:image" content="https://i.loli.net/2019/08/08/i1VkTIxzGe7mqhC.png">
+<meta name="twitter:title" content="初始化MySQL并修改密码">
+<meta name="twitter:description" content="前言由于MySQL5.7.X版本的安全限制，新安装的数据库是不允许我们使用mysqladmin -uroot password ‘初始化密码’ ‘新密码’进行更改密码操作的。所以我们第一次更改密码需要进入MySQL进行更改。">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/08/12/ez241A.png">
   
     <link rel="alternative" href="/atom.xml" title="菜鹌鹑" type="application/atom+xml">
   
@@ -155,57 +151,50 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Nginx代理和负载均衡实验" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-修改MySQL密码" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Nginx代理和负载均衡实验
+      初始化MySQL并修改密码
     </h1>
   
 
         
-        <a href="/2019/08/08/Nginx代理和负载均衡实验/" class="archive-article-date">
-  	<time datetime="2019-08-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
+        <a href="/2019/08/15/修改MySQL密码/" class="archive-article-date">
+  	<time datetime="2019-08-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、构建两个tomcat容器并启动"><a href="#一、构建两个tomcat容器并启动" class="headerlink" title="一、构建两个tomcat容器并启动"></a>一、构建两个tomcat容器并启动</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost bin]# ps -ef|grep tomcat</span><br><span class="line">root       1525      1 12 10:19 pts/0    00:00:03 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-1/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /usr/local/tomcat-1/bin/bootstrap.jar:/usr/local/tomcat-1/bin/tomcat-juli.jar -Dcatalina.base=/usr/local/tomcat-1 -Dcatalina.home=/usr/local/tomcat-1 -Djava.io.tmpdir=/usr/local/tomcat-1/temp org.apache.catalina.startup.Bootstrap start</span><br><span class="line">root       1586      1 39 10:19 pts/0    00:00:02 /usr/bin/java -Djava.util.logging.config.file=/usr/local/tomcat-2/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /usr/local/tomcat-2/bin/bootstrap.jar:/usr/local/tomcat-2/bin/tomcat-juli.jar -Dcatalina.base=/usr/local/tomcat-2 -Dcatalina.home=/usr/local/tomcat-2 -Djava.io.tmpdir=/usr/local/tomcat-2/temp org.apache.catalina.startup.Bootstrap start</span><br></pre></td></tr></table></figure>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于MySQL5.7.X版本的安全限制，新安装的数据库是不允许我们使用<strong>mysqladmin -uroot password ‘初始化密码’ ‘新密码’</strong>进行更改密码操作的。所以我们第一次更改密码需要进入MySQL进行更改。<a id="more"></a></p>
+<h1 id="第一次更改密码"><a href="#第一次更改密码" class="headerlink" title="第一次更改密码"></a>第一次更改密码</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/mysql5/bin/mysqld --initialize --user=mysql --datadir=/data/mysql --</span><br><span class="line">basedir=/usr/local/mysql5</span><br></pre></td></tr></table></figure>
 
-<a id="more"></a>
+<p>使用这个命令进行初始化数据库，初始化完成后，可以在命令行的最后一行看到初始化生成的默认密码</p>
+<p><img src="https://s2.ax1x.com/2019/08/12/ez241A.png" alt="ez241A.png"></p>
+<p>执行下面的命令进入数据库命令行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p'1QlPyd(ki*dt'</span><br><span class="line">mysql: [Warning] Using a password on the command line interface can be insecure.</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is 3</span><br><span class="line">Server version: 5.7.21</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.</span><br><span class="line"></span><br><span class="line"><span class="meta">mysql&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="二、修改两个容器的web首页，并测试两个容器是否正常"><a href="#二、修改两个容器的web首页，并测试两个容器是否正常" class="headerlink" title="二、修改两个容器的web首页，并测试两个容器是否正常"></a>二、修改两个容器的web首页，并测试两个容器是否正常</h2><p><img src="https://i.loli.net/2019/08/08/i1VkTIxzGe7mqhC.png" alt="1655141-20190715102447820-593334092.png"></p>
-<p><img src="https://i.loli.net/2019/08/08/WBzLFs8v2RqHmTc.png" alt="1655141-20190715102651435-484904954.png"></p>
-<h2 id="三、启动Nginx并查看进程"><a href="#三、启动Nginx并查看进程" class="headerlink" title="三、启动Nginx并查看进程"></a>三、启动Nginx并查看进程</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@www ~]# /usr/local/nginx/sbin/./nginx</span><br><span class="line">[root@www ~]# ps -ef|grep nginx</span><br><span class="line">root       5354      1  0 13:00 ?        00:00:00 nginx: master process /usr/local/nginx/sbin/./nginx</span><br><span class="line">nobody     5355   5354  0 13:00 ?        00:00:00 nginx: worker process`</span><br></pre></td></tr></table></figure>
+<p>进入后输入下面的命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">mysql&gt;</span> alter user 'root'@localhost identified by 'Caianchun123.';</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br></pre></td></tr></table></figure>
 
-<h2 id="四、开始实验："><a href="#四、开始实验：" class="headerlink" title="四、开始实验："></a>四、开始实验：</h2><p><strong>Nginx代理服务器IP：192.168.249.132</strong></p>
-<p><strong>Tomcat-1 IP：192.168.249.133：8080</strong></p>
-<p><strong>Tomcat-2 IP：192.168.249.133：8081</strong></p>
-<h3 id="1-配置测试反向代理"><a href="#1-配置测试反向代理" class="headerlink" title="1.配置测试反向代理"></a>1.配置测试反向代理</h3><h4 id="1）修改Nginx的配置文件"><a href="#1）修改Nginx的配置文件" class="headerlink" title="1）修改Nginx的配置文件"></a>1）修改Nginx的配置文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[root@www conf]# cat nginx.conf|grep -E -v &quot;#|^$&quot;</span><br><span class="line">worker_processes  1;</span><br><span class="line">	events &#123;</span><br><span class="line">		worker_connections  1024;</span><br><span class="line">	&#125;</span><br><span class="line">http &#123;</span><br><span class="line">	include       mime.types;</span><br><span class="line">	default_type  application/octet-stream;</span><br><span class="line">	sendfile        on;</span><br><span class="line">	keepalive_timeout  65;</span><br><span class="line">	server &#123;</span><br><span class="line">		listen       80;</span><br><span class="line">		server_name  localhost;</span><br><span class="line">		location / &#123;</span><br><span class="line">			proxy_pass http://192.168.249.133:8080;  #将请求转向后端定义的Tomcat-1上.</span><br><span class="line">		&#125;</span><br><span class="line">		error_page   500 502 503 504  /50x.html;</span><br><span class="line">		location = /50x.html &#123;</span><br><span class="line">			root   html;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>修改成功后，我们需要刷新内存才能什么生效</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">mysql&gt;</span> flush privileges;</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br></pre></td></tr></table></figure>
 
-<h4 id="2）重新载入nginx-conf"><a href="#2）重新载入nginx-conf" class="headerlink" title="2）重新载入nginx.conf"></a>2）重新载入nginx.conf</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@www conf]# cat nginx.conf|grep -E -v &quot;#|^$&quot;</span><br></pre></td></tr></table></figure>
+<p>然后我们退出数据库，使用新密码重新登陆</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@iZ2zecxmcsda0x83lfxjajZ home]# mysql -uroot -p'Caianchun123.'</span><br><span class="line">mysql: [Warning] Using a password on the command line interface can be insecure.</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is 5</span><br><span class="line">Server version: 5.7.21 Source distribution</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.</span><br><span class="line"></span><br><span class="line"><span class="meta">mysql&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="3）访问Nginx代理服务器，查看是否跳转"><a href="#3）访问Nginx代理服务器，查看是否跳转" class="headerlink" title="3）访问Nginx代理服务器，查看是否跳转"></a>3）访问Nginx代理服务器，查看是否跳转</h4><p><img src="https://i.loli.net/2019/08/08/ULTGaktvVREoh79.png" alt="1655141-20190715133427820-677492248.png"></p>
-<h3 id="2-负载均衡算法测试——轮询算法"><a href="#2-负载均衡算法测试——轮询算法" class="headerlink" title="2.负载均衡算法测试——轮询算法"></a>2.负载均衡算法测试——轮询算法</h3><h4 id="1）在nginx-conf的server块里写入upstream配置块，并修改proxy-pass参数"><a href="#1）在nginx-conf的server块里写入upstream配置块，并修改proxy-pass参数" class="headerlink" title="1）在nginx.conf的server块里写入upstream配置块，并修改proxy_pass参数"></a>1）在nginx.conf的server块里写入upstream配置块，并修改proxy_pass参数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">[root@www conf]# cat nginx.conf|grep -E -v &quot;#|^$&quot;</span><br><span class="line">worker_processes  1;</span><br><span class="line">events &#123;</span><br><span class="line">	worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line">http &#123;</span><br><span class="line">	include       mime.types;</span><br><span class="line">	default_type  application/octet-stream;</span><br><span class="line">	sendfile        on;</span><br><span class="line">	keepalive_timeout  65;</span><br><span class="line">	upstream nginxtest &#123;</span><br><span class="line">		server 192.168.249.133:8080;</span><br><span class="line">		server 192.168.249.133:8081;</span><br><span class="line">	&#125;</span><br><span class="line">	server &#123;</span><br><span class="line">		listen       80;</span><br><span class="line">		server_name  localhost;</span><br><span class="line">		location / &#123;</span><br><span class="line">			proxy_pass http://nginxtest;</span><br><span class="line">		&#125;</span><br><span class="line">		error_page   500 502 503 504  /50x.html;</span><br><span class="line">		location = /50x.html &#123;</span><br><span class="line">			root   html;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>密码修改成功。</p>
+<h1 id="其他修改密码的方式"><a href="#其他修改密码的方式" class="headerlink" title="其他修改密码的方式"></a>其他修改密码的方式</h1><h2 id="修改mysql库字段"><a href="#修改mysql库字段" class="headerlink" title="修改mysql库字段"></a>修改mysql库字段</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">mysql&gt;</span> use mysql;</span><br><span class="line"><span class="meta">mysql&gt;</span> update user set authentication_string=password("Jf123456.") where user='root';</span><br><span class="line"><span class="meta">mysql&gt;</span> flush privileges;</span><br></pre></td></tr></table></figure>
 
-<h4 id="2）重新载入nginx-conf-1"><a href="#2）重新载入nginx-conf-1" class="headerlink" title="2）重新载入nginx.conf"></a>2）重新载入nginx.conf</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@www conf]# ../sbin/./nginx -s reload</span><br></pre></td></tr></table></figure>
+<h2 id="密码设置向导"><a href="#密码设置向导" class="headerlink" title="密码设置向导"></a>密码设置向导</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql_secure_installation</span><br></pre></td></tr></table></figure>
 
-<h4 id="3）多次访问Nginx代理服务器"><a href="#3）多次访问Nginx代理服务器" class="headerlink" title="3）多次访问Nginx代理服务器"></a>3）多次访问Nginx代理服务器</h4><p><img src="https://i.loli.net/2019/08/08/ULTGaktvVREoh79.png" alt="1655141-20190715133427820-677492248.png"></p>
-<p><img src="https://i.loli.net/2019/08/08/WBzLFs8v2RqHmTc.png" alt="1655141-20190715102651435-484904954.png"></p>
-<p>一直刷新页面会发现随机出现两个网页，这就是nginx默认的负载均衡算法：轮询算法</p>
-<h3 id="3-负载均衡权重测试——权重算法"><a href="#3-负载均衡权重测试——权重算法" class="headerlink" title="3.负载均衡权重测试——权重算法"></a>3.负载均衡权重测试——权重算法</h3><h4 id="1）在nginx-conf的server块里修改upstream配置块，在其中server参数后添加weight参数"><a href="#1）在nginx-conf的server块里修改upstream配置块，在其中server参数后添加weight参数" class="headerlink" title="1）在nginx.conf的server块里修改upstream配置块，在其中server参数后添加weight参数"></a>1）在nginx.conf的server块里修改upstream配置块，在其中server参数后添加weight参数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">[root@www conf]# cat nginx.conf|grep -E -v &quot;#|^$&quot;</span><br><span class="line">worker_processes  1;</span><br><span class="line">events &#123;</span><br><span class="line">	worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line">http &#123;</span><br><span class="line">	include       mime.types;</span><br><span class="line">	default_type  application/octet-stream;</span><br><span class="line">	sendfile        on;</span><br><span class="line">	keepalive_timeout  65;</span><br><span class="line">	upstream nginxtest &#123;</span><br><span class="line">		server 192.168.249.133:8080 weight=3;</span><br><span class="line">		server 192.168.249.133:8081 weight=2;</span><br><span class="line">	&#125;</span><br><span class="line">	server &#123;</span><br><span class="line">		listen       80;</span><br><span class="line">		server_name  localhost;</span><br><span class="line">		location / &#123;</span><br><span class="line">			proxy_pass http://nginxtest;</span><br><span class="line">		&#125;</span><br><span class="line">		error_page   500 502 503 504  /50x.html;</span><br><span class="line">		location = /50x.html &#123;</span><br><span class="line">			root   html;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="mysqladmin"><a href="#mysqladmin" class="headerlink" title="mysqladmin"></a>mysqladmin</h2><p>通过mysqladmin修改密码<strong>（但是第一次无法使用！）</strong></p>
 
-<p>2）重新载入nginx.conf</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@www conf]# ../sbin/./nginx -s reload</span><br></pre></td></tr></table></figure>
-
-<p>3）访问nginx代理服务器</p>
-<p>发现刷新三次是tomcat-1后，后两次刷新是tomcat-2.</p>
-<h2 id="剩下的两种算法持续更新哦……"><a href="#剩下的两种算法持续更新哦……" class="headerlink" title="剩下的两种算法持续更新哦……"></a>剩下的两种算法持续更新哦……</h2>
       
 
       
@@ -249,15 +238,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">基础</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">负载均衡</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
         		</li>
       		
 		</ul>
@@ -313,7 +298,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://quail2333.github.io/2019/08/08/Nginx代理和负载均衡实验/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://quail2333.github.io/2019/08/15/修改MySQL密码/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -327,18 +312,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/08/免密钥方式登陆配置/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          免密钥方式连接ssh
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/08/PHP-5.6.8编译安装(附脚本)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">PHP-5.6.8编译安装(附脚本)</div>
+    <a href="/2019/08/13/MySQL 5.7编译安装（附脚本）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL 5.7编译安装（附脚本）</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -365,7 +341,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、构建两个tomcat容器并启动"><span class="toc-number">1.</span> <span class="toc-text">一、构建两个tomcat容器并启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、修改两个容器的web首页，并测试两个容器是否正常"><span class="toc-number">2.</span> <span class="toc-text">二、修改两个容器的web首页，并测试两个容器是否正常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、启动Nginx并查看进程"><span class="toc-number">3.</span> <span class="toc-text">三、启动Nginx并查看进程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、开始实验："><span class="toc-number">4.</span> <span class="toc-text">四、开始实验：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-配置测试反向代理"><span class="toc-number">4.1.</span> <span class="toc-text">1.配置测试反向代理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）修改Nginx的配置文件"><span class="toc-number">4.1.1.</span> <span class="toc-text">1）修改Nginx的配置文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）重新载入nginx-conf"><span class="toc-number">4.1.2.</span> <span class="toc-text">2）重新载入nginx.conf</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3）访问Nginx代理服务器，查看是否跳转"><span class="toc-number">4.1.3.</span> <span class="toc-text">3）访问Nginx代理服务器，查看是否跳转</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-负载均衡算法测试——轮询算法"><span class="toc-number">4.2.</span> <span class="toc-text">2.负载均衡算法测试——轮询算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）在nginx-conf的server块里写入upstream配置块，并修改proxy-pass参数"><span class="toc-number">4.2.1.</span> <span class="toc-text">1）在nginx.conf的server块里写入upstream配置块，并修改proxy_pass参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）重新载入nginx-conf-1"><span class="toc-number">4.2.2.</span> <span class="toc-text">2）重新载入nginx.conf</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3）多次访问Nginx代理服务器"><span class="toc-number">4.2.3.</span> <span class="toc-text">3）多次访问Nginx代理服务器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-负载均衡权重测试——权重算法"><span class="toc-number">4.3.</span> <span class="toc-text">3.负载均衡权重测试——权重算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）在nginx-conf的server块里修改upstream配置块，在其中server参数后添加weight参数"><span class="toc-number">4.3.1.</span> <span class="toc-text">1）在nginx.conf的server块里修改upstream配置块，在其中server参数后添加weight参数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#剩下的两种算法持续更新哦……"><span class="toc-number">5.</span> <span class="toc-text">剩下的两种算法持续更新哦……</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第一次更改密码"><span class="toc-number">2.</span> <span class="toc-text">第一次更改密码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其他修改密码的方式"><span class="toc-number">3.</span> <span class="toc-text">其他修改密码的方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#修改mysql库字段"><span class="toc-number">3.1.</span> <span class="toc-text">修改mysql库字段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#密码设置向导"><span class="toc-number">3.2.</span> <span class="toc-text">密码设置向导</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mysqladmin"><span class="toc-number">3.3.</span> <span class="toc-text">mysqladmin</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
