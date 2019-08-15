@@ -146,31 +146,29 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Nginx搭建Discuz!" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-如何修复被破坏的分区文件系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/09/Nginx搭建Discuz!/">Nginx代理服务器搭建discuz</a>
+      <a class="article-title" href="/2019/08/11/如何修复被破坏的分区文件系统/">如何修复被破坏的分区文件系统</a>
     </h1>
   
 
         
-        <a href="/2019/08/09/Nginx搭建Discuz!/" class="archive-article-date">
-  	<time datetime="2019-08-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
+        <a href="/2019/08/11/如何修复被破坏的分区文件系统/" class="archive-article-date">
+  	<time datetime="2019-08-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h1><ul>
-<li>Nginx代理服务器</li>
-<li>PHP后端服务器</li>
-<li>数据库服务器</li>
-<li>Discuz_X3.2_SC_UTF8.zip
+        <h2 id="·-准备阶段"><a href="#·-准备阶段" class="headerlink" title="· 准备阶段"></a>· 准备阶段</h2><p>由于条件原因，我只能在VMware虚拟机上进行模拟实验，开机的时候，发现sdb磁盘正常加载</p>
+<p><img src="https://s2.ax1x.com/2019/08/10/eOF2j0.png" alt="eOF2j0.png"></p>
+<p>然后通过lsblk命令查看挂载情况
         
       
 
@@ -184,15 +182,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">基础</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">discuz!</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Centos系统管理</a>
         		</li>
       		
 		</ul>
@@ -202,7 +196,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/09/Nginx搭建Discuz!/">more >></a>
+          <a class="article-more-a" href="/2019/08/11/如何修复被破坏的分区文件系统/">more >></a>
         </p>
       
 
@@ -797,29 +791,29 @@
 
 
   
-    <article id="post-Nginx反向代理后端服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Nginx正向代理和反向代理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/08/Nginx反向代理后端服务器/">LNMP WEB架构构建</a>
+      <a class="article-title" href="/2019/08/09/Nginx正向代理和反向代理/">Nginx正向代理和反向代理</a>
     </h1>
   
 
         
-        <a href="/2019/08/08/Nginx反向代理后端服务器/" class="archive-article-date">
-  	<time datetime="2019-08-07T16:04:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
+        <a href="/2019/08/09/Nginx正向代理和反向代理/" class="archive-article-date">
+  	<time datetime="2019-08-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="知识速览"><a href="#知识速览" class="headerlink" title="知识速览"></a>知识速览</h1><h2 id="LNMP-WEB架构处理请求过程"><a href="#LNMP-WEB架构处理请求过程" class="headerlink" title="LNMP WEB架构处理请求过程"></a>LNMP WEB架构处理请求过程</h2><ol>
-<li>Nginx为一款<strong>高性能Web服务器，本身是不能处理PHP</strong>的，当接收到客户端浏览器发送HTTP Request请求时,Nginx服务器响应并处理web请求，静态资源CSS、图片、视频、TXT等<strong>静态文件请求，Nginx服务器可以直接处理并回应。</strong></li>
-<li>Nginx并<strong>不能直接处理PHP页面，PHP动态页面请求Nginx不能直接处理</strong>，Nginx服务器会<strong>将PHP网页脚本通过接口传输协议（网关协议）PHP-FCGI（Fast-CGI）传输给PHP-FPM（PHP进程管理程序）</strong>
+        <h2 id="关于代理"><a href="#关于代理" class="headerlink" title="关于代理"></a>关于代理</h2><p>说到代理，首先我们要明确一个概念，所谓代理就是一个代表、一个渠道；</p>
+<p>此时就设计到两个角色，一个是被代理角色，一个是目标角色，被代理角色通过这个代理访问目标角色完成一些任务的过程称为代理操作过程；例如生活中的专卖店，客人到华为旗舰店买了一部华为P30 Pro，这个旗舰店就是代理，被代理角色就是华为厂商，目标角色就是用户。</p>
+<h2 id="一、正向代理"><a href="#一、正向代理" class="headerlink" title="一、正向代理"></a>一、正向代理</h2><p>在如今的网络环境下，我们如果由于技术需要要去访问国外的某些网站，此时你会发现位于国外的某网站我们通过浏览器是没有办法访问的，此时大家可能都会用一个操作FQ进行访问，
         
       
 
@@ -839,10 +833,6 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">反向代理</a>
         		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">LNMP</a>
-        		</li>
       		
 		</ul>
 	</div>
@@ -851,7 +841,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/08/Nginx反向代理后端服务器/">more >></a>
+          <a class="article-more-a" href="/2019/08/09/Nginx正向代理和反向代理/">more >></a>
         </p>
       
 
@@ -881,31 +871,31 @@
 
 
   
-    <article id="post-初始Ansible" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Nginx搭建Discuz!" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/08/初始Ansible/">初识Ansible</a>
+      <a class="article-title" href="/2019/08/09/Nginx搭建Discuz!/">Nginx代理服务器搭建discuz</a>
     </h1>
   
 
         
-        <a href="/2019/08/08/初始Ansible/" class="archive-article-date">
-  	<time datetime="2019-08-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
+        <a href="/2019/08/09/Nginx搭建Discuz!/" class="archive-article-date">
+  	<time datetime="2019-08-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1、传统运维-amp-自动化运维概念"><a href="#1、传统运维-amp-自动化运维概念" class="headerlink" title="1、传统运维&amp;自动化运维概念"></a>1、传统运维&amp;自动化运维概念</h1><h2 id="1）传统的运维概念（硬件、软件、系统、网络）"><a href="#1）传统的运维概念（硬件、软件、系统、网络）" class="headerlink" title="1）传统的运维概念（硬件、软件、系统、网络）"></a>1）传统的运维概念（硬件、软件、系统、网络）</h2><ul>
-<li>手工安装系统、机房建设；</li>
-<li>软件服务配置、部署通过手工的操作；</li>
-<li>没有自动化脚本、流程；</li>
-<li>依靠大量的运维人员完成任务；
+        <h1 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h1><ul>
+<li>Nginx代理服务器</li>
+<li>PHP后端服务器</li>
+<li>数据库服务器</li>
+<li>Discuz_X3.2_SC_UTF8.zip
         
       
 
@@ -919,11 +909,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">运维工具</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Ansible</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">discuz!</a>
         		</li>
       		
 		</ul>
@@ -933,7 +927,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/08/初始Ansible/">more >></a>
+          <a class="article-more-a" href="/2019/08/09/Nginx搭建Discuz!/">more >></a>
         </p>
       
 
