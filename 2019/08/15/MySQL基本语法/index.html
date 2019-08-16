@@ -6,26 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://quail2333.github.io">
-  <title>Nginx防盗链配置案例配置 | 菜鹌鹑</title>
+  <title>菜鹌鹑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言盗链​        盗链是指服务提供商自己不提供服务的内容，通过技术手段绕过其它有利益的最终用户界面（如广告），直接在自己的网站上向最终用户提供其它服务提供商的服务内容，骗取最终用户的浏览和点击率。受益者不提供资源或提供很少的资源，而真正的服务提供商却得不到任何的收益。 ​">
-<meta name="keywords" content="基础,Nginx">
+  <meta name="description" content="title: MySQL基本语法date: 2019-08-16tags: [MySQL,基础]categorise: [MySQL]toc: true 前言花了一天的时间学习了一下MySQL 5.7的语法，感觉并不简单，命令多而繁琐，并且不容易记，感觉几天不用就可以忘个差不多……趁现在刚学完，赶紧整理一下……">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nginx防盗链配置案例配置">
-<meta property="og:url" content="http://quail2333.github.io/2019/08/11/Nginx防盗链配置案例配置/index.html">
+<meta property="og:title" content="菜鹌鹑">
+<meta property="og:url" content="http://quail2333.github.io/2019/08/15/MySQL基本语法/index.html">
 <meta property="og:site_name" content="菜鹌鹑">
-<meta property="og:description" content="前言盗链​        盗链是指服务提供商自己不提供服务的内容，通过技术手段绕过其它有利益的最终用户界面（如广告），直接在自己的网站上向最终用户提供其它服务提供商的服务内容，骗取最终用户的浏览和点击率。受益者不提供资源或提供很少的资源，而真正的服务提供商却得不到任何的收益。 ​">
+<meta property="og:description" content="title: MySQL基本语法date: 2019-08-16tags: [MySQL,基础]categorise: [MySQL]toc: true 前言花了一天的时间学习了一下MySQL 5.7的语法，感觉并不简单，命令多而繁琐，并且不容易记，感觉几天不用就可以忘个差不多……趁现在刚学完，赶紧整理一下……">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://s2.ax1x.com/2019/08/11/ejWs0O.png">
-<meta property="og:image" content="https://s2.ax1x.com/2019/08/11/ejWrnK.png">
-<meta property="og:image" content="https://s2.ax1x.com/2019/08/11/ejWBX6.png">
-<meta property="og:image" content="https://s2.ax1x.com/2019/08/11/ejW06x.png">
-<meta property="og:image" content="https://s2.ax1x.com/2019/08/11/ejWy7D.png">
-<meta property="og:updated_time" content="2019-08-11T05:50:55.312Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/16/mZ0vCV.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/16/mZwflF.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/16/mZw2WT.jpg">
+<meta property="og:updated_time" content="2019-08-16T03:35:14.659Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nginx防盗链配置案例配置">
-<meta name="twitter:description" content="前言盗链​        盗链是指服务提供商自己不提供服务的内容，通过技术手段绕过其它有利益的最终用户界面（如广告），直接在自己的网站上向最终用户提供其它服务提供商的服务内容，骗取最终用户的浏览和点击率。受益者不提供资源或提供很少的资源，而真正的服务提供商却得不到任何的收益。 ​">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/08/11/ejWs0O.png">
+<meta name="twitter:title" content="菜鹌鹑">
+<meta name="twitter:description" content="title: MySQL基本语法date: 2019-08-16tags: [MySQL,基础]categorise: [MySQL]toc: true 前言花了一天的时间学习了一下MySQL 5.7的语法，感觉并不简单，命令多而繁琐，并且不容易记，感觉几天不用就可以忘个差不多……趁现在刚学完，赶紧整理一下……">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/08/16/mZ0vCV.jpg">
   
     <link rel="alternative" href="/atom.xml" title="菜鹌鹑" type="application/atom+xml">
   
@@ -155,88 +152,205 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Nginx防盗链配置案例配置" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MySQL基本语法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Nginx防盗链配置案例配置
-    </h1>
-  
-
-        
-        <a href="/2019/08/11/Nginx防盗链配置案例配置/" class="archive-article-date">
-  	<time datetime="2019-08-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="盗链"><a href="#盗链" class="headerlink" title="盗链"></a>盗链</h2><p>​        盗链是指服务提供商自己不提供服务的内容，通过技术手段绕过其它有利益的最终用户界面（如广告），直接在自己的网站上向最终用户提供其它服务提供商的服务内容，骗取最终用户的浏览和点击率。受益者不提供资源或提供很少的资源，而真正的服务提供商却得不到任何的收益。</p>
-<p>​                                                                                                                    ——摘自百度百科<a id="more"></a></p>
-<h2 id="盗链分类"><a href="#盗链分类" class="headerlink" title="盗链分类"></a>盗链分类</h2><h3 id="常规盗链"><a href="#常规盗链" class="headerlink" title="常规盗链"></a>常规盗链</h3><p>常规盗链比较初级，同时也比较常见，具有一定的针对性，只盗用某个或某些网站的链接。技术含量不高，实现也比较简单，只需要在自己的嵌入别人的链接即可。</p>
-<h3 id="分布式盗链"><a href="#分布式盗链" class="headerlink" title="分布式盗链"></a>分布式盗链</h3><p>分布式盗链是盗链的一种新的形式，系统设计复杂，难度相对较大。这种盗链一般不针对某一个网站，互联网上任何一台机器都可能成为盗链的对象。服务提供商一般会在后台设置专门程序(Spider)在Internet上抓取有用的链接,<br>然后存储到自己的数据库中。而对于最终用户的每次访问，都将其转化为对已有数据库的查询，被查询到的URL<br>就是被盗链的对象。由于对文件的访问已经被浏览器屏蔽掉了，所以最终用户感觉不到所访问的链接是被盗取的链接。</p>
-<h2 id="反盗链"><a href="#反盗链" class="headerlink" title="反盗链"></a>反盗链</h2><h3 id="原始方式"><a href="#原始方式" class="headerlink" title="原始方式"></a>原始方式</h3><p>不定期的更改文件或者目录的名称，是最原始的反盗链的方式，可以比较有效地防止盗链，这种方法一般工作量比较大。但是批量的文件改名是完全可以自动化的，而且也比较容易实现。在文件的更名过程中,  可能会有客户正在下载该文件，这样会导致正常的客户访问失败，尽管这个问题容易解决，但是也不能够忽视。</p>
-<h3 id="限制引用页"><a href="#限制引用页" class="headerlink" title="限制引用页"></a>限制引用页</h3><p>这种防盗链原理是，服务器获取用户提交信息的网站地址，然后和真正的服务端的地址相比较，如果一致则表明是站内提交，或者为自己信任的站点提交，否则视为盗链。实现时可以使用HTTP_REFERER1 和htaccess 文件(需要启用mod_Rewrite)，结合正则表达式去匹配用户的每一个访问请求。对于每一个HTTP 请求, 服务器都要查找.htaccess 文件，增加了读取文件的次数，一定程度上降低了性能。另外，服务器打开这个功能，有比较多的限制。</p>
-<h3 id="文件伪装"><a href="#文件伪装" class="headerlink" title="文件伪装"></a>文件伪装</h3><p>文件伪装是目前用得最多的一种反盗链技术，一般会结合服务器端动态脚本(PHP/JSP/ASP)。实际上用户请求的文件地址，只是一个经过伪装的脚本文件，这个脚本文件会对用户的请求作认证,一般会检查Session，Cookie 或HTTP_REFERER 作为判断是否为盗链的依据。而真实的文件实际隐藏在用户不能够访问的地方，只有用户通过验证以后才会返回给用户。</p>
-<h3 id="加密认证"><a href="#加密认证" class="headerlink" title="加密认证"></a>加密认证</h3><p>这种反盗链方式，先从客户端获取用户信息，然后根据这个信息和用户请求的文件名字一起加密成字符串(Session  ID)作为身份验证。只有当认证成功以后，服务端才会把用户需要的文件传送给客户。一般我们会把加密的Session ID 作为URL  参数的一部分传递给服务器，由于这个Session ID 和用户的信息挂钩，所以别人就算是盗取了链接，该Session ID 也无法通过身份认证，从而达到反盗链的目的。这种方式对于分布式盗链非常有效。</p>
-<h3 id="随机附加码"><a href="#随机附加码" class="headerlink" title="随机附加码"></a>随机附加码</h3><p>每次,在页面里生成一个附加码,并存在数据库里,和对应的图片相关,访问图片时和此附加码对比,相同则输出图片,否则输出404图片</p>
-<h3 id="其它方法"><a href="#其它方法" class="headerlink" title="其它方法"></a>其它方法</h3><p>其它反盗链方式也有不少, 这里只列出一个大概思想作为参考：⑴ IIS 反盗链, 利用ISAPI_Rewrite,可作为Windows下反盗链的一个解决方案；⑵ 图片反盗链，在图片中加入水印，虽然盗链者可以达到目的，但是却也在为自己的网站做宣传。</p>
-<h2 id="防盗链"><a href="#防盗链" class="headerlink" title="防盗链"></a>防盗链</h2><p>WEB应用防火墙通过实现URL级别的访问控制，对客户端请求进行检测，如果发现图片、文件等资源信息的HTTP请求来自于其它网站，则阻止盗链请求，节省因盗用资源链接而消耗的带宽和性能。</p>
-<h1 id="防盗链实现案例"><a href="#防盗链实现案例" class="headerlink" title="防盗链实现案例"></a>防盗链实现案例</h1><h2 id="模拟盗链"><a href="#模拟盗链" class="headerlink" title="模拟盗链"></a>模拟盗链</h2><h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><ul>
-<li><p>主站：192.168.249.103</p>
-</li>
-<li><p>盗链站：192.168.249.104</p>
-</li>
-<li><p>主站配置</p>
-<ul>
-<li>准备一张图片</li>
-<li>并写一个页面引用他</li>
+        <p>title: MySQL基本语法<br>date: 2019-08-16<br>tags: [MySQL,基础]<br>categorise: [MySQL]<br>toc: true</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>花了一天的时间学习了一下MySQL 5.7的语法，感觉并不简单，命令多而繁琐，并且不容易记，感觉几天不用就可以忘个差不多……趁现在刚学完，赶紧整理一下……</p>
+<p><img src="https://s2.ax1x.com/2019/08/16/mZ0vCV.jpg" alt="mZ0vCV.jpg"></p>
+<a id="more"></a>
+
+<h1 id="重要！"><a href="#重要！" class="headerlink" title="重要！"></a>重要！</h1><p>MySQL数据库管理系统和Linux管理系统一样，都是全新的系统，其中的数据也完全不同，所以Linux命令在MySQL终端完全用不了，用户管理也完全不一样，MySQL中的root和Linux的root用户只是名字一样，其本质完全不同！</p>
+<h1 id="基本命令实战"><a href="#基本命令实战" class="headerlink" title="基本命令实战"></a>基本命令实战</h1><h2 id="增删改查——增"><a href="#增删改查——增" class="headerlink" title="增删改查——增"></a>增删改查——增</h2><ul>
+<li>新建数据库，要求默认字符集为utf-8</li>
 </ul>
-</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim test.html</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Welcome to quail's blog!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"20180513224039_tgfwu.png"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">mysql&gt;</span> create database test default charset=utf8;</span><br><span class="line">Query OK, 1 row affected (0.00 sec)</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>盗链站配置<ul>
-<li>直接写一个盗链静态页面</li>
+<li>显示现在已经存在的数据库</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">mysql&gt;</span> show databases;</span><br><span class="line">+--------------------+</span><br><span class="line">| Database           |</span><br><span class="line">+--------------------+</span><br><span class="line">| information_schema |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| sys                |</span><br><span class="line">| test               |</span><br><span class="line">+--------------------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在test数据库进行操作之前需要先更改自己所在的数据库</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use test;</span><br><span class="line">Database changed</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>现在在test数据库新建一张表（table），要求两列内容，编号（int）姓名（char）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; create table anchun (num int(6),name char(10));</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看现在存在的表和列</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show tables;</span><br><span class="line">+----------------+</span><br><span class="line">| Tables_in_test |</span><br><span class="line">+----------------+</span><br><span class="line">| anchun         |</span><br><span class="line">+----------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; desc anchun;</span><br><span class="line">+-------+----------+------+-----+---------+-------+</span><br><span class="line">| Field | Type     | Null | Key | Default | Extra |</span><br><span class="line">+-------+----------+------+-----+---------+-------+</span><br><span class="line">| num   | int(6)   | YES  |     | NULL    |       |</span><br><span class="line">| name  | char(10) | YES  |     | NULL    |       |</span><br><span class="line">+-------+----------+------+-----+---------+-------+</span><br><span class="line">2 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>desc anchun显示的是列名以及它的默认格式，现在我们按照这种方法创建第二张表anchun2</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; create table anchun2 (num int(6),name char(10));</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>我们先对第一张表的列进行处理，当前只有num和name两列，然后我们要求在最前面插入一列id，在name后面插入age，最后在插入一行职业，要求除了职业可以为空值，其余的都不能为空值。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; alter table anchun add column age int(3) not null after name;alter table anchun add column job char(50);</span><br><span class="line">Query OK, 0 rows affected (0.03 sec)</span><br><span class="line">Records: 0  Duplicates: 0  Warnings: 0</span><br><span class="line"></span><br><span class="line">Query OK, 0 rows affected (0.03 sec)</span><br><span class="line">Records: 0  Duplicates: 0  Warnings: 0</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>当前所有列</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; desc anchun;</span><br><span class="line">+-------+----------+------+-----+---------+-------+</span><br><span class="line">| Field | Type     | Null | Key | Default | Extra |</span><br><span class="line">+-------+----------+------+-----+---------+-------+</span><br><span class="line">| id    | int(3)   | NO   |     | NULL    |       |</span><br><span class="line">| num   | int(6)   | YES  |     | NULL    |       |</span><br><span class="line">| name  | char(10) | YES  |     | NULL    |       |</span><br><span class="line">| age   | int(3)   | NO   |     | NULL    |       |</span><br><span class="line">| job   | char(50) | YES  |     | NULL    |       |</span><br><span class="line">+-------+----------+------+-----+---------+-------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这么看有点长，可能会出毛病，所以我们也可以使用另一种写法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; create table anchun2 ( </span><br><span class="line">    -&gt; id int(2) not null,</span><br><span class="line">    -&gt; num int(6) not null,</span><br><span class="line">    -&gt; name char(6) not null,</span><br><span class="line">    -&gt; age int(2) not null,</span><br><span class="line">    -&gt; job char(20)</span><br><span class="line">    -&gt; )engine=innodb default charset=utf8;</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>ok,现在开始往里更新数据，使用insert命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; insert into anchun(id,num,name,age,job)values(0,0001,&apos;zhangsan&apos;,20,&apos;IT&apos;);</span><br><span class="line">Query OK, 1 row affected (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>我们使用这条命令再插入4条数据。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; insert into anchun(id,num,name,age,job)values(1,0002,&apos;lisi&apos;,21,&apos;yunwei&apos;),(2,0003,&apos;wangwu&apos;,22,&apos;wangan&apos;),(3,0004,&apos;zhaoliu&apos;,23,&apos;zongjian&apos;),(4,0005,&apos;liuqi&apos;,24,&apos;shuiqun&apos;);</span><br><span class="line">Query OK, 4 rows affected (0.01 sec)</span><br><span class="line">Records: 4  Duplicates: 0  Warnings: 0</span><br></pre></td></tr></table></figure>
+
+<h2 id="增删改查——查"><a href="#增删改查——查" class="headerlink" title="增删改查——查"></a>增删改查——查</h2><ul>
+<li>显示所有数据库（database）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show databases;</span><br><span class="line">+--------------------+</span><br><span class="line">| Database           |</span><br><span class="line">+--------------------+</span><br><span class="line">| information_schema |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| sys                |</span><br><span class="line">| test               |</span><br><span class="line">+--------------------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>显示test数据库的所有表（table）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use test;show tables;</span><br><span class="line">Database changed</span><br><span class="line">+----------------+</span><br><span class="line">| Tables_in_test |</span><br><span class="line">+----------------+</span><br><span class="line">| anchun         |</span><br><span class="line">| anchun2        |</span><br><span class="line">+----------------+</span><br><span class="line">2 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>显示anchun表中的存在的所有列（column）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; desc anchun;</span><br><span class="line">+-------+----------+------+-----+---------+-------+</span><br><span class="line">| Field | Type     | Null | Key | Default | Extra |</span><br><span class="line">+-------+----------+------+-----+---------+-------+</span><br><span class="line">| id    | int(3)   | NO   |     | NULL    |       |</span><br><span class="line">| num   | int(6)   | YES  |     | NULL    |       |</span><br><span class="line">| name  | char(10) | YES  |     | NULL    |       |</span><br><span class="line">| age   | int(3)   | NO   |     | NULL    |       |</span><br><span class="line">| job   | char(50) | YES  |     | NULL    |       |</span><br><span class="line">+-------+----------+------+-----+---------+-------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>显示anchun表中的所有字段</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from anchun;</span><br><span class="line">+----+------+----------+-----+----------+</span><br><span class="line">| id | num  | name     | age | job      |</span><br><span class="line">+----+------+----------+-----+----------+</span><br><span class="line">|  0 |    1 | zhangsan |  20 | IT       |</span><br><span class="line">|  1 |    2 | lisi     |  21 | yunwei   |</span><br><span class="line">|  2 |    3 | wangwu   |  22 | wangan   |</span><br><span class="line">|  3 |    4 | zhaoliu  |  23 | zongjian |</span><br><span class="line">|  4 |    5 | liuqi    |  24 | shuiqun  |</span><br><span class="line">+----+------+----------+-----+----------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>只查询某一列数据</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select name from anchun;</span><br><span class="line">+----------+</span><br><span class="line">| name     |</span><br><span class="line">+----------+</span><br><span class="line">| zhangsan |</span><br><span class="line">| lisi     |</span><br><span class="line">| wangwu   |</span><br><span class="line">| zhaoliu  |</span><br><span class="line">| liuqi    |</span><br><span class="line">+----------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查询某几列数据</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select num,name from anchun;</span><br><span class="line">+------+----------+</span><br><span class="line">| num  | name     |</span><br><span class="line">+------+----------+</span><br><span class="line">|    1 | zhangsan |</span><br><span class="line">|    2 | lisi     |</span><br><span class="line">|    3 | wangwu   |</span><br><span class="line">|    4 | zhaoliu  |</span><br><span class="line">|    5 | liuqi    |</span><br><span class="line">+------+----------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查询年龄大于22并且叫zhaoliu的数据</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from anchun where age&gt;22 and name=&quot;zhaoliu&quot;;</span><br><span class="line">+----+------+---------+-----+----------+</span><br><span class="line">| id | num  | name    | age | job      |</span><br><span class="line">+----+------+---------+-----+----------+</span><br><span class="line">|  3 |    4 | zhaoliu |  23 | zongjian |</span><br><span class="line">+----+------+---------+-----+----------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查询年龄大于22并且叫zhaoliu，并且id不是3 的数据记录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from anchun where age&gt;22 and name=&quot;zhaoliu&quot; and id !=3 ;</span><br><span class="line">Empty set (0.00 sec)</span><br><span class="line">#因为没有数据，所以返回空列表</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查询id在2和4的数据记录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from anchun where id in (2,4);</span><br><span class="line">+----+------+--------+-----+---------+</span><br><span class="line">| id | num  | name   | age | job     |</span><br><span class="line">+----+------+--------+-----+---------+</span><br><span class="line">|  2 |    3 | wangwu |  22 | wangan  |</span><br><span class="line">|  4 |    5 | liuqi  |  24 | shuiqun |</span><br><span class="line">+----+------+--------+-----+---------+</span><br><span class="line">2 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查询数据，排除id为2和4的数据记录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from anchun where id not in (2,4);</span><br><span class="line">+----+------+----------+-----+----------+</span><br><span class="line">| id | num  | name     | age | job      |</span><br><span class="line">+----+------+----------+-----+----------+</span><br><span class="line">|  0 |    1 | zhangsan |  20 | IT       |</span><br><span class="line">|  1 |    2 | lisi     |  21 | yunwei   |</span><br><span class="line">|  3 |    4 | zhaoliu  |  23 | zongjian |</span><br><span class="line">+----+------+----------+-----+----------+</span><br><span class="line">3 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>统配符查询：%等同于Linux系统中* 的概念，统配所有。_等同于Linux系统中的 . 的概念，统配一个字符</strong><ul>
+<li>添加一条数据后，进行统配</li>
 </ul>
 </li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/nginx/html/daolian.html</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Welcome to DIDI's blog!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.test.com/20180513224039_tgfwu.png"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; insert into anchun(id,num,name,age,job)values(5,0006,&apos;zhanghaha&apos;,32,&apos;IT&apos;);                                                      </span><br><span class="line">Query OK, 1 row affected (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; select * from anchun where name like &quot;zhang%&quot;;</span><br><span class="line">+----+------+-----------+-----+------+</span><br><span class="line">| id | num  | name      | age | job  |</span><br><span class="line">+----+------+-----------+-----+------+</span><br><span class="line">|  0 |    1 | zhangsan  |  20 | IT   |</span><br><span class="line">|  5 |    6 | zhanghaha |  32 | IT   |</span><br><span class="line">+----+------+-----------+-----+------+</span><br><span class="line">2 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
 
-<h3 id="访问测试"><a href="#访问测试" class="headerlink" title="访问测试"></a>访问测试</h3><h4 id="主站"><a href="#主站" class="headerlink" title="主站"></a>主站</h4><p><img src="https://s2.ax1x.com/2019/08/11/ejWs0O.png" alt="ejWs0O.png"></p>
-<h4 id="盗链站"><a href="#盗链站" class="headerlink" title="盗链站"></a>盗链站</h4><p><img src="https://s2.ax1x.com/2019/08/11/ejWrnK.png" alt="ejWrnK.png"></p>
-<h2 id="通过配置Nginx实现防盗链"><a href="#通过配置Nginx实现防盗链" class="headerlink" title="通过配置Nginx实现防盗链"></a>通过配置Nginx实现防盗链</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>在server配置块中加入以下参数</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">location ~* \.(gif|jpg|png|swf|flv)$ &#123;</span><br><span class="line">            valid_referers none blocked  test.com *.test.com;</span><br><span class="line">            root   html;</span><br><span class="line">        if ($invalid_referer) &#123;</span><br><span class="line">            rewrite ^/ http://www.test.com/403.html;</span><br><span class="line">            return 403;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
-
-<p>保存后重新使用域名访问</p>
-<p><img src="https://s2.ax1x.com/2019/08/11/ejWBX6.png" alt="ejWBX6.png"></p>
-<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>同样是修改Nginx配置文件的server段</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location ~* \.(gif|jpg|png|swf|flv)$</span><br><span class="line">if ($host !=’*.test.com’) &#123;</span><br><span class="line">return 403；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>再次访问盗链网站<br><img src="https://s2.ax1x.com/2019/08/11/ejW06x.png" alt="ejW06x.png"></p>
-<h2 id="通过Nginx日志更直观的分析原因"><a href="#通过Nginx日志更直观的分析原因" class="headerlink" title="通过Nginx日志更直观的分析原因"></a>通过Nginx日志更直观的分析原因</h2><h3 id="清除日志"><a href="#清除日志" class="headerlink" title="清除日志"></a>清除日志</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span>/usr/local/nginx/logs/access.log</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改Nginx配置文件，在日志配置加入请求的参数"><a href="#修改Nginx配置文件，在日志配置加入请求的参数" class="headerlink" title="修改Nginx配置文件，在日志配置加入请求的参数"></a>修改Nginx配置文件，在日志配置加入请求的参数</h3> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; $invalid_referer&apos;</span><br><span class="line">                      &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</span><br><span class="line">                      &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="访问盗链网站，查看access-log"><a href="#访问盗链网站，查看access-log" class="headerlink" title="访问盗链网站，查看access.log"></a>访问盗链网站，查看access.log</h3><p><img src="https://s2.ax1x.com/2019/08/11/ejWy7D.png" alt="ejWy7D.png"></p>
-<p>非主站的请求，Nginx会全部返回403</p>
-<h1 id="Nginx防盗链参数详解"><a href="#Nginx防盗链参数详解" class="headerlink" title="Nginx防盗链参数详解"></a>Nginx防盗链参数详解</h1><ul>
-<li><p>valid_referers表示可用的referers设置</p>
-</li>
-<li><p>none 表示没有referers，直接通过浏览器或者其他工具访问。</p>
-</li>
-<li><p>blocked表示有referers，但是被代理服务器或者防火墙隐藏；</p>
-</li>
-<li><p>jfedu.net 表示通过jfedu.net访问的referers；</p>
-</li>
-<li><p>*.test.com 表示通过*.test.com访问的referers，*表示任意host主机</p>
-</li>
+<ul>
+<li>使用 _ 进行统配</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from anchun where name like &quot;zhang_&quot;;#一个下划线</span><br><span class="line">Empty set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; select * from anchun where name like &quot;zhang____&quot;;#四个下划线</span><br><span class="line">+----+------+-----------+-----+------+</span><br><span class="line">| id | num  | name      | age | job  |</span><br><span class="line">+----+------+-----------+-----+------+</span><br><span class="line">|  5 |    6 | zhanghaha |  32 | IT   |</span><br><span class="line">+----+------+-----------+-----+------+</span><br><span class="line">1 row in set (0.01 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; select * from anchun where name like &quot;zhang___&quot;;#三个下划线</span><br><span class="line">+----+------+----------+-----+------+</span><br><span class="line">| id | num  | name     | age | job  |</span><br><span class="line">+----+------+----------+-----+------+</span><br><span class="line">|  0 |    1 | zhangsan |  20 | IT   |</span><br><span class="line">+----+------+----------+-----+------+</span><br><span class="line">1 row in set (0.01 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>只查询前三行的数据</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from anchun limit 3;</span><br><span class="line">+----+------+----------+-----+--------+</span><br><span class="line">| id | num  | name     | age | job    |</span><br><span class="line">+----+------+----------+-----+--------+</span><br><span class="line">|  0 |    1 | zhangsan |  20 | IT     |</span><br><span class="line">|  1 |    2 | lisi     |  21 | yunwei |</span><br><span class="line">|  2 |    3 | wangwu   |  22 | wangan |</span><br><span class="line">+----+------+----------+-----+--------+</span><br><span class="line">3 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>只查询第二行后面的三行数据</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from anchun limit 2,3;</span><br><span class="line">+----+------+---------+-----+----------+</span><br><span class="line">| id | num  | name    | age | job      |</span><br><span class="line">+----+------+---------+-----+----------+</span><br><span class="line">|  2 |    3 | wangwu  |  22 | wangan   |</span><br><span class="line">|  3 |    4 | zhaoliu |  23 | zongjian |</span><br><span class="line">|  4 |    5 | liuqi   |  24 | shuiqun  |</span><br><span class="line">+----+------+---------+-----+----------+</span><br><span class="line">3 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将age数据从大到小排列</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from anchun order by age desc;</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">| id | num  | name      | age | job      |</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">|  5 |    6 | zhanghaha |  32 | IT       |</span><br><span class="line">|  4 |    5 | liuqi     |  24 | shuiqun  |</span><br><span class="line">|  3 |    4 | zhaoliu   |  23 | zongjian |</span><br><span class="line">|  2 |    3 | wangwu    |  22 | wangan   |</span><br><span class="line">|  1 |    2 | lisi      |  21 | yunwei   |</span><br><span class="line">|  0 |    1 | zhangsan  |  20 | IT       |</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">6 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将age数据从小到大排</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from anchun order by age asc;</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">| id | num  | name      | age | job      |</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">|  0 |    1 | zhangsan  |  20 | IT       |</span><br><span class="line">|  1 |    2 | lisi      |  21 | yunwei   |</span><br><span class="line">|  2 |    3 | wangwu    |  22 | wangan   |</span><br><span class="line">|  3 |    4 | zhaoliu   |  23 | zongjian |</span><br><span class="line">|  4 |    5 | liuqi     |  24 | shuiqun  |</span><br><span class="line">|  5 |    6 | zhanghaha |  32 | IT       |</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">6 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>指定库 . 表 . 字段进行查询</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select mysql.user.User from user;</span><br><span class="line">+---------------+</span><br><span class="line">| User          |</span><br><span class="line">+---------------+</span><br><span class="line">| root          |</span><br><span class="line">| mysql.session |</span><br><span class="line">| mysql.sys     |</span><br><span class="line">| root          |</span><br><span class="line">+---------------+</span><br><span class="line">4 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>多表查询，语法：<code>select  表1 . 列，表2.列 from 表1，表2 where 条件；</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select anchun.name,anchun2.name from anchun,anchun2;</span><br><span class="line">+-----------+--------+</span><br><span class="line">| name      | name   |</span><br><span class="line">+-----------+--------+</span><br><span class="line">| zhangsan  | 张三   |</span><br><span class="line">| zhangsan  | 李四   |</span><br><span class="line">| zhangsan  | 王五   |</span><br><span class="line">| zhangsan  | 赵六   |</span><br><span class="line">| zhangsan  | 刘七   |</span><br><span class="line">| lisi      | 张三   |</span><br><span class="line">| lisi      | 李四   |</span><br><span class="line">| lisi      | 王五   |</span><br><span class="line">| lisi      | 赵六   |</span><br><span class="line">| lisi      | 刘七   |</span><br><span class="line">| wangwu    | 张三   |</span><br><span class="line">| wangwu    | 李四   |</span><br><span class="line">| wangwu    | 王五   |</span><br><span class="line">| wangwu    | 赵六   |</span><br><span class="line">| wangwu    | 刘七   |</span><br><span class="line">| zhaoliu   | 张三   |</span><br><span class="line">| zhaoliu   | 李四   |</span><br><span class="line">| zhaoliu   | 王五   |</span><br><span class="line">| zhaoliu   | 赵六   |</span><br><span class="line">| zhaoliu   | 刘七   |</span><br><span class="line">| liuqi     | 张三   |</span><br><span class="line">| liuqi     | 李四   |</span><br><span class="line">| liuqi     | 王五   |</span><br><span class="line">| liuqi     | 赵六   |</span><br><span class="line">| liuqi     | 刘七   |</span><br><span class="line">| zhanghaha | 张三   |</span><br><span class="line">| zhanghaha | 李四   |</span><br><span class="line">| zhanghaha | 王五   |</span><br><span class="line">| zhanghaha | 赵六   |</span><br><span class="line">| zhanghaha | 刘七   |</span><br><span class="line">+-----------+--------+</span><br><span class="line">30 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<p><strong>如果不加条件直接进行查询,则会出现以下效果,这种结果我们称之为    <em>笛卡尔乘积</em></strong></p>
+<ul>
+<li>查询工号一样的人</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select anchun.name,anchun2.name from anchun,anchun2 where anchun.num = anchun2.num;</span><br><span class="line">+----------+--------+</span><br><span class="line">| name     | name   |</span><br><span class="line">+----------+--------+</span><br><span class="line">| zhangsan | 张三   |</span><br><span class="line">| lisi     | 李四   |</span><br><span class="line">| wangwu   | 王五   |</span><br><span class="line">| zhaoliu  | 赵六   |</span><br><span class="line">| liuqi    | 刘七   |</span><br><span class="line">+----------+--------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<h2 id="增删改查——改"><a href="#增删改查——改" class="headerlink" title="增删改查——改"></a>增删改查——改</h2><ul>
+<li>修改anchun表里的id为3 的修改成2 ，把另一个id为2 的修改成id为6</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; update anchun set id = 2 where id = 3;select * from anchun;update anchun set id = 6 where name = &apos;wangwu&apos;;select * from anchun; </span><br><span class="line">Query OK, 1 row affected (0.00 sec)</span><br><span class="line">Rows matched: 1  Changed: 1  Warnings: 0</span><br><span class="line"></span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">| id | num  | name      | age | job      |</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">|  0 |    1 | zhangsan  |  20 | IT       |</span><br><span class="line">|  1 |    2 | lisi      |  21 | yunwei   |</span><br><span class="line">|  2 |    3 | wangwu    |  22 | wangan   |</span><br><span class="line">|  2 |    4 | zhaoliu   |  23 | zongjian |</span><br><span class="line">|  4 |    5 | liuqi     |  24 | shuiqun  |</span><br><span class="line">|  5 |    6 | zhanghaha |  32 | IT       |</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">6 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">Query OK, 1 row affected (0.00 sec)</span><br><span class="line">Rows matched: 1  Changed: 1  Warnings: 0</span><br><span class="line"></span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">| id | num  | name      | age | job      |</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">|  0 |    1 | zhangsan  |  20 | IT       |</span><br><span class="line">|  1 |    2 | lisi      |  21 | yunwei   |</span><br><span class="line">|  6 |    3 | wangwu    |  22 | wangan   |</span><br><span class="line">|  2 |    4 | zhaoliu   |  23 | zongjian |</span><br><span class="line">|  4 |    5 | liuqi     |  24 | shuiqun  |</span><br><span class="line">|  5 |    6 | zhanghaha |  32 | IT       |</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">6 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<h2 id="⚠增删改查——删⚠"><a href="#⚠增删改查——删⚠" class="headerlink" title="⚠增删改查——删⚠"></a>⚠增删改查——删⚠</h2><p><strong>使用的时候一定要慎重！</strong></p>
+<p><img src="https://s2.ax1x.com/2019/08/16/mZwflF.png" alt="mZwflF.png"></p>
+<ul>
+<li>删除<code>wangwu</code>一行数据</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from anchun;delete from anchun where name = &apos;wangwu&apos;;select * from anchun;</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">| id | num  | name      | age | job      |</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">|  1 |    2 | lisi      |  21 | yunwei   |</span><br><span class="line">|  6 |    3 | wangwu    |  22 | wangan   |</span><br><span class="line">|  2 |    4 | zhaoliu   |  23 | zongjian |</span><br><span class="line">|  4 |    5 | liuqi     |  24 | shuiqun  |</span><br><span class="line">|  5 |    6 | zhanghaha |  32 | IT       |</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">Query OK, 1 row affected (0.01 sec)</span><br><span class="line"></span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">| id | num  | name      | age | job      |</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">|  1 |    2 | lisi      |  21 | yunwei   |</span><br><span class="line">|  2 |    4 | zhaoliu   |  23 | zongjian |</span><br><span class="line">|  4 |    5 | liuqi     |  24 | shuiqun  |</span><br><span class="line">|  5 |    6 | zhanghaha |  32 | IT       |</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">4 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除num列数据</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from anchun;alter table anchun drop column num;select * from anchun;desc anchun;</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">| id | num  | name      | age | job      |</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">|  1 |    2 | lisi      |  21 | yunwei   |</span><br><span class="line">|  2 |    4 | zhaoliu   |  23 | zongjian |</span><br><span class="line">|  4 |    5 | liuqi     |  24 | shuiqun  |</span><br><span class="line">|  5 |    6 | zhanghaha |  32 | IT       |</span><br><span class="line">+----+------+-----------+-----+----------+</span><br><span class="line">4 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">Query OK, 0 rows affected (0.09 sec)</span><br><span class="line">Records: 0  Duplicates: 0  Warnings: 0</span><br><span class="line"></span><br><span class="line">+----+-----------+-----+----------+</span><br><span class="line">| id | name      | age | job      |</span><br><span class="line">+----+-----------+-----+----------+</span><br><span class="line">|  1 | lisi      |  21 | yunwei   |</span><br><span class="line">|  2 | zhaoliu   |  23 | zongjian |</span><br><span class="line">|  4 | liuqi     |  24 | shuiqun  |</span><br><span class="line">|  5 | zhanghaha |  32 | IT       |</span><br><span class="line">+----+-----------+-----+----------+</span><br><span class="line">4 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">+-------+----------+------+-----+---------+-------+</span><br><span class="line">| Field | Type     | Null | Key | Default | Extra |</span><br><span class="line">+-------+----------+------+-----+---------+-------+</span><br><span class="line">| id    | int(3)   | NO   |     | NULL    |       |</span><br><span class="line">| name  | char(10) | YES  |     | NULL    |       |</span><br><span class="line">| age   | int(3)   | NO   |     | NULL    |       |</span><br><span class="line">| job   | char(50) | YES  |     | NULL    |       |</span><br><span class="line">+-------+----------+------+-----+---------+-------+</span><br><span class="line">4 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除anchun这张表</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show tables;drop table anchun;show tables;</span><br><span class="line">+----------------+</span><br><span class="line">| Tables_in_test |</span><br><span class="line">+----------------+</span><br><span class="line">| anchun         |</span><br><span class="line">| anchun2        |</span><br><span class="line">+----------------+</span><br><span class="line">2 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br><span class="line"></span><br><span class="line">+----------------+</span><br><span class="line">| Tables_in_test |</span><br><span class="line">+----------------+</span><br><span class="line">| anchun2        |</span><br><span class="line">+----------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>清除表内所有数据</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from anchun2;delete from anchun2; select * from anchun2;</span><br><span class="line">+----+-----+--------+-----+--------+</span><br><span class="line">| id | num | name   | age | job    |</span><br><span class="line">+----+-----+--------+-----+--------+</span><br><span class="line">|  0 |   1 | 张三   |  10 | 运维   |</span><br><span class="line">|  1 |   2 | 李四   |  11 | 网络   |</span><br><span class="line">|  2 |   3 | 王五   |  12 | 信息   |</span><br><span class="line">|  3 |   4 | 赵六   |  13 | 销售   |</span><br><span class="line">|  4 |   5 | 刘七   |  14 | 打杂   |</span><br><span class="line">+----+-----+--------+-----+--------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">Query OK, 5 rows affected (0.00 sec)</span><br><span class="line"></span><br><span class="line">Empty set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>⚠删除test数据库⚠</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show databases;drop database test;show databases;</span><br><span class="line">+--------------------+</span><br><span class="line">| Database           |</span><br><span class="line">+--------------------+</span><br><span class="line">| information_schema |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| sys                |</span><br><span class="line">| test               |</span><br><span class="line">+--------------------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">Query OK, 1 row affected (0.01 sec)</span><br><span class="line"></span><br><span class="line">+--------------------+</span><br><span class="line">| Database           |</span><br><span class="line">+--------------------+</span><br><span class="line">| information_schema |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| sys                |</span><br><span class="line">+--------------------+</span><br><span class="line">4 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<h1 id="⚠重中之重⚠"><a href="#⚠重中之重⚠" class="headerlink" title="⚠重中之重⚠"></a>⚠重中之重⚠</h1><p>从删库到跑路，仅在一念之间……</p>
+<p><img src="https://s2.ax1x.com/2019/08/16/mZw2WT.jpg" alt="mZw2WT.jpg"></p>
 
       
 
@@ -276,21 +390,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">基础</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -341,7 +440,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://quail2333.github.io/2019/08/11/Nginx防盗链配置案例配置/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://quail2333.github.io/2019/08/15/MySQL基本语法/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -355,18 +454,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/13/MySQL 5.7编译安装（附脚本）/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          MySQL 5.7编译安装（附脚本）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/11/CentOS 7修改yum源为阿里源/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CentOS 7修改yum源为阿里源</div>
+    <a href="/2019/08/15/MySQL忘记密码怎么办/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL忘记密码怎么办</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -393,7 +483,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#盗链"><span class="toc-number">1.1.</span> <span class="toc-text">盗链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#盗链分类"><span class="toc-number">1.2.</span> <span class="toc-text">盗链分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#常规盗链"><span class="toc-number">1.2.1.</span> <span class="toc-text">常规盗链</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分布式盗链"><span class="toc-number">1.2.2.</span> <span class="toc-text">分布式盗链</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#反盗链"><span class="toc-number">1.3.</span> <span class="toc-text">反盗链</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#原始方式"><span class="toc-number">1.3.1.</span> <span class="toc-text">原始方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#限制引用页"><span class="toc-number">1.3.2.</span> <span class="toc-text">限制引用页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件伪装"><span class="toc-number">1.3.3.</span> <span class="toc-text">文件伪装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#加密认证"><span class="toc-number">1.3.4.</span> <span class="toc-text">加密认证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#随机附加码"><span class="toc-number">1.3.5.</span> <span class="toc-text">随机附加码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其它方法"><span class="toc-number">1.3.6.</span> <span class="toc-text">其它方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#防盗链"><span class="toc-number">1.4.</span> <span class="toc-text">防盗链</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#防盗链实现案例"><span class="toc-number">2.</span> <span class="toc-text">防盗链实现案例</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#模拟盗链"><span class="toc-number">2.1.</span> <span class="toc-text">模拟盗链</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#环境准备"><span class="toc-number">2.1.1.</span> <span class="toc-text">环境准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#访问测试"><span class="toc-number">2.1.2.</span> <span class="toc-text">访问测试</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#主站"><span class="toc-number">2.1.2.1.</span> <span class="toc-text">主站</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#盗链站"><span class="toc-number">2.1.2.2.</span> <span class="toc-text">盗链站</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过配置Nginx实现防盗链"><span class="toc-number">2.2.</span> <span class="toc-text">通过配置Nginx实现防盗链</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一"><span class="toc-number">2.2.1.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二"><span class="toc-number">2.2.2.</span> <span class="toc-text">方法二</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过Nginx日志更直观的分析原因"><span class="toc-number">2.3.</span> <span class="toc-text">通过Nginx日志更直观的分析原因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#清除日志"><span class="toc-number">2.3.1.</span> <span class="toc-text">清除日志</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改Nginx配置文件，在日志配置加入请求的参数"><span class="toc-number">2.3.2.</span> <span class="toc-text">修改Nginx配置文件，在日志配置加入请求的参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#访问盗链网站，查看access-log"><span class="toc-number">2.3.3.</span> <span class="toc-text">访问盗链网站，查看access.log</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Nginx防盗链参数详解"><span class="toc-number">3.</span> <span class="toc-text">Nginx防盗链参数详解</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#重要！"><span class="toc-number">2.</span> <span class="toc-text">重要！</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基本命令实战"><span class="toc-number">3.</span> <span class="toc-text">基本命令实战</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#增删改查——增"><span class="toc-number">3.1.</span> <span class="toc-text">增删改查——增</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增删改查——查"><span class="toc-number">3.2.</span> <span class="toc-text">增删改查——查</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增删改查——改"><span class="toc-number">3.3.</span> <span class="toc-text">增删改查——改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#⚠增删改查——删⚠"><span class="toc-number">3.4.</span> <span class="toc-text">⚠增删改查——删⚠</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#⚠重中之重⚠"><span class="toc-number">4.</span> <span class="toc-text">⚠重中之重⚠</span></a></li></ol>
                     </div>
                 </span>
             </div>
