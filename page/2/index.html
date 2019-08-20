@@ -228,19 +228,19 @@
 
 
   
-    <article id="post-如何修复被破坏的分区文件系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-CentOS 7修改yum源为阿里源" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/11/如何修复被破坏的分区文件系统/">如何修复被破坏的分区文件系统</a>
+      <a class="article-title" href="/2019/08/11/CentOS 7修改yum源为阿里源/">CentOS 7修改yum源为阿里源</a>
     </h1>
   
 
         
-        <a href="/2019/08/11/如何修复被破坏的分区文件系统/" class="archive-article-date">
+        <a href="/2019/08/11/CentOS 7修改yum源为阿里源/" class="archive-article-date">
   	<time datetime="2019-08-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
 </a>
         
@@ -248,9 +248,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="·-准备阶段"><a href="#·-准备阶段" class="headerlink" title="· 准备阶段"></a>· 准备阶段</h2><p>由于条件原因，我只能在VMware虚拟机上进行模拟实验，开机的时候，发现sdb磁盘正常加载</p>
-<p><img src="https://s2.ax1x.com/2019/08/10/eOF2j0.png" alt="eOF2j0.png"></p>
-<p>然后通过lsblk命令查看挂载情况
+        <h2 id="手动更新"><a href="#手动更新" class="headerlink" title="手动更新"></a>手动更新</h2><p>1.备份本地源</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 # mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo_bak</span><br></pre></td></tr></table></figure>
+
+<p>2.获取阿里yum源配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 # wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br></pre></td></tr></table></figure>
+
+<p>3.更新缓存
         
       
 
@@ -278,7 +282,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/11/如何修复被破坏的分区文件系统/">more >></a>
+          <a class="article-more-a" href="/2019/08/11/CentOS 7修改yum源为阿里源/">more >></a>
         </p>
       
 
@@ -308,28 +312,28 @@
 
 
   
-    <article id="post-echo-nginx-module的安装、配置、使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Nginx防盗链配置案例配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/09/echo-nginx-module的安装、配置、使用/">echo-nginx-module的安装，配置，使用</a>
+      <a class="article-title" href="/2019/08/11/Nginx防盗链配置案例配置/">Nginx防盗链配置案例配置</a>
     </h1>
   
 
         
-        <a href="/2019/08/09/echo-nginx-module的安装、配置、使用/" class="archive-article-date">
-  	<time datetime="2019-08-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
+        <a href="/2019/08/11/Nginx防盗链配置案例配置/" class="archive-article-date">
+  	<time datetime="2019-08-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、下载压缩包"><a href="#一、下载压缩包" class="headerlink" title="一、下载压缩包"></a>一、下载压缩包</h2><p>[root@www nginx-1.16.0]# wget <a href="https://github.com/openresty/echo-nginx-module/archive/v0.61.tar.gz" target="_blank" rel="noopener">https://github.com/openresty/echo-nginx-module/archive/v0.61.tar.gz</a></p>
-<h2 id="二、解压v0-61-tar-gz"><a href="#二、解压v0-61-tar-gz" class="headerlink" title="二、解压v0.61.tar.gz"></a>二、解压v0.61.tar.gz</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@www nginx]# tar zxf v0.61.tar.gz</span><br></pre></td></tr></table></figure>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="盗链"><a href="#盗链" class="headerlink" title="盗链"></a>盗链</h2><p>​        盗链是指服务提供商自己不提供服务的内容，通过技术手段绕过其它有利益的最终用户界面（如广告），直接在自己的网站上向最终用户提供其它服务提供商的服务内容，骗取最终用户的浏览和点击率。受益者不提供资源或提供很少的资源，而真正的服务提供商却得不到任何的收益。</p>
+<p>​                                                                                                                    ——摘自百度百科
         
       
 
@@ -343,15 +347,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">基础</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Location</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">plusing</a>
         		</li>
       		
 		</ul>
@@ -361,7 +361,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/09/echo-nginx-module的安装、配置、使用/">more >></a>
+          <a class="article-more-a" href="/2019/08/11/Nginx防盗链配置案例配置/">more >></a>
         </p>
       
 
@@ -963,7 +963,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
