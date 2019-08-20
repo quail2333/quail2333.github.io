@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="http://quail2333.github.io">
   <title>MySQL用户授权 | 菜鹌鹑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="说在前面对于MySQL的管理与使用，大部分人会选择使用phpadmin，navicat for mysql等等，我还是比较中意navicat这款工具的，但是不管你使用什么数据库管理工具，都会涉及到一个主要问题——用户授权 MySQL的几种连接方式TCP连接（Linux，Windows）目标    启动选项    默认值SERVER    --port=PORT    3306CLIENT    -">
+  <meta name="description" content="说在前面对于MySQL的管理与使用，大部分人会选择使用phpadmin，navicat for mysql等等，我还是比较中意navicat这款工具的，但是不管你使用什么数据库管理工具，都会涉及到一个主要问题——用户授权">
 <meta name="keywords" content="基础,MySQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL用户授权">
 <meta property="og:url" content="http://quail2333.github.io/2019/08/20/MySQL用户授权/index.html">
 <meta property="og:site_name" content="菜鹌鹑">
-<meta property="og:description" content="说在前面对于MySQL的管理与使用，大部分人会选择使用phpadmin，navicat for mysql等等，我还是比较中意navicat这款工具的，但是不管你使用什么数据库管理工具，都会涉及到一个主要问题——用户授权 MySQL的几种连接方式TCP连接（Linux，Windows）目标    启动选项    默认值SERVER    --port=PORT    3306CLIENT    -">
+<meta property="og:description" content="说在前面对于MySQL的管理与使用，大部分人会选择使用phpadmin，navicat for mysql等等，我还是比较中意navicat这款工具的，但是不管你使用什么数据库管理工具，都会涉及到一个主要问题——用户授权">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/20/mYRzAU.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/20/mYfCa8.png">
@@ -24,10 +24,10 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/20/mYfA2j.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/20/mYfZMn.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/20/mYfExs.png">
-<meta property="og:updated_time" content="2019-08-20T13:49:29.681Z">
+<meta property="og:updated_time" content="2019-08-20T14:27:34.406Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL用户授权">
-<meta name="twitter:description" content="说在前面对于MySQL的管理与使用，大部分人会选择使用phpadmin，navicat for mysql等等，我还是比较中意navicat这款工具的，但是不管你使用什么数据库管理工具，都会涉及到一个主要问题——用户授权 MySQL的几种连接方式TCP连接（Linux，Windows）目标    启动选项    默认值SERVER    --port=PORT    3306CLIENT    -">
+<meta name="twitter:description" content="说在前面对于MySQL的管理与使用，大部分人会选择使用phpadmin，navicat for mysql等等，我还是比较中意navicat这款工具的，但是不管你使用什么数据库管理工具，都会涉及到一个主要问题——用户授权">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/08/20/mYRzAU.png">
   
     <link rel="alternative" href="/atom.xml" title="菜鹌鹑" type="application/atom+xml">
@@ -178,7 +178,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h1><p>对于MySQL的管理与使用，大部分人会选择使用<code>phpadmin</code>，<code>navicat for mysql</code>等等，我还是比较中意navicat这款工具的，但是不管你使用什么数据库管理工具，都会涉及到一个主要问题——<strong>用户授权</strong></p>
+        <h1 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h1><p>对于MySQL的管理与使用，大部分人会选择使用<code>phpadmin</code>，<code>navicat for mysql</code>等等，我还是比较中意navicat这款工具的，但是不管你使用什么数据库管理工具，都会涉及到一个主要问题——<strong>用户授权</strong><a id="more"></a></p>
 <h1 id="MySQL的几种连接方式"><a href="#MySQL的几种连接方式" class="headerlink" title="MySQL的几种连接方式"></a>MySQL的几种连接方式</h1><h2 id="TCP连接（Linux，Windows）"><a href="#TCP连接（Linux，Windows）" class="headerlink" title="TCP连接（Linux，Windows）"></a>TCP连接（Linux，Windows）</h2><p>目标    启动选项    默认值<br><code>SERVER    --port=PORT    3306</code><br><code>CLIENT    --protocol=TCP --port=PORT    3306</code></p>
 <h2 id="SOCKET连接（Linux）"><a href="#SOCKET连接（Linux）" class="headerlink" title="SOCKET连接（Linux）"></a>SOCKET连接（Linux）</h2><p>目标    启动选项    默认值<br><code>SERVER    --enable-named-pipe --socket=SOCKET    /tmp/mysql.sock</code><br><code>CLIENT    --protocol=SOCKET --socket=SOCKET    /tmp/mysql.sock</code></p>
 <h2 id="PIPE连接（Windows）："><a href="#PIPE连接（Windows）：" class="headerlink" title="PIPE连接（Windows）："></a>PIPE连接（Windows）：</h2><p>目标    启动选项    默认值<br><code>SERVER    --enable-named-pipe --socket=SOCKET    MYSQL</code><br><code>CLIENT    --protocol=PIPE --socket=SOCKET    MYSQL</code></p>
